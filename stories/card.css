@@ -26,9 +26,16 @@
 
 
 .card__img {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   object-fit: cover;
   object-position: center;
+}
+
+.card--medium .card__img {
+  max-width: 300px;
+  max-height: 500px;
+  object-fit: cover;
+  margin-bottom: 12px;
 }
 
 .card--small .card__img {
