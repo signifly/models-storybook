@@ -25,6 +25,11 @@
 }
 
 
+.card--border-radius .card__img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .card__img {
   /* border: 1px solid black; */
   object-fit: cover;

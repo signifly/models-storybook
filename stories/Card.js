@@ -2,11 +2,11 @@ import './card.css'
 
 import { createImage } from './Image'
 
-export const createCard = ({ size = 'medium', title, subtitle, onClick, imgSrc }) => {
+export const createCard = ({ size = 'medium', title, subtitle, onClick, imgSrc, borderRadius }) => {
   const card = document.createElement('div')
   card.className = 'card'
   card.addEventListener('click', onClick)
-  card.className = ['card', `card--${size}`].join(' ')
+  card.className = ['card', `card--${size}`, borderRadius ? 'card--border-radius' : ''].join(' ')
 
   const cardText = document.createElement('div')
   cardText.className = 'card__text'

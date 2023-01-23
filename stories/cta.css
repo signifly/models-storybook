@@ -1,0 +1,27 @@
+/* .cta {
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 24px;
+  padding: 24px;
+}
+
+.cta__text {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cta__text .title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cta__img {
+  width: 100%;
+} */

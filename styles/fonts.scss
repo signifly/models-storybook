@@ -1,0 +1,180 @@
+// PPEiko
+
+@font-face {
+  font-family: 'PPEiko-Thin';
+  src: url('../fonts/PPEiko-Thin.otf') format('opentype'),
+    url('../fonts/PPEiko-Thin.ttf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'PPEiko-ThinItalic';
+  src: url('../fonts/PPEiko-ThinItalic.otf') format('opentype'),
+    url('../fonts/PPEiko-ThinItalic.ttf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'PPEiko-Light';
+  src: url('../fonts/PPEiko-Light.otf') format('opentype'),
+    url('../fonts/PPEiko-Light.ttf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'PPEiko-LightItalic';
+  src: url('../fonts/PPEiko-LightItalic.otf') format('opentype'),
+    url('../fonts/PPEiko-LightItalic.ttf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'PPEiko-Regular';
+  src: url('../fonts/PPEiko-Regular.otf') format('opentype'),
+    url('../fonts/PPEiko-Regular.ttf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PPEiko-RegularItalic';
+  src: url('../fonts/PPEiko-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PPEiko-Medium';
+  src: url('../fonts/PPEiko-Medium.otf') format('opentype'),
+    url('../fonts/PPEiko-Medium.ttf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'PPEiko-MediumItalic';
+  src: url('../fonts/PPEiko-MediumItalic.otf') format('opentype'),
+    url('../fonts/PPEiko-MediumItalic.ttf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'PPEiko-Black';
+  src: url('../fonts/PPEiko-Black.otf') format('opentype'),
+    url('../fonts/PPEiko-Black.ttf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'PPEiko-BlackItalic';
+  src: url('../fonts/PPEiko-BlackItalic.otf') format('opentype'),
+    url('../fonts/PPEiko-BlackItalic.ttf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'PPEiko-Heavy';
+  src: url('../fonts/PPEiko-Heavy.otf') format('opentype'),
+    url('../fonts/PPEiko-Heavy.ttf') format('opentype');
+  font-weight: 900;
+}
+
+// SuisseIntl
+
+@font-face {
+  font-family: 'SuisseIntl-Black';
+  src: url('../fonts/SuisseIntl-Black-WebTrial.ttf') format('opentype'),
+    url('../fonts/SuisseIntl-Black-WebTrial.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-BlackItalic';
+  src: url('../fonts/SuisseIntl-BlackItalic-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Bold';
+  src: url('../fonts/SuisseIntl-Bold-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-BoldItalic';
+  src: url('../fonts/SuisseIntl-BoldItalic-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-SemiBold';
+  src: url('../fonts/SuisseIntl-SemiBold-WebTrial.ttf') format('opentype');
+}
+
+// @font-face {
+//   font-family: 'SuisseIntl-SemiBoldItalic';
+//   src: url('../fonts/SuisseIntl-SemiBoldItalic-WebTrial.ttf') format('opentype');
+// }
+
+@font-face {
+  font-family: 'SuisseIntl-Book';
+  src: url('../fonts/SuisseIntl-Book-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-BookItalic';
+  src: url('../fonts/SuisseIntl-BookItalic-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Light';
+  src: url('../fonts/SuisseIntl-Light-WebTrial.ttf') format('opentype');
+}
+
+// @font-face {
+//   font-family: 'SuisseIntl-Italic';
+//   src: url('../fonts/SuisseIntl-Italic-WebTrial.ttf') format('opentype');
+// }
+
+@font-face {
+  font-family: 'SuisseIntl-Medium';
+  src: url('../fonts/SuisseIntl-Medium-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-MediumItalic';
+  src: url('../fonts/SuisseIntl-MediumItalic-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Regular';
+  src: url('../fonts/SuisseIntl-Regular-WebTrial.ttf') format('opentype');
+}
+
+// @font-face {
+//   font-family: 'SuisseIntl-RegularItalic';
+//   src: url('../fonts/SuisseIntl-RegularItalic-WebTrial.ttf') format('opentype');
+// }
+
+@font-face {
+  font-family: 'SuisseIntl-Ultralight';
+  src: url('../fonts/SuisseIntl-Ultralight-WebTrial.ttf') format('opentype');
+}
+
+// @font-face {
+//   font-family: 'SuisseIntl-UltraLightItalic';
+//   src: url('../fonts/SuisseIntl-UltraLightItalic-WebTrial.ttf') format('opentype');
+// }
+
+@font-face {
+  font-family: 'SuisseIntl-Thin';
+  src: url('../fonts/SuisseIntl-Thin-WebTrial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-ThinItalic';
+  src: url('../fonts/SuisseIntl-ThinItalic-WebTrial.ttf') format('opentype');
+}
+
+// @font-face {
+//   font-family: 'SuisseIntl-UltraThin';
+//   src: url('../fonts/SuisseIntl-UltraThin-WebTrial.ttf') format('opentype');
+// }
+
+// @font-face {
+//   font-family: 'SuisseIntl-UltraThinItalic';
+//   src: url('../fonts/SuisseIntl-UltraThinItalic-WebTrial.ttf') format('opentype');
+// }

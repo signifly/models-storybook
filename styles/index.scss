@@ -1,0 +1,48 @@
+@import 'variables';
+// @import "icons";
+@import 'mixins';
+
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: $font-primary;
+}
+button {
+  cursor: pointer;
+}
+
+.cta {
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 24px;
+  padding: 24px;
+
+  &__text {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__text .title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

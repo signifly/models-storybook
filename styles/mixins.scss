@@ -1,0 +1,20 @@
+@mixin res($width, $dir: max) {
+  @if $width== 'mobile-s' {
+    $width: 360;
+  }
+  @if $width== 'mobile' {
+    $width: 692;
+  }
+
+  @if $width== 'tab-p' {
+    $width: 768;
+  }
+
+  @if $width== 'tab-l' {
+    $width: 1024;
+  }
+
+  @media (#{$dir}-width: $width + "px") {
+    @content;
+  }
+}
