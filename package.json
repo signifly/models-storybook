@@ -28,10 +28,11 @@
     "@storybook/builder-webpack4": "^6.5.15",
     "@storybook/html": "^6.5.15",
     "@storybook/manager-webpack4": "^6.5.15",
-    "@storybook/testing-library": "^0.0.13",
     "@storybook/preset-scss": "^1.0.3",
-    "css-loader": "^5.1.0",
+    "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.15.0",
+    "css-loader": "^5.1.0",
     "sass": "^1.32.8",
     "sass-loader": "10.1.1",
     "style-loader": "^2.0.0"
