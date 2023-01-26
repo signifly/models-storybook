@@ -1,5 +1,3 @@
-import './image.css'
-
 export const createImage = ({ src }) => {
   const image = document.createElement('img')
   image.className = 'image'

@@ -1,5 +1,3 @@
-import './cta.css'
-
 import { createImage } from './Image'
 import { createButton } from './Button'
 

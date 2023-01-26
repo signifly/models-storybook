@@ -1,5 +1,3 @@
-import './footer.css';
-
 export const createFooter = ({}) => {
   const footer = document.createElement('footer');
   footer.className = 'footer';

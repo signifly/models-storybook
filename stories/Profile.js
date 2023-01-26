@@ -1,5 +1,3 @@
-import './profile.css'
-
 import { createImage } from './Image'
 
 export const createProfile = ({ title, subtitle, onClick, imgSrc }) => {
