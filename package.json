@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=d91e2c212657"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,7 @@
     "sass": "^1.32.8",
     "sass-loader": "10.1.1",
     "style-loader": "^2.0.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "models-storybook@1.0.0"
 }

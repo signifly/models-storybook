@@ -1,5 +1,3 @@
-import './card.css'
-
 import { createImage } from './Image'
 
 export const createCard = ({ size = 'medium', title, subtitle, onClick, imgSrc, borderRadius }) => {

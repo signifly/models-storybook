@@ -1,5 +1,8 @@
 @import 'fonts';
 
+$black: #000;
+$gray: #999999;;
+
 $color-primary: #1c4756;
 $color-primary-dark: #112332;
 $color-secondary: #e8ebed;
@@ -9,5 +12,7 @@ $color-error: #ff487f;
 $color-sand: #fdf3ec;
 $color-yellow: #ffd600;
 $color-orange: #ffb37b;
+$color-text: $black;
+$color-subtext: $gray;
 
 $font-primary: 'SuisseIntl-Medium', sans-serif;

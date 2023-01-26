@@ -1,5 +1,3 @@
-import './button.css';
-
 export const createButton = ({
   primary = false,
   size = 'medium',

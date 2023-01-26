@@ -1,6 +1,6 @@
 @import 'variables';
-// @import "icons";
 @import 'mixins';
+@import 'components/index.scss';
 
 html {
   box-sizing: border-box;
@@ -17,6 +17,10 @@ body {
 }
 button {
   cursor: pointer;
+}
+
+.subtitle {
+  color: $color-subtext;
 }
 
 .cta {
