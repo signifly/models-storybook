@@ -8,17 +8,21 @@ export const createArticleCard = ({
   imgSrc,
   borderRadius
 }) => {
+  const grid = document.createElement('div')
+  grid.className = 'grid'
+
   const articleCard = document.createElement('div')
-  articleCard.className = 'article-card'
+
   articleCard.addEventListener('click', onClick)
   articleCard.className = [
     'article-card',
     `article-card--${size}`,
+    size === 'large' ? 'span-6' : 'span-3',
     borderRadius ? 'article-card--border-radius' : ''
   ].join(' ')
 
   const articleCardText = document.createElement('div')
-  articleCardText.className = 'article-card__text'
+  articleCardText.className = ['article-card__text', size === 'large' ? 'span-2' : 'span-3'].join(' ')
 
   const titleElement = document.createElement('h6')
   titleElement.className = 'title'
@@ -34,9 +38,11 @@ export const createArticleCard = ({
 
   const articleCardImage = createImage({ src: imgSrc })
 
-  articleCardImage.className = 'article-card__img'
+  articleCardImage.className = ['article-card__img', size === 'large' ? 'span-4' : 'span-3'].join(' ')
 
   articleCard.appendChild(articleCardImage)
 
-  return articleCard
+  grid.appendChild(articleCard)
+
+  return grid
 }

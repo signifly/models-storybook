@@ -1,5 +1,6 @@
 @import 'fonts';
 
+// Colors
 $black: #000;
 $gray: #999999;;
 
@@ -16,3 +17,24 @@ $color-text: $black;
 $color-subtext: $gray;
 
 $font-primary: 'SuisseIntl-Medium', sans-serif;
+
+// Grid
+$columns: 12;
+$row-gap: 10px;
+$column-gap: 30px;
+
+// Breakpoints.
+$xxs: 380px;
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Layout.
+$site-gutter: 48px;
+$site-gutter-md: 40px;
+$site-gutter-sm: 40px;
+$site-gutter-xs: 16px;
+$container-max-width: 1440px;

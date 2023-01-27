@@ -1,18 +1,17 @@
 .article-card {
   display: flex;
-  width: 50%;
   min-height: 453px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .article-card--small {
   font-size: 12px;
-  padding: 10px 16px;
+  // padding: 10px 16px;
   flex-flow: column-reverse;
 }
 
 .article-card--large {
   font-size: 16px;
-  padding: 12px 24px;
+  // padding: 12px 24px;
 }
 
 .article-card__text,
