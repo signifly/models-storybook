@@ -1,13 +1,6 @@
 import { createImage } from './Image'
 
-export const createArticleCard = ({
-  size = 'medium',
-  title,
-  subtitle,
-  onClick,
-  imgSrc,
-  borderRadius
-}) => {
+export const createArticleCard = ({ size = 'large', title, subtitle, onClick, imgSrc }) => {
   const grid = document.createElement('div')
   grid.className = 'grid'
 
@@ -17,12 +10,13 @@ export const createArticleCard = ({
   articleCard.className = [
     'article-card',
     `article-card--${size}`,
-    size === 'large' ? 'span-6' : 'span-3',
-    borderRadius ? 'article-card--border-radius' : ''
+    size === 'large' ? 'span-6' : 'span-3'
   ].join(' ')
 
   const articleCardText = document.createElement('div')
-  articleCardText.className = ['article-card__text', size === 'large' ? 'span-2' : 'span-3'].join(' ')
+  articleCardText.className = ['article-card__text', size === 'large' ? 'span-2' : 'span-3'].join(
+    ' '
+  )
 
   const titleElement = document.createElement('h6')
   titleElement.className = 'title'
@@ -38,11 +32,15 @@ export const createArticleCard = ({
 
   const articleCardImage = createImage({ src: imgSrc })
 
-  articleCardImage.className = ['article-card__img', size === 'large' ? 'span-4' : 'span-3'].join(' ')
+  articleCardImage.className = ['article-card__img', size === 'large' ? 'span-4' : 'span-3'].join(
+    ' '
+  )
 
   articleCard.appendChild(articleCardImage)
 
-  grid.appendChild(articleCard)
+  return articleCard
 
-  return grid
+  // grid.appendChild(articleCard)
+
+  // return grid
 }

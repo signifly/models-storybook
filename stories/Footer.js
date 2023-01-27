@@ -1,4 +1,6 @@
-export const createFooter = ({}) => {
+import { createButton } from './Button'
+
+export const createFooter = ({ tagline, paragraph, buttons }) => {
   const footer = document.createElement('footer')
   footer.className = 'footer'
 
@@ -7,6 +9,26 @@ export const createFooter = ({}) => {
 
   const wrapperBottom = document.createElement('div')
   wrapperBottom.className = ['wrapper', 'wrapper--bottom'].join(' ')
+
+  const footerTagline = document.createElement('p')
+  footerTagline.className = 'footer__tagline'
+  footerTagline.innerText = tagline
+
+  const footerParagraph = document.createElement('div')
+  footerParagraph.className = 'footer__paragraph'
+  footerParagraph.innerText = paragraph
+
+  const footerButtons = document.createElement('div')
+  footerButtons.className = 'footer__buttons'
+
+  buttons.forEach((button) => {
+    let buttonElement = createButton(button)
+    footerButtons.appendChild(buttonElement)
+  })
+
+  footerParagraph.appendChild(footerButtons)
+  wrapperTop.appendChild(footerTagline)
+  wrapperTop.appendChild(footerParagraph)
 
   const logo = `<div>
   <svg width="211" height="47" viewBox="0 0 211 47" fill="none" xmlns="http://www.w3.org/2000/svg">

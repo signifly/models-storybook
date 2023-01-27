@@ -9,6 +9,42 @@
   background-color: black;
   color: white;
   padding: 40px 64px;
+
+  .wrapper {
+    display: flex;
+  }
+
+  .wrapper--top {
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  &__tagline,
+  &__paragraph {
+    max-width: 341px;
+  }
+
+  &__tagline {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &__paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: $font-primary-light;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__buttons {
+    margin-top: 24px;
+  }
 }
 
 .wrapper {

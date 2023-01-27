@@ -1,7 +1,9 @@
 export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl }) => {
-  const heroBanner = document.createElement('div')
-  heroBanner.className = 'hero-banner'
+  const grid = document.createElement('div')
+  grid.className = 'grid'
 
+  const heroBanner = document.createElement('div')
+  heroBanner.className = 'hero-banner span-full'
 
   const heroBannerImg = document.createElement('img')
   heroBannerImg.className = 'hero-banner__img'
@@ -29,5 +31,7 @@ export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl }
   heroBanner.appendChild(heroBannerImg)
   heroBanner.appendChild(heroBannerText)
 
-  return heroBanner
+  grid.appendChild(heroBanner)
+
+  return grid
 }
