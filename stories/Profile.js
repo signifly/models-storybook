@@ -2,9 +2,8 @@ import { createImage } from './Image'
 
 export const createProfile = ({ title, subtitle, onClick, imgSrc }) => {
   const profile = document.createElement('div')
-  profile.className = 'profile'
   profile.addEventListener('click', onClick)
-  profile.className = ['profile'].join(' ')
+  profile.className = ['profile', 'span-3 sm-span-full'].join(' ')
 
   const profileImage = createImage({ src: imgSrc })
   profileImage.className = 'profile__img'

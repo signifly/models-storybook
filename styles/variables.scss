@@ -2,7 +2,11 @@
 
 // Colors
 $black: #000;
-$gray: #999999;;
+$white: #FFF;
+$off-black: #111;
+$gray: #999999;
+$light-gray: #CCCCCC;
+$dark-gray: #262626;
 
 $color-primary: #1c4756;
 $color-primary-dark: #112332;
@@ -21,8 +25,8 @@ $font-primary-light: 'SuisseIntl-Light', sans-serif;
 
 // Grid
 $columns: 12;
-$row-gap: 10px;
-$column-gap: 30px;
+$row-gap: 30px;
+$column-gap: 24px;
 
 // Breakpoints.
 $xxs: 380px;
