@@ -1,0 +1,48 @@
+.video-card {
+  --video-progress: 0;
+  min-width: 100px;
+  padding: 16px;
+  max-width: 270px;
+
+  &__progress {
+    width: 100%;
+    height: 2px;
+    background-color: rgba($black, 0.1);
+    margin-bottom: 16px;
+
+    &--bar {
+      height: 100%;
+      width: 100%;
+      transition: all 0.2s;
+      max-width: var(--video-progress);
+      background-color: transparent;
+    }
+  }
+
+  &__header {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 21px;
+    text-align: left;
+    color: $light-gray;
+  }
+
+  &__video {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  &--active {
+    .video-card__title {
+      color: $black;
+    }
+    .video-card__progress--bar {
+      background-color: $black;
+    }
+  }
+}
