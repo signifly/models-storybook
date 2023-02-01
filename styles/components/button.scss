@@ -34,3 +34,8 @@
   font-size: 16px;
   padding: 12px 24px;
 }
+.storybook-button--dark {
+  color: $white;
+  border: 1px $light-gray solid;
+  background-color: $black;
+}

@@ -19,11 +19,13 @@ Footer.args = {
   buttons: [
     {
       size: 'large',
-      label: 'Join'
+      label: 'Join',
+      dark: true
     },
     {
       size: 'large',
-      label: 'Login'
+      label: 'Login',
+      dark: true
     }
   ]
 }

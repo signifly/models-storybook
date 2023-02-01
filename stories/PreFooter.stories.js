@@ -13,7 +13,11 @@ export default {
 export const PreFooter = (args) => createPreFooter(args)
 
 PreFooter.args = {
-  newsletter: {},
+  newsletter: {
+    title: 'Newsletter',
+    emailLabel: 'Enter your email',
+    submitButton: 'SIGN UP'
+  },
   linkGroups: [
     {
       title: 'Support',
