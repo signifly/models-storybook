@@ -1,0 +1,41 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+
+  .link {
+    padding: 12px;
+  }
+
+  .link a {
+    font-family: $font-accent;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &--header {
+    justify-content: center;
+    .link a {
+      font-family: $font-accent;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+
+    .link--selected {
+      border-bottom: 2px solid $black;
+    }
+
+    .link--selected a {
+      font-family: $font-accent-italic;
+    }
+  }
+}

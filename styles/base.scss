@@ -1,3 +1,9 @@
+.container,
+.grid {
+  padding-left: $site-gutter;
+  padding-right: $site-gutter;
+}
+
 button {
   cursor: pointer;
 }
