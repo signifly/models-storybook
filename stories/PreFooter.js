@@ -1,29 +1,31 @@
+import { addClasses } from '../utilities/classes-names'
+
 export const createPreFooter = ({ newsletter, linkGroups, copyright, dark }) => {
   const preFooter = document.createElement('div')
-  preFooter.className = ['pre-footer', dark ? 'pre-footer--dark' : 'pre-footer--light'].join(' ')
+  preFooter.className = addClasses(['pre-footer', dark ? 'pre-footer--dark' : 'pre-footer--light'])
 
   const preFooterTop = document.createElement('div')
-  preFooterTop.className = ['pre-footer__top', 'grid'].join(' ')
+  preFooterTop.className = addClasses(['pre-footer__top', 'grid'])
   const preFooterBottom = document.createElement('div')
-  preFooterBottom.className = ['pre-footer__bottom', 'grid'].join(' ')
+  preFooterBottom.className = addClasses(['pre-footer__bottom', 'grid'])
 
   if (newsletter) {
     const newsletterElement = document.createElement('div')
-    newsletterElement.className = ['pre-footer__newsletter', 'span-4'].join(' ')
+    newsletterElement.className = addClasses(['pre-footer__newsletter', 'span-4'])
 
     const newsletterTitle = document.createElement('div')
-    newsletterTitle.className = ['newsletter__title'].join(' ')
+    newsletterTitle.className = addClasses(['newsletter__title'])
     newsletterTitle.innerText = newsletter.title
     newsletterElement.appendChild(newsletterTitle)
 
     const newsletterEmail = document.createElement('div')
-    newsletterEmail.className = ['newsletter__email'].join(' ')
+    newsletterEmail.className = addClasses(['newsletter__email'])
 
     const newsletterInput = document.createElement('input')
-    newsletterInput.className = ['newsletter__input'].join(' ')
+    newsletterInput.className = addClasses(['newsletter__input'])
     newsletterInput.placeholder = newsletter.emailLabel
     const newsletterSubmit = document.createElement('button')
-    newsletterSubmit.className = ['newsletter__submit'].join(' ')
+    newsletterSubmit.className = addClasses(['newsletter__submit'])
     newsletterSubmit.innerText = newsletter.submitButton
     newsletterEmail.appendChild(newsletterInput)
     newsletterEmail.appendChild(newsletterSubmit)
@@ -31,7 +33,7 @@ export const createPreFooter = ({ newsletter, linkGroups, copyright, dark }) => 
     newsletterElement.appendChild(newsletterEmail)
 
     const newsletterSocial = document.createElement('div')
-    newsletterSocial.className = ['newsletter__social-links'].join(' ')
+    newsletterSocial.className = addClasses(['newsletter__social-links'])
     newsletterElement.appendChild(newsletterSocial)
 
     preFooterTop.appendChild(newsletterElement)
@@ -39,11 +41,11 @@ export const createPreFooter = ({ newsletter, linkGroups, copyright, dark }) => 
 
   linkGroups.forEach((linkGroup) => {
     const linkGroupElement = document.createElement('ul')
-    linkGroupElement.className = ['link-group', 'span-2'].join(' ')
+    linkGroupElement.className = addClasses(['link-group', 'span-2'])
 
     const titleWrapper = document.createElement('li')
     titleWrapper.innerText = linkGroup.title
-    titleWrapper.className = ['link-group__title'].join(' ')
+    titleWrapper.className = addClasses(['link-group__title'])
 
     linkGroupElement.appendChild(titleWrapper)
 
@@ -62,7 +64,7 @@ export const createPreFooter = ({ newsletter, linkGroups, copyright, dark }) => 
   if (copyright) {
     const copyrightElement = document.createElement('p')
     copyrightElement.innerText = copyright
-    copyrightElement.className = ['copyright', 'span-4', 'start-1'].join(' ')
+    copyrightElement.className = addClasses(['copyright', 'span-4', 'start-1'])
     preFooterBottom.appendChild(copyrightElement)
   }
 

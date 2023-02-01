@@ -1,12 +1,14 @@
+import { addClasses } from '../utilities/classes-names'
+
 export const createVideoCard = ({ title, videoSrc, videoProgress, active, onClick }) => {
   const videoCard = document.createElement('div')
   videoCard.addEventListener('click', onClick)
-  videoCard.className = ['video-card', active ? 'video-card--active' : ''].join(' ')
+  videoCard.className = addClasses(['video-card', active ? 'video-card--active' : ''])
 
   const videoCardProgress = document.createElement('div')
-  videoCardProgress.className = ['video-card__progress'].join(' ')
+  videoCardProgress.className = addClasses(['video-card__progress'])
   const videoCardProgressBar = document.createElement('div')
-  videoCardProgressBar.className = ['video-card__progress--bar'].join(' ')
+  videoCardProgressBar.className = addClasses(['video-card__progress--bar'])
   videoCardProgress.appendChild(videoCardProgressBar)
 
   videoCardProgress.style.setProperty('--video-progress', `${videoProgress || 0}%`)
@@ -14,11 +16,11 @@ export const createVideoCard = ({ title, videoSrc, videoProgress, active, onClic
   videoCard.appendChild(videoCardProgress)
 
   const videoHeader = document.createElement('div')
-  videoHeader.className = ['video-card__header'].join(' ')
+  videoHeader.className = addClasses(['video-card__header'])
 
   if (title) {
     const videoTitle = document.createElement('p')
-    videoTitle.className = ['video-card__title'].join(' ')
+    videoTitle.className = addClasses(['video-card__title'])
     videoTitle.innerText = title
     videoHeader.appendChild(videoTitle)
   }
@@ -28,7 +30,7 @@ export const createVideoCard = ({ title, videoSrc, videoProgress, active, onClic
   if (!active) {
     videoElement.pause()
   }
-  videoElement.className = ['video-card__video'].join(' ')
+  videoElement.className = addClasses(['video-card__video'])
 
   const videoSrcElement = document.createElement('source')
   videoSrcElement.src = videoSrc

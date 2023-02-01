@@ -1,9 +1,10 @@
+import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
 export const createProfile = ({ title, subtitle, onClick, imgSrc }) => {
   const profile = document.createElement('div')
   profile.addEventListener('click', onClick)
-  profile.className = ['profile', 'span-3 sm-span-full'].join(' ')
+  profile.className = addClasses(['profile', 'span-3 sm-span-full'])
 
   const profileImage = createImage({ src: imgSrc })
   profileImage.className = 'profile__img'

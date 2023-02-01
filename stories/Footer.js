@@ -1,3 +1,4 @@
+import { addClasses } from '../utilities/classes-names'
 import { createButton } from './Button'
 
 export const createFooter = ({ tagline, paragraph, buttons }) => {
@@ -5,10 +6,10 @@ export const createFooter = ({ tagline, paragraph, buttons }) => {
   footer.className = 'footer'
 
   const wrapperTop = document.createElement('div')
-  wrapperTop.className = ['wrapper', 'wrapper--top'].join(' ')
+  wrapperTop.className = addClasses(['wrapper', 'wrapper--top'])
 
   const wrapperBottom = document.createElement('div')
-  wrapperBottom.className = ['wrapper', 'wrapper--bottom'].join(' ')
+  wrapperBottom.className = addClasses(['wrapper', 'wrapper--bottom'])
 
   const footerTagline = document.createElement('p')
   footerTagline.className = 'footer__tagline'

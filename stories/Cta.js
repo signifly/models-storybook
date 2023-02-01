@@ -1,11 +1,12 @@
 import { createImage } from './Image'
 import { createButton } from './Button'
+import { addClasses } from '../utilities/classes-names'
 
 export const createCta = ({ title, buttonLabel, onClick, imgSrc }) => {
   const cta = document.createElement('div')
   cta.className = 'cta'
   cta.addEventListener('click', onClick)
-  cta.className = ['cta'].join(' ')
+  cta.className = addClasses(['cta'])
 
   const ctaText = document.createElement('div')
   ctaText.className = 'cta__text'

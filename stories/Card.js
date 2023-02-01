@@ -1,3 +1,4 @@
+import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
 export const createCard = ({
@@ -13,12 +14,12 @@ export const createCard = ({
   const card = document.createElement('div')
   card.className = 'card'
   card.addEventListener('click', onClick)
-  card.className = [
+  card.className = addClasses([
     'card',
     `card--${size}`,
     borderRadius ? 'card--border-radius' : '',
     titleMargin ? 'card--title-margin' : ''
-  ].join(' ')
+  ])
 
   const cardText = document.createElement('div')
   cardText.className = 'card__text'

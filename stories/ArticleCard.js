@@ -1,3 +1,4 @@
+import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
 export const createArticleCard = ({ size = 'large', title, subtitle, onClick, imgSrc }) => {
@@ -7,19 +8,15 @@ export const createArticleCard = ({ size = 'large', title, subtitle, onClick, im
   const articleCard = document.createElement('div')
 
   articleCard.addEventListener('click', onClick)
-  articleCard.className = [
+  articleCard.className = addClasses([
     'article-card',
     `article-card--${size}`,
     size === 'large' ? 'span-6' : 'span-3',
     'sm-span-full'
-  ].join(' ')
+  ])
 
   const articleCardText = document.createElement('div')
-  articleCardText.className = [
-    'article-card__text'
-    // size === 'large' ? 'span-2' : 'span-3',
-    // 'sm-span-full'
-  ].join(' ')
+  articleCardText.className = addClasses(['article-card__text'])
 
   const titleElement = document.createElement('h6')
   titleElement.className = 'title'
@@ -35,17 +32,9 @@ export const createArticleCard = ({ size = 'large', title, subtitle, onClick, im
 
   const articleCardImage = createImage({ src: imgSrc })
 
-  articleCardImage.className = [
-    'article-card__img'
-    // size === 'large' ? 'span-4' : 'span-3',
-    // 'sm-span-full'
-  ].join(' ')
+  articleCardImage.className = addClasses(['article-card__img'])
 
   articleCard.appendChild(articleCardImage)
 
   return articleCard
-
-  // grid.appendChild(articleCard)
-
-  // return grid
 }
