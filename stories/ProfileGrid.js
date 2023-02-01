@@ -23,7 +23,7 @@ export const createProfileGrid = ({ title, profiles, buttonLabel }) => {
 
   grid.appendChild(profileGrid)
 
-  const buttonLabelElement = createButton({ size: 'small', label: buttonLabel, onClick: () => {} })
+  const buttonLabelElement = createButton({ label: buttonLabel, onClick: () => {} })
   buttonLabelElement.className = addClasses([
     ...buttonLabelElement.className.split(' '),
     'start-1',

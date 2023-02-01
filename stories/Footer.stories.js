@@ -18,14 +18,13 @@ Footer.args = {
     'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident in culpa qui officia deserunt.',
   buttons: [
     {
-      size: 'large',
       label: 'Join',
-      dark: true
+      primary: true
     },
     {
       size: 'large',
       label: 'Login',
-      dark: true
+      primary: true
     }
   ]
 }
