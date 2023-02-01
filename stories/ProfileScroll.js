@@ -1,12 +1,25 @@
 import { addClasses } from '../utilities/classes-names'
+import { createProfile } from './Profile'
 
-export const createSection = ({ title }) => {
-  const section = document.createElement('section')
-  section.className = addClasses(['section'])
-  const sectionTitle = document.createElement('h2')
-  sectionTitle.className = addClasses(['section__title'])
-  sectionTitle.innerText = title
-  section.appendChild(sectionTitle)
+export const createProfileScroll = ({ title, profiles }) => {
+  const profileScroll = document.createElement('div')
+  profileScroll.className = addClasses(['profile-scroll'])
 
-  return section
+  if (title) {
+    const profileScrollTitle = document.createElement('h2')
+    profileScrollTitle.innerText = title
+    profileScroll.appendChild(profileScrollTitle)
+  }
+
+  const profilesWrapper = document.createElement('div')
+  profilesWrapper.className = addClasses(['profile-scroll__wrapper'])
+
+  profileScroll.appendChild(profilesWrapper)
+
+  profiles.forEach((profile) => {
+    let profileElement = createProfile(profile)
+    profilesWrapper.appendChild(profileElement)
+  })
+
+  return profileScroll
 }

@@ -12,4 +12,19 @@
   &--fixed {
     position: fixed;
   }
+
+  &__wrapper {
+    --set-width: 100%;
+    --set-height: 100%;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 8px;
+    // min-width: 364px;
+    // min-height: 349px;
+    width: var(--set-width);
+    height: var(--set-height);
+    // max-width: var(--max-width);
+    // max-height: var(--max-height);
+    overflow: scroll;
+  }
 }

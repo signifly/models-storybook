@@ -4,6 +4,8 @@ export default {
   title: 'Components/PopUp',
   argTypes: {
     fixed: { control: 'boolean' },
+    height: { control: 'number' },
+    width: { control: 'number' },
     content: { control: 'object' }
   }
 }
@@ -15,5 +17,6 @@ const Template = ({ label, ...args }) => {
 export const PopUp = Template.bind({})
 PopUp.args = {
   fixed: true,
-  content: {}
+  height: 500,
+  width: 500,
 }
