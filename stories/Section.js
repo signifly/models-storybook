@@ -5,7 +5,7 @@ export const createSection = ({ title }) => {
   section.className = addClasses(['section'])
   const sectionTitle = document.createElement('h2')
   sectionTitle.className = addClasses(['section__title'])
-  sectionTitle.innerText = title
+  sectionTitle.innerHTML = title
   section.appendChild(sectionTitle)
 
   return section

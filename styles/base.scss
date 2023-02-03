@@ -1,7 +1,13 @@
 .container,
+.section,
 .grid {
   padding-left: $site-gutter;
   padding-right: $site-gutter;
+}
+
+.section .grid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 button {

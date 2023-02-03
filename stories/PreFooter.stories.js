@@ -6,7 +6,8 @@ export default {
     layout: 'fullscreen',
     newsletter: { control: 'object' },
     linkGroups: { control: 'object' },
-    dark: { control: 'boolean' }
+    dark: { control: 'boolean' },
+    onClick: { action: 'onClick' },
   }
 }
 

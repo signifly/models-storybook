@@ -1,23 +1,23 @@
 .card {
   display: flex;
-  width: 50%;
-  min-height: 453px;
+  // width: 50%;
+  // min-height: 453px;
 
   &--small {
     font-size: 12px;
-    padding: 10px 16px;
+    // padding: 10px 16px;
     flex-flow: column-reverse;
   }
 
   &--medium {
     font-size: 14px;
-    padding: 11px 20px;
+    // padding: 11px 20px;
     flex-flow: column-reverse;
   }
 
   &--large {
     font-size: 16px;
-    padding: 12px 24px;
+    // padding: 12px 24px;
     flex-flow: column-reverse;
   }
 
@@ -102,5 +102,17 @@
 
   &--title-margin &__text .title {
     margin-bottom: 24px;
+  }
+
+  &--small {
+    .title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .subtitle,
+    .subtext {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }

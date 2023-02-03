@@ -15,7 +15,7 @@ export const createCta = ({ title, buttonLabel, onClick, imgSrc }) => {
   titleElement.className = 'title'
   titleElement.innerText = title
 
-  const buttonLabelElement = createButton({ label: buttonLabel, onClick: () => {} })
+  const buttonLabelElement = createButton({ label: buttonLabel, onClick: onClick })
 
   ctaText.appendChild(titleElement)
   ctaText.appendChild(buttonLabelElement)

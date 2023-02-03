@@ -1,6 +1,6 @@
 import { addClasses } from '../utilities/classes-names'
 
-export const createPreFooter = ({ newsletter, linkGroups, copyright, dark }) => {
+export const createPreFooter = ({ newsletter, linkGroups, copyright, dark, onClick }) => {
   const preFooter = document.createElement('div')
   preFooter.className = addClasses(['pre-footer', dark ? 'pre-footer--dark' : 'pre-footer--light'])
 
@@ -27,6 +27,7 @@ export const createPreFooter = ({ newsletter, linkGroups, copyright, dark }) => 
     const newsletterSubmit = document.createElement('button')
     newsletterSubmit.className = addClasses(['newsletter__submit'])
     newsletterSubmit.innerText = newsletter.submitButton
+    newsletterSubmit.addEventListener('click', onClick)
     newsletterEmail.appendChild(newsletterInput)
     newsletterEmail.appendChild(newsletterSubmit)
 
