@@ -33,6 +33,14 @@
   }
 }
 
+.flex {
+  display: flex;
+  &.center {
+    justify-content: center;
+    align-content: center;
+  }
+}
+
 @include gridUtilities('');
 
 @media screen and (max-width: $lg) {

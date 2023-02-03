@@ -3,7 +3,10 @@ import { createLatestWork } from './LatestWork'
 export default {
   title: 'Examples/Latest Work',
   argTypes: {
-    title: { control: 'text' }
+    title: { control: 'text' },
+    buttons: { control: 'object' },
+    cards: { control: 'object' },
+    mainButton: { control: 'object' }
   }
 }
 
@@ -13,17 +16,20 @@ const Template = ({ label, ...args }) => {
 
 export const LatestWork = Template.bind({})
 LatestWork.args = {
-  title: 'Discover<br>Agencies. People.',
+  title: 'Discover<br>Latest Work.',
   buttons: [
     {
-      label: 'Button'
+      label: 'Button',
+      onClick: () => {}
     },
     {
       primary: true,
-      label: 'Button'
+      label: 'Button',
+      onClick: () => {}
     },
     {
-      label: 'Button'
+      label: 'Button',
+      onClick: () => {}
     }
   ],
   cards: [
@@ -117,5 +123,9 @@ LatestWork.args = {
       subtext: 'Work',
       borderRadius: true
     }
-  ]
+  ],
+  mainButton: {
+    label: 'Button',
+    onClick: () => {}
+  }
 }
