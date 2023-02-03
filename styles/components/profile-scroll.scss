@@ -5,10 +5,12 @@
     margin-bottom: 24px;
   }
 
-  .profile {
-    border-top: 1px solid $grey2;
-  }
-  .profile:last-child {
-    border-bottom: 1px solid $grey2;
+  &__wrapper {
+    .profile {
+      border-top: 1px solid $grey2;
+    }
+    .profile:last-child {
+      border-bottom: 1px solid $grey2;
+    }
   }
 }

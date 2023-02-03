@@ -1,7 +1,7 @@
 import { createPopUp } from './PopUp'
 import { createProfileScroll } from './ProfileScroll'
 
-export const createPopUpExample = ({ fixed, height, width, content }) => {
+export const createPopUpExample = ({ fixed, height, width,onClick }) => {
   const popupContent = createProfileScroll({
     title: 'Tagged People',
     profiles: [
@@ -38,7 +38,7 @@ export const createPopUpExample = ({ fixed, height, width, content }) => {
     ]
   })
 
-  const popup = createPopUp({ fixed, height, width, content: popupContent })
+  const popup = createPopUp({ fixed, height, width, content: popupContent, onClick })
 
   return popup
 }

@@ -5,8 +5,9 @@ export default {
   argTypes: {
     fixed: { control: 'boolean' },
     height: { control: 'number' },
-    width: { control: 'number' }
-    // content: { control: 'object' },
+    width: { control: 'number' },
+    closeLabel: { control: 'text' },
+    onClick: { action: 'clicked' },
   }
 }
 

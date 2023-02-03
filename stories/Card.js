@@ -2,12 +2,12 @@ import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
 export const createCard = ({
-  size = 'medium',
   title,
   subtitle,
   subtext,
   onClick,
   imgSrc,
+  borders,
   borderRadius,
   titleMargin
 }) => {
@@ -16,7 +16,7 @@ export const createCard = ({
   card.addEventListener('click', onClick)
   card.className = addClasses([
     'card',
-    `card--${size}`,
+    borders ? 'card--borders' : '',
     borderRadius ? 'card--border-radius' : '',
     titleMargin ? 'card--title-margin' : ''
   ])

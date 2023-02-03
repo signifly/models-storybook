@@ -1,25 +1,6 @@
 .card {
   display: flex;
-  // width: 50%;
-  // min-height: 453px;
-
-  &--small {
-    font-size: 12px;
-    // padding: 10px 16px;
-    flex-flow: column-reverse;
-  }
-
-  &--medium {
-    font-size: 14px;
-    // padding: 11px 20px;
-    flex-flow: column-reverse;
-  }
-
-  &--large {
-    font-size: 16px;
-    // padding: 12px 24px;
-    flex-flow: column-reverse;
-  }
+  flex-flow: column-reverse;
 
   &__text,
   &__img {
@@ -33,26 +14,34 @@
   }
 
   &__text .title {
-    font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 125%;
     letter-spacing: -0.01em;
     color: $black;
     margin-bottom: 4px;
+
+    font-size: 16px;
+    line-height: 20px;
   }
 
   &__text .subtitle,
   &__text .subtext {
     color: $grey4;
-    font-weight: 450;
-    font-size: 14px;
-    line-height: 125%;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   &__img {
     object-fit: cover;
     object-position: center;
+    margin-bottom: 12px;
+    aspect-ratio: 1;
+  }
+
+  &--borders {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid $grey2;
+    border-bottom: 1px solid $grey2;
   }
 
   &--border-radius &__img {
@@ -60,59 +49,7 @@
     overflow: hidden;
   }
 
-  &--medium &__img {
-    max-width: 300px;
-    max-height: 500px;
-    object-fit: cover;
-    margin-bottom: 12px;
-  }
-
-  &--small &__img {
-    max-width: 211px;
-    max-height: 211px;
-    object-fit: cover;
-    margin-bottom: 12px;
-  }
-
-  &--large &__text {
-    padding-right: 32px;
-    // width: 33%;
-
-    .title {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 30px;
-      letter-spacing: -0.01em;
-      text-align: left;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      font-weight: 450;
-      line-height: 18px;
-      letter-spacing: 0em;
-      text-align: left;
-    }
-  }
-
-  &--large &__img {
-    // width: 66%;
-    margin-bottom: 12px;
-  }
-
   &--title-margin &__text .title {
     margin-bottom: 24px;
-  }
-
-  &--small {
-    .title {
-      font-size: 16px;
-      line-height: 20px;
-    }
-    .subtitle,
-    .subtext {
-      font-size: 12px;
-      line-height: 15px;
-    }
   }
 }

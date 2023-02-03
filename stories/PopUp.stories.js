@@ -6,7 +6,8 @@ export default {
     fixed: { control: 'boolean' },
     height: { control: 'number' },
     width: { control: 'number' },
-    content: { control: 'object' }
+    content: { control: 'object' },
+    onClick: { action: 'clicked' },
   }
 }
 

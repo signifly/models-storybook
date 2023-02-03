@@ -14,17 +14,35 @@
   }
 
   &__wrapper {
+    position: relative;
     --set-width: 100%;
     --set-height: 100%;
     background-color: $white;
     padding: 30px;
     border-radius: 8px;
-    // min-width: 364px;
-    // min-height: 349px;
     width: var(--set-width);
     height: var(--set-height);
-    // max-width: var(--max-width);
-    // max-height: var(--max-height);
+    overflow: hidden;
+  }
+
+  &__content {
     overflow: scroll;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 11px;
+    font-weight: 450;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+    text-align: right;
+    text-decoration: underline;
+    color: $grey4;
+    background-color: transparent;
+    border: none;
   }
 }

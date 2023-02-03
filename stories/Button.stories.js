@@ -6,7 +6,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
     label: { control: 'text' },
-    onClick: { action: 'onClick' },
+    onClick: { action: 'clicked' },
     primary: { control: 'boolean' },
     dark: { control: 'boolean' },
   }
