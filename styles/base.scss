@@ -1,10 +1,11 @@
-.container,
 .section,
+.container,
 .grid {
   padding-left: $site-gutter;
   padding-right: $site-gutter;
 }
 
+.section .container,
 .section .grid {
   padding-left: 0;
   padding-right: 0;
@@ -27,6 +28,26 @@ button {
   }
 }
 
+.title {
+  color: $color-text;
+}
 .subtitle {
   color: $color-subtext;
+}
+
+.logged-off {
+  position: relative;
+  overflow: hidden;
+  height: 175px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, $white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 }

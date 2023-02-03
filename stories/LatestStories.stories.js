@@ -46,7 +46,9 @@ LatestStories.args = {
     {
       videoSrc:
         'https://wedistill.io/uploads/videos/processed/33/Cold2520Winter2520Dream-HD3_1.mp4.mp4',
-      title: 'Work Title'
+      title: 'Work Title',
+      active: true,
+      videoProgress: 50,
     },
     {
       videoSrc:
@@ -57,7 +59,7 @@ LatestStories.args = {
       videoSrc:
         'https://wedistill.io/uploads/videos/processed/33/Cold2520Winter2520Dream-HD3_1.mp4.mp4',
       title: 'Work Title'
-    },
+    }
   ],
   mainLink: {
     label: 'WATCH IT ON INSTAGRAM',

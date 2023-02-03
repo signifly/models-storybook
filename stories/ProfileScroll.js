@@ -7,6 +7,7 @@ export const createProfileScroll = ({ title, profiles }) => {
 
   if (title) {
     const profileScrollTitle = document.createElement('h2')
+    profileScrollTitle.className = addClasses(['profile-scroll__title'])
     profileScrollTitle.innerText = title
     profileScroll.appendChild(profileScrollTitle)
   }
