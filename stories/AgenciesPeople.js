@@ -5,7 +5,14 @@ import { createCard } from './Card'
 import { createButton } from './Button'
 import { createProfileGrid } from './ProfileGrid'
 
-export const createAgenciesPeople = ({ title, ctaSections, simpleCtaSections, profileGrids, cards, mainButton }) => {
+export const createAgenciesPeople = ({
+  title,
+  ctaSections,
+  simpleCtaSections,
+  profileGrids,
+  cards,
+  mainButton
+}) => {
   const section = createSection({ title })
 
   if (ctaSections && ctaSections.length) {
@@ -20,9 +27,13 @@ export const createAgenciesPeople = ({ title, ctaSections, simpleCtaSections, pr
   }
 
   if (profileGrids && profileGrids.length) {
+    const profileGridsGrid = document.createElement('div')
+    profileGridsGrid.className = addClasses(['sb-grid'])
     profileGrids.forEach((profileGrid) => {
       let profileGridElement = createProfileGrid(profileGrid)
-      section.appendChild(profileGridElement)
+      profileGridElement.className = addClasses([profileGridElement.className, 'span-6'])
+      profileGridsGrid.appendChild(profileGridElement)
+      section.appendChild(profileGridsGrid)
     })
   }
 
@@ -36,7 +47,6 @@ export const createAgenciesPeople = ({ title, ctaSections, simpleCtaSections, pr
     })
     section.appendChild(ctaGrid)
   }
-
 
   return section
 }

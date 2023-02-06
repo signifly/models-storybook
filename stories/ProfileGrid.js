@@ -11,26 +11,30 @@ export const createProfileGrid = ({
   onLinkClick
 }) => {
   const grid = document.createElement('div')
-  grid.className = addClasses(['sb-grid', 'sb-profile-grid--container'])
+  grid.className = addClasses(['sb-profile-grid'])
+
+  const gridHeader = document.createElement('div')
+  gridHeader.className = addClasses(['sb-profile-grid__header'])
+  grid.appendChild(gridHeader)
 
   if (title) {
     const titleElement = document.createElement('h6')
-    titleElement.className = addClasses(['sb-title', 'span-3'])
+    titleElement.className = addClasses(['sb-title'])
     titleElement.innerText = title
-    grid.appendChild(titleElement)
+    gridHeader.appendChild(titleElement)
   }
 
   if (linkLabel) {
     const linkElement = document.createElement('a')
-    linkElement.className = addClasses(['sb-link', 'span-3'])
+    linkElement.className = addClasses(['sb-link'])
     linkElement.innerText = linkLabel
     linkElement.addEventListener('click', onLinkClick)
-    grid.appendChild(linkElement)
+    gridHeader.appendChild(linkElement)
   }
 
   if (profiles && profiles.length) {
     const profileGrid = document.createElement('div')
-    profileGrid.className = addClasses(['sb-profile-grid', 'span-6', 'start-1'])
+    profileGrid.className = addClasses(['sb-profile-grid__profiles'])
 
     profiles.forEach((profile) => {
       let profileElement = createProfile(profile)
@@ -41,14 +45,11 @@ export const createProfileGrid = ({
   }
 
   if (buttonLabel) {
+    const buttonWrapper = document.createElement('div')
+    buttonWrapper.className = addClasses(['sb-flex'])
     const buttonLabelElement = createButton({ label: buttonLabel, onClick: onButtonClick })
-    buttonLabelElement.className = addClasses([
-      ...buttonLabelElement.className.split(' '),
-      'start-1',
-      'span-2'
-    ])
-
-    grid.appendChild(buttonLabelElement)
+    buttonWrapper.appendChild(buttonLabelElement)
+    grid.appendChild(buttonWrapper)
   }
 
   return grid

@@ -1,15 +1,10 @@
 .sb-section {
   width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: center;
-
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: $column-gap;
-  grid-row-gap: $row-gap;
+  grid-row-gap: calc($row-gap * 2);
 
   &__title {
     font-family: $font-accent-italic;

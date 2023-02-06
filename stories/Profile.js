@@ -4,7 +4,7 @@ import { createImage } from './Image'
 export const createProfile = ({ title, subtitle, onClick, imgSrc }) => {
   const profile = document.createElement('div')
   profile.addEventListener('click', onClick)
-  profile.className = addClasses(['sb-profile', 'span-3 sm-span-full'])
+  profile.className = addClasses(['sb-profile'])
 
   const profileImage = createImage({ src: imgSrc })
   profileImage.className = 'sb-profile__img'
