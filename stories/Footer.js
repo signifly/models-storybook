@@ -3,24 +3,24 @@ import { createButton } from './Button'
 
 export const createFooter = ({ tagline, paragraph, buttons }) => {
   const footer = document.createElement('footer')
-  footer.className = 'footer'
+  footer.className = 'sb-footer'
 
   const wrapperTop = document.createElement('div')
-  wrapperTop.className = addClasses(['wrapper', 'wrapper--top'])
+  wrapperTop.className = addClasses(['sb-footer__wrapper', 'sb-footer__wrapper--top'])
 
   const wrapperBottom = document.createElement('div')
-  wrapperBottom.className = addClasses(['wrapper', 'wrapper--bottom'])
+  wrapperBottom.className = addClasses(['sb-footer__wrapper', 'sb-footer__wrapper--bottom'])
 
   const footerTagline = document.createElement('p')
-  footerTagline.className = 'footer__tagline'
+  footerTagline.className = 'sb-footer__tagline'
   footerTagline.innerText = tagline
 
   const footerParagraph = document.createElement('div')
-  footerParagraph.className = 'footer__paragraph'
+  footerParagraph.className = 'sb-footer__paragraph'
   footerParagraph.innerText = paragraph
 
   const footerButtons = document.createElement('div')
-  footerButtons.className = 'footer__buttons'
+  footerButtons.className = 'sb-footer__buttons'
 
   buttons.forEach((button) => {
     let buttonElement = createButton(button)

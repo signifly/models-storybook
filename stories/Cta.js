@@ -4,15 +4,14 @@ import { addClasses } from '../utilities/classes-names'
 
 export const createCta = ({ title, buttonLabel, onClick, imgSrc }) => {
   const cta = document.createElement('div')
-  cta.className = 'cta'
   cta.addEventListener('click', onClick)
-  cta.className = addClasses(['cta'])
+  cta.className = addClasses(['sb-cta'])
 
   const ctaText = document.createElement('div')
-  ctaText.className = 'cta__text'
+  ctaText.className = 'sb-cta__text'
 
   const titleElement = document.createElement('h6')
-  titleElement.className = 'title'
+  titleElement.className = 'sb-title'
   titleElement.innerText = title
 
   const buttonLabelElement = createButton({ label: buttonLabel, onClick: onClick })
@@ -22,7 +21,7 @@ export const createCta = ({ title, buttonLabel, onClick, imgSrc }) => {
   cta.appendChild(ctaText)
 
   const ctaImage = createImage({ src: imgSrc })
-  ctaImage.className = 'cta__img'
+  ctaImage.className = 'sb-cta__img'
   cta.appendChild(ctaImage)
 
   return cta

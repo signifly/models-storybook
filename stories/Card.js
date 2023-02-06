@@ -12,35 +12,35 @@ export const createCard = ({
   titleMargin
 }) => {
   const card = document.createElement('div')
-  card.className = 'card'
+  card.className = 'sb-card'
   card.addEventListener('click', onClick)
   card.className = addClasses([
-    'card',
-    borders ? 'card--borders' : '',
-    borderRadius ? 'card--border-radius' : '',
-    titleMargin ? 'card--title-margin' : ''
+    'sb-card',
+    borders ? 'sb-card--borders' : '',
+    borderRadius ? 'sb-card--border-radius' : '',
+    titleMargin ? 'sb-card--title-margin' : ''
   ])
 
   const cardText = document.createElement('div')
-  cardText.className = 'card__text'
+  cardText.className = 'sb-card__text'
 
   if (title) {
     const titleElement = document.createElement('h6')
-    titleElement.className = 'title'
+    titleElement.className = 'sb-title'
     titleElement.innerText = title
     cardText.appendChild(titleElement)
   }
 
   if (subtitle) {
     const subtitleElement = document.createElement('p')
-    subtitleElement.className = 'subtitle'
+    subtitleElement.className = 'sb-subtitle'
     subtitleElement.innerText = subtitle
     cardText.appendChild(subtitleElement)
   }
 
   if (subtext) {
     const subtextElement = document.createElement('p')
-    subtextElement.className = 'subtext'
+    subtextElement.className = 'sb-subtext'
     subtextElement.innerText = subtext
     cardText.appendChild(subtextElement)
   }
@@ -49,7 +49,7 @@ export const createCard = ({
 
   const cardImage = createImage({ src: imgSrc })
 
-  cardImage.className = 'card__img'
+  cardImage.className = 'sb-card__img'
 
   card.appendChild(cardImage)
 

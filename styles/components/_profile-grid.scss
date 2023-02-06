@@ -1,14 +1,14 @@
-.profile-grid {
+.sb-profile-grid {
   display: flex;
   flex-wrap: wrap;
 
-  &--container .title {
+  &--container .sb-title {
     font-size: 20px;
     line-height: 25px;
     text-align: left;
   }
 
-  .profile {
+  .sb-profile {
     width: 50%;
   }
 }

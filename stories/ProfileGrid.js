@@ -4,17 +4,17 @@ import { createButton } from './Button'
 
 export const createProfileGrid = ({ title, profiles, buttonLabel }) => {
   const grid = document.createElement('div')
-  grid.className = addClasses(['grid', 'profile-grid--container'])
+  grid.className = addClasses(['grid', 'sb-profile-grid--container'])
 
   if (title) {
     const titleElement = document.createElement('h6')
-    titleElement.className = addClasses(['title', 'span-6'])
+    titleElement.className = addClasses(['sb-title', 'span-6'])
     titleElement.innerText = title
     grid.appendChild(titleElement)
   }
 
   const profileGrid = document.createElement('div')
-  profileGrid.className = addClasses(['profile-grid', 'span-6', 'start-1'])
+  profileGrid.className = addClasses(['sb-profile-grid', 'span-6', 'start-1'])
 
   profiles.forEach((profile) => {
     let profileElement = createProfile(profile)

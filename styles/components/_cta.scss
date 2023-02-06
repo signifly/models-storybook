@@ -1,5 +1,5 @@
-.cta {
-  background-color: #f7f7f7;
+.sb-cta {
+  background-color: $grey1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -13,7 +13,7 @@
     align-items: flex-start;
   }
 
-  &__text .title {
+  &__text .sb-title {
     font-size: 20px;
     font-weight: 600;
     line-height: 25px;

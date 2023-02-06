@@ -2,7 +2,7 @@ import { createArticleCard } from './ArticleCard'
 
 export const createArticleGrid = ({ cards = [] }) => {
   const grid = document.createElement('div')
-  grid.className = 'grid'
+  grid.className = 'sb-grid'
 
   cards.forEach((card) => {
     let cardElement = createArticleCard(card)

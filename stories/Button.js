@@ -6,7 +6,7 @@ export const createButton = ({ primary = false, label, onClick }) => {
   btn.innerText = label
   btn.addEventListener('click', onClick)
 
-  btn.className = addClasses(['button', primary ? 'button--primary' : 'button--secondary'])
+  btn.className = addClasses(['sb-button', primary ? 'sb-button--primary' : 'sb-button--secondary'])
 
   return btn
 }

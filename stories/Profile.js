@@ -4,21 +4,21 @@ import { createImage } from './Image'
 export const createProfile = ({ title, subtitle, onClick, imgSrc }) => {
   const profile = document.createElement('div')
   profile.addEventListener('click', onClick)
-  profile.className = addClasses(['profile', 'span-3 sm-span-full'])
+  profile.className = addClasses(['sb-profile', 'span-3 sm-span-full'])
 
   const profileImage = createImage({ src: imgSrc })
-  profileImage.className = 'profile__img'
+  profileImage.className = 'sb-profile__img'
   profile.appendChild(profileImage)
 
   const profileText = document.createElement('div')
-  profileText.className = 'profile__text'
+  profileText.className = 'sb-profile__text'
 
   const titleElement = document.createElement('h6')
-  titleElement.className = 'title'
+  titleElement.className = 'sb-title'
   titleElement.innerText = title
 
   const subtitleElement = document.createElement('p')
-  subtitleElement.className = 'subtitle'
+  subtitleElement.className = 'sb-subtitle'
   subtitleElement.innerText = subtitle
 
   profileText.appendChild(titleElement)

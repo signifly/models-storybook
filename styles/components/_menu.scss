@@ -1,15 +1,15 @@
-.menu {
+.sb-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   width: 100%;
 
-  .link {
+  .sb-link {
     padding: 12px;
   }
 
-  .link a {
+  .sb-link a {
     font-family: $font-accent;
     font-size: 40px;
     font-weight: 400;
@@ -21,7 +21,7 @@
 
   &--header {
     justify-content: center;
-    .link a {
+    .sb-link a {
       font-family: $font-accent;
       font-size: 15px;
       font-weight: 400;
@@ -30,11 +30,11 @@
       text-align: center;
     }
 
-    .link--selected {
+    .sb-link--selected {
       border-bottom: 2px solid $black;
     }
 
-    .link--selected a {
+    .sb-link--selected a {
       font-family: $font-accent-italic;
     }
   }

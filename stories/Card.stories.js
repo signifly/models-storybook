@@ -38,7 +38,7 @@ Borders.args = {
   subtitle: 'Subtitle',
   subtext: 'Subtext',
   borders: true,
-  borderRadius: true,
+  borderRadius: false,
   titleMargin: false
 }
 

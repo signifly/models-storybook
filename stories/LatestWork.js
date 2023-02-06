@@ -14,7 +14,7 @@ export const createLatestWork = ({ title, buttons, cards, mainButton }) => {
 
   if (cards && cards.length) {
     const grid5 = document.createElement('div')
-    grid5.className = addClasses(['grid', 'grid--5'])
+    grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
     cards.forEach((card) => {
       let cardElement = createCard(card)
       grid5.appendChild(cardElement)
@@ -24,7 +24,7 @@ export const createLatestWork = ({ title, buttons, cards, mainButton }) => {
 
   if (mainButton) {
     const buttonContainer = document.createElement('div')
-    buttonContainer.className = addClasses(['flex', 'center'])
+    buttonContainer.className = addClasses(['sb-flex', 'sb-center'])
     section.appendChild(buttonContainer)
     const buttonElement = createButton(mainButton)
     buttonContainer.appendChild(buttonElement)

@@ -7,7 +7,7 @@ export const createYourModels = ({ loggedIn = false, title, cards = [], mainButt
   const section = createSection({ title })
 
   const grid5 = document.createElement('div')
-  grid5.className = addClasses(['grid', 'grid--5'])
+  grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
 
   if (cards && cards.length) {
     cards.forEach((card) => {
@@ -19,7 +19,7 @@ export const createYourModels = ({ loggedIn = false, title, cards = [], mainButt
       section.appendChild(grid5)
     } else {
       const gridContainer = document.createElement('div')
-      gridContainer.className = addClasses(['container', 'logged-off'])
+      gridContainer.className = addClasses(['sb-container', 'sb-logged-off'])
       gridContainer.appendChild(grid5)
       section.appendChild(gridContainer)
     }
@@ -27,15 +27,15 @@ export const createYourModels = ({ loggedIn = false, title, cards = [], mainButt
 
   if (!loggedIn) {
     const btnContainer = document.createElement('div')
-    btnContainer.className = addClasses(['flex', 'center'])
+    btnContainer.className = addClasses(['sb-flex', 'sb-center'])
     const btnElement = createButton(mainButton)
     btnContainer.appendChild(btnElement)
     section.appendChild(btnContainer)
 
     const textContainer = document.createElement('div')
-    textContainer.className = addClasses(['flex', 'center'])
+    textContainer.className = addClasses(['sb-flex', 'sb-center'])
     const mainTextElement = document.createElement('p')
-    mainTextElement.className = addClasses(['subtitle'])
+    mainTextElement.className = addClasses(['sb-subtitle'])
     mainTextElement.innerText = mainText
     textContainer.appendChild(mainTextElement)
     section.appendChild(textContainer)

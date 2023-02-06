@@ -1,8 +1,6 @@
-.video-card {
+.sb-video-card {
   --video-progress: 0;
   min-width: 100px;
-  // padding: 16px;
-  // max-width: 270px;
 
   &__progress {
     width: 100%;
@@ -38,10 +36,10 @@
   }
 
   &--active {
-    .video-card__title {
+    .sb-video-card__title {
       color: $black;
     }
-    .video-card__progress--bar {
+    .sb-video-card__progress--bar {
       background-color: $black;
     }
   }

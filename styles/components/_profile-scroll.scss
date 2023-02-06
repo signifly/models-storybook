@@ -1,4 +1,4 @@
-.profile-scroll {
+.sb-profile-scroll {
   overflow-y: scroll;
 
   &__title {
@@ -6,10 +6,10 @@
   }
 
   &__wrapper {
-    .profile {
+    .sb-profile {
       border-top: 1px solid $grey2;
     }
-    .profile:last-child {
+    .sb-profile:last-child {
       border-bottom: 1px solid $grey2;
     }
   }

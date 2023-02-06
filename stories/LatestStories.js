@@ -7,7 +7,7 @@ export const createLatestStories = ({ title, cards, mainLink }) => {
 
   if (cards && cards.length) {
     const grid5 = document.createElement('div')
-    grid5.className = addClasses(['grid', 'grid--5'])
+    grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
     cards.forEach((card) => {
       let cardElement = createVideoCard(card)
       grid5.appendChild(cardElement)
@@ -17,7 +17,7 @@ export const createLatestStories = ({ title, cards, mainLink }) => {
 
   if (mainLink) {
     const linkContainer = document.createElement('div')
-    linkContainer.className = addClasses(['flex', 'center'])
+    linkContainer.className = addClasses(['sb-flex', 'sb-center'])
     section.appendChild(linkContainer)
     const linkElement = document.createElement('a')
     linkElement.innerText = mainLink.label

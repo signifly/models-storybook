@@ -1,4 +1,4 @@
-.article-card {
+.sb-article-card {
   display: flex;
   min-height: 453px;
   font-family: Arial, Helvetica, sans-serif;
@@ -27,12 +27,12 @@
     object-position: center;
   }
 
-  &__text .title,
-  &__text .subtitle {
+  &__text .sb-title,
+  &__text .sb-subtitle {
     margin: 0;
   }
 
-  &__text .title {
+  &__text .sb-title {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -41,7 +41,7 @@
     color: $black;
   }
 
-  &__text .subtitle {
+  &__text .sb-subtitle {
     color: $grey4;
     font-weight: 450;
     font-size: 14px;
@@ -60,7 +60,7 @@
     padding-right: 32px;
     width: 33%;
 
-    .title {
+    .sb-title {
       font-size: 24px;
       font-weight: 600;
       line-height: 30px;
@@ -68,7 +68,7 @@
       text-align: left;
     }
 
-    .subtitle {
+    .sb-subtitle {
       font-size: 14px;
       font-weight: 450;
       line-height: 18px;
@@ -85,17 +85,17 @@
 // MEDIA QUERIES
 
 @media screen and (max-width: $sm) {
-  .article-card--large {
+  .sb-article-card--large {
     font-size: 12px;
     flex-flow: column-reverse;
   }
 
-  .article-card--large .article-card__text,
-  .article-card--large .article-card__img {
+  .sb-article-card--large .sb-article-card__text,
+  .sb-article-card--large .sb-article-card__img {
     width: 100%;
   }
 
-  .article-card--small .article-card__img {
+  .sb-article-card--small .sb-article-card__img {
     max-width: unset;
     max-height: unset;
   }

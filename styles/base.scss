@@ -1,12 +1,12 @@
-.section,
-.container,
-.grid {
+.sb-section,
+.sb-container,
+.sb-grid {
   padding-left: $site-gutter;
   padding-right: $site-gutter;
 }
 
-.section .container,
-.section .grid {
+.sb-section .sb-container,
+.sb-section .sb-grid {
   padding-left: 0;
   padding-right: 0;
 }
@@ -20,7 +20,8 @@ a {
 }
 
 a,
-button {
+button,
+.sb-link {
   transition: all 0.3s;
 
   &:hover {
@@ -28,14 +29,14 @@ button {
   }
 }
 
-.title {
+.sb-title {
   color: $color-text;
 }
-.subtitle {
+.sb-subtitle {
   color: $color-subtext;
 }
 
-.logged-off {
+.sb-logged-off {
   position: relative;
   overflow: hidden;
   height: 175px;
