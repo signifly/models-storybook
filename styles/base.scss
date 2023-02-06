@@ -11,22 +11,19 @@
   padding-right: 0;
 }
 
-button {
-  cursor: pointer;
-}
-
-a {
-  color: $color-text;
-}
-
-a,
-button,
+.sb-button,
 .sb-link {
   transition: all 0.3s;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
   }
+}
+
+.sb-link {
+  color: $color-text;
+  text-decoration: underline;
 }
 
 .sb-title {

@@ -1,10 +1,14 @@
 import { createProfileGrid } from './ProfileGrid'
 
 export default {
-  title: 'Examples/Profile Grid',
+  title: 'Components/Profile Grid',
   argTypes: {
     title: { control: 'text' },
-    profiles: { control: 'object' }
+    linkLabel: { control: 'text' },
+    buttonLabel: { control: 'text' },
+    profiles: { control: 'object' },
+    onButtonClick: { action: 'click' },
+    onLinkClick: { action: 'click' }
   }
 }
 
@@ -15,6 +19,7 @@ const Template = ({ label, ...args }) => {
 export const ProfileGrid = Template.bind({})
 ProfileGrid.args = {
   title: 'Title',
+  linkLabel: 'SHUFFLE',
   profiles: [
     {
       imgSrc:
@@ -53,5 +58,5 @@ ProfileGrid.args = {
       subtitle: 'Subtitle'
     }
   ],
-  buttonLabel: 'SEE ALL MODELS'
+  buttonLabel: 'SEE ALL MODEL'
 }

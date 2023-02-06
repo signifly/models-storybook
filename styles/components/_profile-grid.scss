@@ -8,6 +8,13 @@
     text-align: left;
   }
 
+  &--container .sb-link {
+    text-align: right;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+  }
+
   .sb-profile {
     width: 50%;
   }

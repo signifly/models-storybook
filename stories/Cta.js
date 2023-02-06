@@ -2,27 +2,60 @@ import { createImage } from './Image'
 import { createButton } from './Button'
 import { addClasses } from '../utilities/classes-names'
 
-export const createCta = ({ title, buttonLabel, onClick, imgSrc }) => {
+export const createCta = ({
+  simple = true,
+  title,
+  subtitle,
+  buttonLabel,
+  linkLabel,
+  linkUrl,
+  onClick,
+  imgSrc
+}) => {
   const cta = document.createElement('div')
   cta.addEventListener('click', onClick)
-  cta.className = addClasses(['sb-cta'])
+  cta.className = addClasses(['sb-cta', simple ? 'sb-cta--simple' : ''])
+
+  const ctaImage = createImage({ src: imgSrc })
+  ctaImage.className = 'sb-cta__img'
 
   const ctaText = document.createElement('div')
   ctaText.className = 'sb-cta__text'
 
-  const titleElement = document.createElement('h6')
-  titleElement.className = 'sb-title'
-  titleElement.innerText = title
+  if (title) {
+    const titleElement = document.createElement('h6')
+    titleElement.className = 'sb-title'
+    titleElement.innerText = title
+    ctaText.appendChild(titleElement)
+  }
 
-  const buttonLabelElement = createButton({ label: buttonLabel, onClick: onClick })
+  if (subtitle) {
+    const subtitleElement = document.createElement('p')
+    subtitleElement.className = 'sb-subtitle'
+    subtitleElement.innerText = subtitle
+    ctaText.appendChild(subtitleElement)
+  }
 
-  ctaText.appendChild(titleElement)
-  ctaText.appendChild(buttonLabelElement)
-  cta.appendChild(ctaText)
+  if (linkLabel) {
+    const linkElement = document.createElement('a')
+    linkElement.className = 'sb-link'
+    linkElement.innerText = linkLabel
+    linkElement.href = linkUrl || '/'
+    ctaText.appendChild(linkElement)
+  }
 
-  const ctaImage = createImage({ src: imgSrc })
-  ctaImage.className = 'sb-cta__img'
-  cta.appendChild(ctaImage)
+  if (buttonLabel) {
+    const buttonLabelElement = createButton({ label: buttonLabel, onClick: onClick })
+    ctaText.appendChild(buttonLabelElement)
+  }
+
+  if (simple) {
+    cta.appendChild(ctaImage)
+    cta.appendChild(ctaText)
+  } else {
+    cta.appendChild(ctaText)
+    cta.appendChild(ctaImage)
+  }
 
   return cta
 }
