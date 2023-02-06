@@ -4,7 +4,7 @@ import { createButton } from './Button'
 
 export const createProfileGrid = ({ title, profiles, buttonLabel }) => {
   const grid = document.createElement('div')
-  grid.className = addClasses(['grid', 'sb-profile-grid--container'])
+  grid.className = addClasses(['sb-grid', 'sb-profile-grid--container'])
 
   if (title) {
     const titleElement = document.createElement('h6')
