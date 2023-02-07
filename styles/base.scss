@@ -5,16 +5,27 @@
   padding-right: $site-gutter;
 }
 
-.sb-section .sb-container,
-.sb-section .sb-grid {
-  padding-left: 0;
-  padding-right: 0;
+.sb-section,
+.sb-container,
+.sb-grid {
+  .sb-section,
+  .sb-container,
+  .sb-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+a,
+button,
+.sb-button,
+.sb-link {
+  cursor: pointer;
 }
 
 .sb-button,
 .sb-link {
   transition: all 0.3s;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.5;

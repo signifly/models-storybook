@@ -16,7 +16,7 @@ export const createCta = ({
   cta.addEventListener('click', onClick)
   cta.className = addClasses(['sb-cta', simple ? 'sb-cta--simple' : ''])
 
-  const ctaImage = createImage({ src: imgSrc })
+  const ctaImage = createImage({ imgSrc: imgSrc })
   ctaImage.className = 'sb-cta__img'
 
   const ctaText = document.createElement('div')

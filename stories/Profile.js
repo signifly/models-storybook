@@ -6,7 +6,7 @@ export const createProfile = ({ title, subtitle, onClick, imgSrc }) => {
   profile.addEventListener('click', onClick)
   profile.className = addClasses(['sb-profile'])
 
-  const profileImage = createImage({ src: imgSrc })
+  const profileImage = createImage({ imgSrc: imgSrc })
   profileImage.className = 'sb-profile__img'
   profile.appendChild(profileImage)
 

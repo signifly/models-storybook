@@ -1,9 +1,15 @@
-export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl }) => {
+import { addClasses } from '../utilities/classes-names'
+
+export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl, borders }) => {
   const grid = document.createElement('div')
   grid.className = 'sb-grid'
 
   const heroBanner = document.createElement('div')
-  heroBanner.className = 'sb-hero-banner span-full'
+  heroBanner.className = addClasses([
+    'sb-hero-banner',
+    'span-full',
+    borders ? 'sb-hero-banner--borders' : ''
+  ])
 
   const heroBannerImg = document.createElement('img')
   heroBannerImg.className = 'sb-hero-banner__img'

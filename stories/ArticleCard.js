@@ -30,7 +30,7 @@ export const createArticleCard = ({ size = 'large', title, subtitle, onClick, im
   articleCardText.appendChild(titleElement)
   articleCard.appendChild(articleCardText)
 
-  const articleCardImage = createImage({ src: imgSrc })
+  const articleCardImage = createImage({ imgSrc: imgSrc })
 
   articleCardImage.className = addClasses(['sb-article-card__img'])
 

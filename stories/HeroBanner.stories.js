@@ -10,7 +10,8 @@ export default {
     subtitle: { control: 'text' },
     imgSrc: { control: 'text' },
     linkLabel: { control: 'text' },
-    linkUrl: { control: 'text' }
+    linkUrl: { control: 'text' },
+    borders: { control: 'boolean' }
   }
 }
 
@@ -26,4 +27,15 @@ HeroBanner.args = {
   subtitle: 'Subtitle',
   linkLabel: 'See More',
   linkUrl: '/'
+}
+
+export const HeroBannerBorders = Template.bind({})
+HeroBannerBorders.args = {
+  imgSrc:
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80',
+  title: 'Title',
+  subtitle: 'Subtitle',
+  linkLabel: 'See More',
+  linkUrl: '/',
+  borders: true
 }

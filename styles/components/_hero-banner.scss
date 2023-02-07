@@ -44,4 +44,11 @@
     letter-spacing: 0.03em;
     color: $color-text;
   }
+
+  &--borders {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid $grey2;
+    border-bottom: 1px solid $grey2;
+  }
 }

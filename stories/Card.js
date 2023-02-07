@@ -47,7 +47,7 @@ export const createCard = ({
 
   card.appendChild(cardText)
 
-  const cardImage = createImage({ src: imgSrc })
+  const cardImage = createImage({ imgSrc: imgSrc })
 
   cardImage.className = 'sb-card__img'
 
