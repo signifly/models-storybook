@@ -1,5 +1,6 @@
 import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
+import { createSocialLink } from './SocialLink'
 
 export const createEditorialHeader = ({ content }) => {
   const editorialHeader = document.createElement('div')
@@ -31,7 +32,16 @@ export const createEditorialHeader = ({ content }) => {
       editorialHeaderText.appendChild(editorialHeaderSubtitle)
     }
 
-    if (content.social) {}
+    if (content.social && content.social.length) {
+      const editorialHeaderSocial = document.createElement('div')
+      editorialHeaderSocial.className = 'sb-editorial-header__social-links'
+      editorialHeaderText.appendChild(editorialHeaderSocial)
+
+      content.social.forEach((socialLink) => {
+        const socialLinkElement = createSocialLink(socialLink)
+        editorialHeaderSocial.appendChild(socialLinkElement)
+      })
+    }
 
     if (content.img) {
       const editorialImage = createImage(content.img)

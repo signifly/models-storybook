@@ -1,8 +1,9 @@
-export const createImage = ({ imgSrc, imgCaption }) => {
+export const createImage = ({ imgSrc, imgAlt, imgCaption }) => {
   const imageWrapper = document.createElement('div')
   imageWrapper.className = 'sb-image'
   const image = document.createElement('img')
   image.src = imgSrc
+  image.alt = imgAlt
   image.className = 'sb-image__img'
   imageWrapper.appendChild(image)
   if (imgCaption) {

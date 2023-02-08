@@ -3,25 +3,6 @@
     grid-row-gap: 96px;
   }
 
-  &__header {
-    .sb-title {
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 48px;
-      letter-spacing: -0.01em;
-      text-align: left;
-    }
-
-    .sb-subtitle {
-      margin-top: 16px;
-      font-size: 14px;
-      font-weight: 450;
-      line-height: 18px;
-      letter-spacing: 0em;
-      text-align: left;
-    }
-  }
-
   &__segment--text {
     font-size: 16px;
     line-height: 26px;
@@ -49,24 +30,38 @@
       text-align: center;
     }
   }
+}
 
-  &__tagged {
+.sb-editorial-header {
+  .sb-title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    text-align: left;
   }
-  &__footer {
-    .sb-editorial-footer__articles {
-      margin-top: 24px;
+
+  .sb-subtitle {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px 0;
+    .sb-social-link:not(:last-child) {
+      margin-right: 16px;
     }
   }
 }
 
-.sb-editorial-header {
-  @extend .sb-editorial__header;
-}
-
-.sb-editorial-tagged {
-  @extend .sb-editorial__tagged;
-}
-
 .sb-editorial-footer {
-  @extend .sb-editorial__footer;
+  .sb-editorial-footer__articles {
+    margin-top: 24px;
+  }
 }

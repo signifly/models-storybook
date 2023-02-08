@@ -1,7 +1,15 @@
 import { addClasses } from '../utilities/classes-names'
 import { createLink } from './Link'
+import { createSocialLink } from './SocialLink'
 
-export const createPreFooter = ({ newsletter, linkGroups, copyright, dark, onClick }) => {
+export const createPreFooter = ({
+  newsletter,
+  socialLinks,
+  linkGroups,
+  copyright,
+  dark,
+  onClick
+}) => {
   const preFooter = document.createElement('div')
   preFooter.className = addClasses([
     'sb-pre-footer',
@@ -37,16 +45,23 @@ export const createPreFooter = ({ newsletter, linkGroups, copyright, dark, onCli
 
     newsletterElement.appendChild(newsletterEmail)
 
-    const newsletterSocial = document.createElement('div')
-    newsletterSocial.className = 'sb-newsletter__social-links'
-    newsletterElement.appendChild(newsletterSocial)
+    if (socialLinks && socialLinks.length) {
+      const newsletterSocial = document.createElement('div')
+      newsletterSocial.className = 'sb-newsletter__social-links'
+      newsletterElement.appendChild(newsletterSocial)
+
+      socialLinks.forEach(socialLink => {
+        const socialLinkElement = createSocialLink(socialLink)
+        newsletterSocial.appendChild(socialLinkElement)
+      })
+    }
 
     preFooterTop.appendChild(newsletterElement)
   }
 
   linkGroups.forEach((linkGroup) => {
     const linkGroupElement = document.createElement('ul')
-    linkGroupElement.className = 'sb-link-group', 'span-2'
+    linkGroupElement.className = addClasses(['sb-link-group', 'span-2'])
 
     const titleWrapper = document.createElement('li')
     titleWrapper.innerText = linkGroup.title
