@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 24px;
+  grid-gap: $row-gap;
   padding: 24px;
 
   &__text {
@@ -50,5 +50,28 @@
       letter-spacing: 0.03em;
       text-align: left;
     }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-cta {
+    grid-gap: 12px;
+    padding: 12px;
+  }
+
+  .sb-cta__text .sb-title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .sb-cta__text .sb-subtitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .sb-cta__text .sb-link,
+  .sb-cta--simple .sb-cta__text .sb-link {
+    font-size: 9px;
+    line-height: 11px;
   }
 }

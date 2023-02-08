@@ -33,17 +33,14 @@ button,
 }
 
 .sb-link {
-  color: $color-text;
-  text-decoration: underline;
-  background-color: transparent;
-  border: none;
+  @include link;
 }
 
 .sb-title {
-  color: $color-text;
+  @include title
 }
 .sb-subtitle {
-  color: $color-subtext;
+  @include subtitle
 }
 
 .sb-logged-off {

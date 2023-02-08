@@ -5,7 +5,13 @@
   justify-content: center;
   width: 100%;
 
-  button:not(:last-child) {
-    margin-right: 8px;
+  button {
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-button-group button {
+    margin: 4px;
   }
 }

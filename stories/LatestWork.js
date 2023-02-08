@@ -17,6 +17,7 @@ export const createLatestWork = ({ title, buttons, cards, mainButton }) => {
     grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
     cards.forEach((card) => {
       let cardElement = createCard(card)
+      cardElement.className = addClasses([cardElement.className, 'sm-span-2'])
       grid5.appendChild(cardElement)
     })
     section.appendChild(grid5)

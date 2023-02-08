@@ -20,7 +20,7 @@ export const createAgenciesPeople = ({
     ctaGrid.className = 'sb-grid'
     ctaSections.forEach((cta) => {
       let ctaElement = createCta(cta)
-      ctaElement.className = addClasses([ctaElement.className, 'span-6'])
+      ctaElement.className = addClasses([ctaElement.className, 'span-6', 'sm-span-full'])
       ctaGrid.appendChild(ctaElement)
     })
     section.appendChild(ctaGrid)
@@ -31,7 +31,11 @@ export const createAgenciesPeople = ({
     profileGridsGrid.className = 'sb-grid'
     profileGrids.forEach((profileGrid) => {
       let profileGridElement = createProfileGrid(profileGrid)
-      profileGridElement.className = addClasses([profileGridElement.className, 'span-6'])
+      profileGridElement.className = addClasses([
+        profileGridElement.className,
+        'span-6',
+        'sm-span-full'
+      ])
       profileGridsGrid.appendChild(profileGridElement)
       section.appendChild(profileGridsGrid)
     })
@@ -42,7 +46,7 @@ export const createAgenciesPeople = ({
     ctaGrid.className = 'sb-grid'
     simpleCtaSections.forEach((cta) => {
       let ctaElement = createCta(cta)
-      ctaElement.className = addClasses([ctaElement.className, 'span-6'])
+      ctaElement.className = addClasses([ctaElement.className, 'span-6', 'sm-span-full'])
       ctaGrid.appendChild(ctaElement)
     })
     section.appendChild(ctaGrid)

@@ -8,6 +8,7 @@ export const createPreFooter = ({
   linkGroups,
   copyright,
   dark,
+  displayLinksOnMobile = false,
   onClick
 }) => {
   const preFooter = document.createElement('div')
@@ -23,7 +24,11 @@ export const createPreFooter = ({
 
   if (newsletter) {
     const newsletterElement = document.createElement('div')
-    newsletterElement.className = addClasses(['sb-pre-footer__newsletter', 'span-4'])
+    newsletterElement.className = addClasses([
+      'sb-pre-footer__newsletter',
+      'span-4',
+      'sm-span-full'
+    ])
 
     const newsletterTitle = document.createElement('div')
     newsletterTitle.className = 'sb-newsletter__title'
@@ -61,21 +66,35 @@ export const createPreFooter = ({
 
   if (linkGroups && linkGroups.length) {
     linkGroups.forEach((linkGroup) => {
-      const linkGroupElement = document.createElement('ul')
-      linkGroupElement.className = addClasses(['sb-link-group', 'span-2'])
+      const linkGroupElement = document.createElement('div')
+      linkGroupElement.className = addClasses([
+        'sb-link-group',
+        'span-2',
+        'sm-span-full',
+        displayLinksOnMobile ? 'sb-link-group--display' : ''
+      ])
 
-      const titleWrapper = document.createElement('li')
-      titleWrapper.innerText = linkGroup.title
-      titleWrapper.className = 'sb-link-group__title'
+      const linkGroupTitle = document.createElement('p')
+      linkGroupTitle.innerText = linkGroup.title
+      linkGroupTitle.className = 'sb-link-group__title'
+      const arrowDown = `<span>
+      <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 0.726562L4 3.72656L7 0.726562" stroke="white" stroke-linecap="square"/>
+      </svg>
+      </span>`
+      linkGroupTitle.insertAdjacentHTML('beforeend', arrowDown)
+      linkGroupElement.appendChild(linkGroupTitle)
 
-      linkGroupElement.appendChild(titleWrapper)
+      const linkGroupList = document.createElement('ul')
+      linkGroupList.className = addClasses(['sb-link-group__list', 'span-2', 'sm-span-full'])
+      linkGroupElement.appendChild(linkGroupList)
 
       if (linkGroup.links && linkGroup.links.length) {
         linkGroup.links.forEach((link) => {
           const linkWrapper = document.createElement('li')
           const linkElement = createLink({ label: link.label, url: link.url })
           linkWrapper.appendChild(linkElement)
-          linkGroupElement.appendChild(linkWrapper)
+          linkGroupList.appendChild(linkWrapper)
         })
       }
 
@@ -86,7 +105,7 @@ export const createPreFooter = ({
   if (copyright) {
     const copyrightElement = document.createElement('p')
     copyrightElement.innerText = copyright
-    copyrightElement.className = addClasses(['sb-copyright', 'span-4', 'start-1'])
+    copyrightElement.className = addClasses(['sb-copyright', 'span-4', 'start-1', 'sm-span-full'])
     preFooterBottom.appendChild(copyrightElement)
   }
 

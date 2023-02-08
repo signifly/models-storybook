@@ -51,7 +51,11 @@ export const createProfileGrid = ({
 
   if (buttonLabel) {
     const buttonWrapper = document.createElement('div')
-    buttonWrapper.className = addClasses(['sb-flex', centeredButton ? 'sb-center' : ''])
+    buttonWrapper.className = addClasses([
+      'sb-profile-grid__button',
+      'sb-flex',
+      centeredButton ? 'sb-center' : ''
+    ])
     const buttonLabelElement = createButton({ label: buttonLabel, onClick: onButtonClick })
     buttonWrapper.appendChild(buttonLabelElement)
     grid.appendChild(buttonWrapper)

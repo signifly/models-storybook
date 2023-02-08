@@ -18,3 +18,19 @@
     @content;
   }
 }
+
+@mixin title {
+  color: $color-text;
+  font-weight: 600;
+}
+@mixin subtitle {
+  color: $color-subtext;
+  font-weight: 450;
+}
+
+@mixin link {
+  color: $color-text;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+}

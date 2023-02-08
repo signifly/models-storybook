@@ -8,6 +8,7 @@ export default {
     socialLinks: { control: 'object' },
     linkGroups: { control: 'object' },
     dark: { control: 'boolean' },
+    displayLinksOnMobile: { control: 'boolean' },
     onClick: { action: 'onClick' }
   }
 }
@@ -119,7 +120,8 @@ Dark.args = {
   ],
   copyright:
     'All content Copyright © MODELS.com, Inc. 2000-2023 or their respective owners where indicated.',
-  dark: true
+  dark: true,
+  displayLinksOnMobile: false
 }
 
 export const Light = (args) => createPreFooter(args)
@@ -224,5 +226,6 @@ Light.args = {
   ],
   copyright:
     'All content Copyright © MODELS.com, Inc. 2000-2023 or their respective owners where indicated.',
-  dark: false
+  dark: false,
+  displayLinksOnMobile: false
 }

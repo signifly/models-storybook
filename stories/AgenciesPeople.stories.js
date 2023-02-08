@@ -76,7 +76,7 @@ AgenciesPeople.args = {
           subtitle: 'Subtitle'
         }
       ],
-      buttonLabel: 'SEE ALL MODEL'
+      buttonLabel: 'SEE ALL MODELS'
     },
     {
       title: 'Title',
@@ -119,7 +119,7 @@ AgenciesPeople.args = {
           subtitle: 'Subtitle'
         }
       ],
-      buttonLabel: 'SEE ALL MODEL'
+      buttonLabel: 'SEE ALL MODELS'
     }
   ],
   simpleCtaSections: [

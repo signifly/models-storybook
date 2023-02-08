@@ -10,6 +10,19 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    > .sb-title {
+      font-size: 20px;
+      line-height: 25px;
+      text-align: left;
+    }
+
+    > .sb-link {
+      text-align: right;
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: 0.03em;
+    }
   }
 
   &__profiles {
@@ -21,19 +34,6 @@
     grid-template-rows: 1fr;
     grid-column-gap: $column-gap;
     grid-row-gap: 0;
-  }
-
-  .sb-title {
-    font-size: 20px;
-    line-height: 25px;
-    text-align: left;
-  }
-
-  .sb-link {
-    text-align: right;
-    font-size: 11px;
-    line-height: 13px;
-    letter-spacing: 0.03em;
   }
 
   .sb-profile {
@@ -53,5 +53,20 @@
     .sb-profile:nth-last-child(3) {
       border-bottom: 1px solid $grey2;
     }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-profile-grid__header > .sb-title {
+    font-size: 15px;
+    line-height: 19px;
+  }
+  .sb-profile-grid__header > .sb-link {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .sb-profile-grid__button {
+    justify-content: center;
   }
 }
