@@ -1,18 +1,19 @@
 import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 import { createEditorialHeader } from './EditorialHeader'
+import { createEditorialTagged } from './EditorialTagged'
+import { createEditorialFooter } from './EditorialFooter'
 
-export const createEditorialSingleStory = ({ header, segments }) => {
+export const createEditorialSingleStory = ({ header, segments, tagged, footer }) => {
   const editorialSingleStory = document.createElement('div')
   editorialSingleStory.className = addClasses(['sb-editorial', 'sb-grid'])
-
 
   if (header) {
     const editorialHeader = createEditorialHeader({ content: header })
     editorialHeader.className = addClasses([
       editorialHeader.className,
       'sb-editorial__header',
-      'span-full',
+      header.img ? 'span-full' : 'span-8 start-3'
     ])
     editorialSingleStory.appendChild(editorialHeader)
   }
@@ -42,6 +43,26 @@ export const createEditorialSingleStory = ({ header, segments }) => {
         editorialSingleStory.appendChild(editorialImage)
       }
     })
+  }
+
+  if (tagged) {
+    const editorialTagged = createEditorialTagged({ ...tagged })
+    editorialTagged.className = addClasses([
+      editorialTagged.className,
+      'sb-editorial__tagged',
+      'span-full'
+    ])
+    editorialSingleStory.appendChild(editorialTagged)
+  }
+
+  if (footer) {
+    const editorialFooter = createEditorialFooter({ ...footer })
+    editorialFooter.className = addClasses([
+      editorialFooter.className,
+      'sb-editorial__footer',
+      'span-full'
+    ])
+    editorialSingleStory.appendChild(editorialFooter)
   }
 
   return editorialSingleStory

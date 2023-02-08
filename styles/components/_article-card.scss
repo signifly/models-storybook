@@ -49,15 +49,31 @@
     margin-bottom: 12px;
   }
 
+  &--small &__text {
+    .sb-title {
+      font-size: 16px;
+      font-weight: 450;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .sb-subtitle {
+      font-size: 14px;
+      font-weight: 450;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
   &--small &__img {
-    max-width: 211px;
-    max-height: 211px;
     object-fit: cover;
     margin-bottom: 12px;
   }
 
   &--large &__text {
-    padding-right: 32px;
+    padding-right: $column-gap;
     width: 33%;
 
     .sb-title {

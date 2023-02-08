@@ -1,12 +1,16 @@
+import { addClasses } from '../utilities/classes-names'
 import { createLink } from './Link'
 
-export const createContainer = ({ title, linkLabel, linkUrl }) => {
+export const createContainer = ({ title, linkLabel, linkUrl, headerBorder }) => {
   const container = document.createElement('div')
   container.className = 'sb-container'
 
   if (title || linkLabel) {
     const containerHeader = document.createElement('div')
-    containerHeader.className = 'sb-container__header'
+    containerHeader.className = addClasses([
+      'sb-container__header',
+      headerBorder ? 'sb-container__header--border' : ''
+    ])
     container.appendChild(containerHeader)
 
     if (title) {

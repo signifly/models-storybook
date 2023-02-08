@@ -16,7 +16,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -40,8 +39,19 @@
   .sb-profile {
     border-top: 1px solid $grey2;
   }
+
   .sb-profile:nth-last-child(2),
   .sb-profile:last-child {
     border-bottom: 1px solid $grey2;
+  }
+
+  &--four-columns &__profiles {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &--four-columns {
+    .sb-profile:nth-last-child(4),
+    .sb-profile:nth-last-child(3) {
+      border-bottom: 1px solid $grey2;
+    }
   }
 }

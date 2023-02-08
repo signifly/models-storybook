@@ -1,5 +1,6 @@
 import { createProfile } from './Profile'
 import { createButton } from './Button'
+import { addClasses } from '../utilities/classes-names'
 
 export const createProfileGrid = ({
   title,
@@ -7,10 +8,15 @@ export const createProfileGrid = ({
   buttonLabel,
   onButtonClick,
   linkLabel,
-  onLinkClick
+  onLinkClick,
+  centeredButton = false,
+  fourColumns = false
 }) => {
   const grid = document.createElement('div')
-  grid.className = 'sb-profile-grid'
+  grid.className = addClasses([
+    'sb-profile-grid',
+    fourColumns ? 'sb-profile-grid--four-columns' : ''
+  ])
 
   const gridHeader = document.createElement('div')
   gridHeader.className = 'sb-profile-grid__header'
@@ -45,7 +51,7 @@ export const createProfileGrid = ({
 
   if (buttonLabel) {
     const buttonWrapper = document.createElement('div')
-    buttonWrapper.className = 'sb-flex'
+    buttonWrapper.className = addClasses(['sb-flex', centeredButton ? 'sb-center' : ''])
     const buttonLabelElement = createButton({ label: buttonLabel, onClick: onButtonClick })
     buttonWrapper.appendChild(buttonLabelElement)
     grid.appendChild(buttonWrapper)

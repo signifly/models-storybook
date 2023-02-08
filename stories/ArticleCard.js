@@ -1,7 +1,14 @@
 import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
-export const createArticleCard = ({ size = 'large', title, subtitle, onClick, imgSrc }) => {
+export const createArticleCard = ({
+  size = 'large',
+  title,
+  subtitle,
+  onClick,
+  imgSrc,
+  largeSpan = false
+}) => {
   const grid = document.createElement('div')
   grid.className = 'sb-grid'
 
@@ -11,7 +18,7 @@ export const createArticleCard = ({ size = 'large', title, subtitle, onClick, im
   articleCard.className = addClasses([
     'sb-article-card',
     `sb-article-card--${size}`,
-    size === 'large' ? 'span-6' : 'span-3',
+    size === 'large' || largeSpan ? 'span-6' : 'span-3',
     'sm-span-full'
   ])
 

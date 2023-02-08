@@ -6,6 +6,7 @@ export default {
     title: { control: 'text' },
     subtitle: { control: 'text' },
     imgSrc: { control: 'text' },
+    largeSpan: { control: 'boolean' },
     size: {
       control: { type: 'select' },
       options: ['small', 'large'],
