@@ -1,19 +1,18 @@
-import { addClasses } from '../utilities/classes-names'
 import { createProfile } from './Profile'
 
 export const createProfileScroll = ({ title, profiles }) => {
   const profileScroll = document.createElement('div')
-  profileScroll.className = addClasses(['sb-profile-scroll'])
+  profileScroll.className = 'sb-profile-scroll'
 
   if (title) {
     const profileScrollTitle = document.createElement('h2')
-    profileScrollTitle.className = addClasses(['sb-profile-scroll__title'])
+    profileScrollTitle.className = 'sb-profile-scroll__title'
     profileScrollTitle.innerText = title
     profileScroll.appendChild(profileScrollTitle)
   }
 
   const profilesWrapper = document.createElement('div')
-  profilesWrapper.className = addClasses(['sb-profile-scroll__wrapper'])
+  profilesWrapper.className = 'sb-profile-scroll__wrapper'
 
   profileScroll.appendChild(profilesWrapper)
 

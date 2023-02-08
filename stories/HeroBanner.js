@@ -1,4 +1,5 @@
 import { addClasses } from '../utilities/classes-names'
+import { createLink } from './Link'
 
 export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl, borders }) => {
   const grid = document.createElement('div')
@@ -26,10 +27,7 @@ export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl, 
   subtitleElement.className = 'sb-subtitle'
   subtitleElement.innerText = subtitle
 
-  const linkElement = document.createElement('a')
-  linkElement.className = 'sb-link'
-  linkElement.innerText = linkLabel
-  linkElement.href = linkUrl
+  const linkElement = createLink({ label: linkLabel, url: linkUrl })
 
   heroBannerText.appendChild(subtitleElement)
   heroBannerText.appendChild(titleElement)

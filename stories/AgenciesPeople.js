@@ -17,7 +17,7 @@ export const createAgenciesPeople = ({
 
   if (ctaSections && ctaSections.length) {
     const ctaGrid = document.createElement('div')
-    ctaGrid.className = addClasses(['sb-grid'])
+    ctaGrid.className = 'sb-grid'
     ctaSections.forEach((cta) => {
       let ctaElement = createCta(cta)
       ctaElement.className = addClasses([ctaElement.className, 'span-6'])
@@ -28,7 +28,7 @@ export const createAgenciesPeople = ({
 
   if (profileGrids && profileGrids.length) {
     const profileGridsGrid = document.createElement('div')
-    profileGridsGrid.className = addClasses(['sb-grid'])
+    profileGridsGrid.className = 'sb-grid'
     profileGrids.forEach((profileGrid) => {
       let profileGridElement = createProfileGrid(profileGrid)
       profileGridElement.className = addClasses([profileGridElement.className, 'span-6'])
@@ -39,7 +39,7 @@ export const createAgenciesPeople = ({
 
   if (simpleCtaSections && simpleCtaSections.length) {
     const ctaGrid = document.createElement('div')
-    ctaGrid.className = addClasses(['sb-grid'])
+    ctaGrid.className = 'sb-grid'
     simpleCtaSections.forEach((cta) => {
       let ctaElement = createCta(cta)
       ctaElement.className = addClasses([ctaElement.className, 'span-6'])

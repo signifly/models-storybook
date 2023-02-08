@@ -16,7 +16,7 @@ export const createArticleCard = ({ size = 'large', title, subtitle, onClick, im
   ])
 
   const articleCardText = document.createElement('div')
-  articleCardText.className = addClasses(['sb-article-card__text'])
+  articleCardText.className = 'sb-article-card__text'
 
   const titleElement = document.createElement('h6')
   titleElement.className = 'sb-title'
@@ -32,7 +32,7 @@ export const createArticleCard = ({ size = 'large', title, subtitle, onClick, im
 
   const articleCardImage = createImage({ imgSrc: imgSrc })
 
-  articleCardImage.className = addClasses(['sb-article-card__img'])
+  articleCardImage.className = 'sb-article-card__img'
 
   articleCard.appendChild(articleCardImage)
 

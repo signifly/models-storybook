@@ -5,23 +5,24 @@
   list-style: none;
   width: 100%;
 
-  .sb-link {
+  &__item {
     padding: 12px;
-  }
 
-  .sb-link a {
-    font-family: $font-accent;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 46px;
-    letter-spacing: -0.01em;
-    text-align: center;
-    text-decoration: none;
+    .sb-link {
+      font-family: $font-accent;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 46px;
+      letter-spacing: -0.01em;
+      text-align: center;
+      text-decoration: none;
+    }
   }
 
   &--header {
     justify-content: center;
-    .sb-link a {
+
+    .sb-menu__item .sb-link {
       font-family: $font-accent;
       font-size: 15px;
       font-weight: 400;
@@ -30,11 +31,11 @@
       text-align: center;
     }
 
-    .sb-link--selected {
+    .sb-menu__item--selected {
       border-bottom: 2px solid $black;
     }
 
-    .sb-link--selected a {
+    .sb-menu__item--selected .sb-link {
       font-family: $font-accent-italic;
     }
   }

@@ -1,4 +1,5 @@
 import { addClasses } from '../utilities/classes-names'
+import { createLink } from './Link'
 
 export const createMenu = ({ header = false, links }) => {
   const menu = document.createElement('ul')
@@ -6,10 +7,13 @@ export const createMenu = ({ header = false, links }) => {
 
   links.forEach((link) => {
     let linkWrapper = document.createElement('li')
-    linkWrapper.className = addClasses(['sb-link', link.selected ? 'sb-link--selected' : ''])
-    let linkElement = document.createElement('a')
-    linkElement.innerText = `${link.label}.`
-    linkElement.href = link.url
+    linkWrapper.className = addClasses([
+      'sb-menu__item',
+      link.selected ? 'sb-menu__item--selected' : ''
+    ])
+
+    const linkElement = createLink({ label: link.label, url: link.url })
+
     linkWrapper.appendChild(linkElement)
     menu.appendChild(linkWrapper)
   })

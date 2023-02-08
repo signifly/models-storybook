@@ -35,7 +35,7 @@ export const createYourModels = ({ loggedIn = false, title, cards = [], mainButt
     const textContainer = document.createElement('div')
     textContainer.className = addClasses(['sb-flex', 'sb-center'])
     const mainTextElement = document.createElement('p')
-    mainTextElement.className = addClasses(['sb-subtitle'])
+    mainTextElement.className = 'sb-subtitle'
     mainTextElement.innerText = mainText
     textContainer.appendChild(mainTextElement)
     section.appendChild(textContainer)

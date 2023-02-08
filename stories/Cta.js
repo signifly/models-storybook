@@ -1,6 +1,7 @@
 import { createImage } from './Image'
 import { createButton } from './Button'
 import { addClasses } from '../utilities/classes-names'
+import { createLink } from './Link'
 
 export const createCta = ({
   simple = true,
@@ -37,10 +38,7 @@ export const createCta = ({
   }
 
   if (linkLabel) {
-    const linkElement = document.createElement('a')
-    linkElement.className = 'sb-link'
-    linkElement.innerText = linkLabel
-    linkElement.href = linkUrl || '/'
+    const linkElement = createLink({ label: linkLabel, url: linkUrl })
     ctaText.appendChild(linkElement)
   }
 
