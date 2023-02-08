@@ -22,10 +22,12 @@ export const createFooter = ({ tagline, paragraph, buttons }) => {
   const footerButtons = document.createElement('div')
   footerButtons.className = 'sb-footer__buttons'
 
-  buttons.forEach((button) => {
-    let buttonElement = createButton(button)
-    footerButtons.appendChild(buttonElement)
-  })
+  if (buttons && buttons.length) {
+    buttons.forEach((button) => {
+      let buttonElement = createButton(button)
+      footerButtons.appendChild(buttonElement)
+    })
+  }
 
   footerParagraph.appendChild(footerButtons)
   wrapperTop.appendChild(footerTagline)

@@ -18,8 +18,7 @@ export const createArticleCard = ({
   articleCard.className = addClasses([
     'sb-article-card',
     `sb-article-card--${size}`,
-    size === 'large' || largeSpan ? 'span-6' : 'span-3',
-    'sm-span-full'
+    size === 'large' || largeSpan ? 'span-6 sm-span-full' : 'span-3 sm-span-6'
   ])
 
   const articleCardText = document.createElement('div')

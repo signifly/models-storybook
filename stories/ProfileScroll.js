@@ -16,10 +16,12 @@ export const createProfileScroll = ({ title, profiles }) => {
 
   profileScroll.appendChild(profilesWrapper)
 
-  profiles.forEach((profile) => {
-    let profileElement = createProfile(profile)
-    profilesWrapper.appendChild(profileElement)
-  })
+  if (profiles && profiles.length) {
+    profiles.forEach((profile) => {
+      let profileElement = createProfile(profile)
+      profilesWrapper.appendChild(profileElement)
+    })
+  }
 
   return profileScroll
 }

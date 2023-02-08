@@ -50,7 +50,7 @@ export const createPreFooter = ({
       newsletterSocial.className = 'sb-newsletter__social-links'
       newsletterElement.appendChild(newsletterSocial)
 
-      socialLinks.forEach(socialLink => {
+      socialLinks.forEach((socialLink) => {
         const socialLinkElement = createSocialLink(socialLink)
         newsletterSocial.appendChild(socialLinkElement)
       })
@@ -59,25 +59,29 @@ export const createPreFooter = ({
     preFooterTop.appendChild(newsletterElement)
   }
 
-  linkGroups.forEach((linkGroup) => {
-    const linkGroupElement = document.createElement('ul')
-    linkGroupElement.className = addClasses(['sb-link-group', 'span-2'])
+  if (linkGroups && linkGroups.length) {
+    linkGroups.forEach((linkGroup) => {
+      const linkGroupElement = document.createElement('ul')
+      linkGroupElement.className = addClasses(['sb-link-group', 'span-2'])
 
-    const titleWrapper = document.createElement('li')
-    titleWrapper.innerText = linkGroup.title
-    titleWrapper.className = 'sb-link-group__title'
+      const titleWrapper = document.createElement('li')
+      titleWrapper.innerText = linkGroup.title
+      titleWrapper.className = 'sb-link-group__title'
 
-    linkGroupElement.appendChild(titleWrapper)
+      linkGroupElement.appendChild(titleWrapper)
 
-    linkGroup.links.forEach((link) => {
-      const linkWrapper = document.createElement('li')
-      const linkElement = createLink({ label: link.label, url: link.url })
-      linkWrapper.appendChild(linkElement)
-      linkGroupElement.appendChild(linkWrapper)
+      if (linkGroup.links && linkGroup.links.length) {
+        linkGroup.links.forEach((link) => {
+          const linkWrapper = document.createElement('li')
+          const linkElement = createLink({ label: link.label, url: link.url })
+          linkWrapper.appendChild(linkElement)
+          linkGroupElement.appendChild(linkWrapper)
+        })
+      }
+
+      preFooterTop.appendChild(linkGroupElement)
     })
-
-    preFooterTop.appendChild(linkGroupElement)
-  })
+  }
 
   if (copyright) {
     const copyrightElement = document.createElement('p')

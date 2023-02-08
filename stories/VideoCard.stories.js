@@ -7,7 +7,9 @@ export default {
     active: { control: 'boolean' },
     videoSrc: { control: 'text' },
     videoProgress: { control: { type: 'range', min: 0, max: 100, step: 1 } },
-    onClick: { action: 'onClick' }
+    onTaggedClick: { action: 'onClick' },
+    onVideoClick: { action: 'onClick' },
+    tagged: { control: 'object' }
   }
 }
 
@@ -21,7 +23,21 @@ Active.args = {
   videoSrc:
     'https://wedistill.io/uploads/videos/processed/33/Cold2520Winter2520Dream-HD3_1.mp4.mp4',
   videoProgress: 50,
-  title: 'Title'
+  title: 'Title',
+  tagged: [
+    {
+      imgSrc:
+        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80'
+    },
+    {
+      imgSrc:
+        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80'
+    },
+    {
+      imgSrc:
+        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80'
+    }
+  ]
 }
 
 export const Inactive = Template.bind({})

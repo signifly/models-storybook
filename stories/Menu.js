@@ -5,18 +5,20 @@ export const createMenu = ({ size = 'small', links }) => {
   const menu = document.createElement('ul')
   menu.className = addClasses(['sb-menu', `sb-menu--${size}`, 'sb-container'])
 
-  links.forEach((link) => {
-    let linkWrapper = document.createElement('li')
-    linkWrapper.className = addClasses([
-      'sb-menu__item',
-      link.selected ? 'sb-menu__item--selected' : ''
-    ])
+  if (links && links.length) {
+    links.forEach((link) => {
+      let linkWrapper = document.createElement('li')
+      linkWrapper.className = addClasses([
+        'sb-menu__item',
+        link.selected ? 'sb-menu__item--selected' : ''
+      ])
 
-    const linkElement = createLink({ label: link.label, url: link.url })
+      const linkElement = createLink({ label: link.label, url: link.url })
 
-    linkWrapper.appendChild(linkElement)
-    menu.appendChild(linkWrapper)
-  })
+      linkWrapper.appendChild(linkElement)
+      menu.appendChild(linkWrapper)
+    })
+  }
 
   return menu
 }

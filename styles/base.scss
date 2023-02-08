@@ -35,6 +35,8 @@ button,
 .sb-link {
   color: $color-text;
   text-decoration: underline;
+  background-color: transparent;
+  border: none;
 }
 
 .sb-title {
@@ -58,5 +60,23 @@ button,
     top: 0;
     left: 0;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-section,
+  .sb-container,
+  .sb-grid {
+    padding-left: $site-gutter-md;
+    padding-right: $site-gutter-md;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-section,
+  .sb-container,
+  .sb-grid {
+    padding-left: $site-gutter-sm;
+    padding-right: $site-gutter-sm;
   }
 }
