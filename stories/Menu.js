@@ -1,9 +1,9 @@
 import { addClasses } from '../utilities/classes-names'
 import { createLink } from './Link'
 
-export const createMenu = ({ header = false, links }) => {
+export const createMenu = ({ size = 'small', links }) => {
   const menu = document.createElement('ul')
-  menu.className = addClasses(['sb-menu', 'sb-container', header ? 'sb-menu--header' : ''])
+  menu.className = addClasses(['sb-menu', `sb-menu--${size}`, 'sb-container'])
 
   links.forEach((link) => {
     let linkWrapper = document.createElement('li')

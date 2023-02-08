@@ -15,8 +15,8 @@ const Template = ({ label, ...args }) => {
   return createVideoCard({ label, ...args })
 }
 
-export const VideoCard = Template.bind({})
-VideoCard.args = {
+export const Active = Template.bind({})
+Active.args = {
   active: true,
   videoSrc:
     'https://wedistill.io/uploads/videos/processed/33/Cold2520Winter2520Dream-HD3_1.mp4.mp4',
@@ -24,8 +24,8 @@ VideoCard.args = {
   title: 'Title'
 }
 
-export const VideoCardInactive = Template.bind({})
-VideoCardInactive.args = {
+export const Inactive = Template.bind({})
+Inactive.args = {
   active: false,
   videoSrc:
     'https://wedistill.io/uploads/videos/processed/33/Cold2520Winter2520Dream-HD3_1.mp4.mp4',

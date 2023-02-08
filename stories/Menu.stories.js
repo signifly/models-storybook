@@ -3,7 +3,10 @@ import { createMenu } from './Menu'
 export default {
   title: 'Components/Menu',
   argTypes: {
-    header: { control: 'boolean' }
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'large']
+    }
   }
 }
 
@@ -11,9 +14,9 @@ const Template = ({ label, ...args }) => {
   return createMenu({ label, ...args })
 }
 
-export const Menu = Template.bind({})
-Menu.args = {
-  header: false,
+export const Large = Template.bind({})
+Large.args = {
+  size: 'large',
   links: [
     { label: 'Models', url: '/' },
     { label: 'Creatives', url: '/' },
@@ -23,9 +26,9 @@ Menu.args = {
   ]
 }
 
-export const MenuHeader = Template.bind({})
-MenuHeader.args = {
-  header: true,
+export const Small = Template.bind({})
+Small.args = {
+  size: 'small',
   links: [
     { label: 'Models', url: '/' },
     { label: 'Creatives', url: '/' },

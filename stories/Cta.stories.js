@@ -28,8 +28,8 @@ SimpleCTA.args = {
   simple: true
 }
 
-export const CTA = Template.bind({})
-CTA.args = {
+export const BoxCTA = Template.bind({})
+BoxCTA.args = {
   imgSrc:
     'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80',
   title: 'Title',

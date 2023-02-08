@@ -14,8 +14,8 @@ const Template = ({ label, ...args }) => {
   return createEditorialTagged({ label, ...args })
 }
 
-export const EditorialTagged = Template.bind({})
-EditorialTagged.args = {
+export const Collapsed = Template.bind({})
+Collapsed.args = {
   title: 'Title',
   profiles: [
     {
@@ -70,8 +70,8 @@ EditorialTagged.args = {
   buttonLabel: 'SEE MORE'
 }
 
-export const EditorialTaggedExtended = Template.bind({})
-EditorialTaggedExtended.args = {
+export const Extended = Template.bind({})
+Extended.args = {
   title: 'Title',
   profiles: [
     {

@@ -1,4 +1,5 @@
 import { addClasses } from '../utilities/classes-names'
+import { createLink } from './Link'
 import { createSection } from './Section'
 import { createVideoCard } from './VideoCard'
 
@@ -19,9 +20,7 @@ export const createLatestStories = ({ title, cards, mainLink }) => {
     const linkContainer = document.createElement('div')
     linkContainer.className = addClasses(['sb-flex', 'sb-center'])
     section.appendChild(linkContainer)
-    const linkElement = document.createElement('a')
-    linkElement.innerText = mainLink.label
-    linkElement.href = mainLink.url
+    const linkElement = createLink({ label: mainLink.label, url: mainLink.url })
     linkContainer.appendChild(linkElement)
   }
 

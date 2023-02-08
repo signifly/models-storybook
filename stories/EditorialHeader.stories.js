@@ -11,8 +11,8 @@ const Template = ({ label, ...args }) => {
   return createEditorialHeader({ label, ...args })
 }
 
-export const EditorialHeader = Template.bind({})
-EditorialHeader.args = {
+export const WithImage = Template.bind({})
+WithImage.args = {
   content: {
     title: `Photographers Tanya and Zhenya Posternak on Seeing a Frame from Two Different Angles`,
     subtitle: `12/7/2022 by Irene Ojo-Felix`,
@@ -23,5 +23,13 @@ EditorialHeader.args = {
       imgCaption:
         '<p><a>Re-Edition Magazine A/W 22</a>&nbsp;| Courtesy of Tanya & Zhenya Posternak</p>'
     }
+  }
+}
+export const WithoutImage = Template.bind({})
+WithoutImage.args = {
+  content: {
+    title: `Photographers Tanya and Zhenya Posternak on Seeing a Frame from Two Different Angles`,
+    subtitle: `12/7/2022 by Irene Ojo-Felix`,
+    social: [],
   }
 }
