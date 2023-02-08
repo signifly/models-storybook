@@ -26,7 +26,9 @@ export const createEditorialSingleStory = ({ header, segments, tagged, footer })
           'sb-editorial__segment',
           'sb-editorial__segment--text',
           'span-8',
-          'start-3'
+          'start-3',
+          'sm-start-1',
+          'sm-span-full'
         ])
         editorialText.innerHTML = segment.content
         editorialSingleStory.appendChild(editorialText)
@@ -38,7 +40,8 @@ export const createEditorialSingleStory = ({ header, segments, tagged, footer })
           editorialImage.className,
           'sb-editorial__segment',
           'sb-editorial__segment--img',
-          segment.span ? `span-${segment.span}` : 'span-full start-1'
+          segment.span ? `span-${segment.span}` : 'span-full start-1',
+          'sm-span-full'
         ])
         editorialSingleStory.appendChild(editorialImage)
       }

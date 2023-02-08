@@ -1,7 +1,6 @@
 .sb-article-card {
   display: flex;
   min-height: 453px;
-  font-family: Arial, Helvetica, sans-serif;
 
   &--small {
     font-size: 12px;
@@ -99,6 +98,10 @@
 }
 
 @media screen and (max-width: $sm) {
+  .sb-article-card {
+    min-height: unset;
+  }
+
   .sb-article-card--large {
     font-size: 12px;
   }

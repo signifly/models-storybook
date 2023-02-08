@@ -69,4 +69,11 @@
   .sb-profile-grid__button {
     justify-content: center;
   }
+
+  .sb-profile-grid__profiles {
+    grid-column-gap: $column-gap-sm;
+  }
+  .sb-profile-grid--four-columns .sb-profile-grid__profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

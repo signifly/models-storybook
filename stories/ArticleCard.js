@@ -7,19 +7,28 @@ export const createArticleCard = ({
   subtitle,
   onClick,
   imgSrc,
-  largeSpan = false
+  largeSpan = false,
+  halfGrid = false
 }) => {
-  const grid = document.createElement('div')
-  grid.className = 'sb-grid'
-
   const articleCard = document.createElement('div')
 
   articleCard.addEventListener('click', onClick)
   articleCard.className = addClasses([
     'sb-article-card',
     `sb-article-card--${size}`,
-    size === 'large' || largeSpan ? 'span-6 sm-span-full' : 'span-3 sm-span-6'
   ])
+
+  if (halfGrid) {
+    articleCard.className = addClasses([
+      articleCard.className,
+      size === 'large' || largeSpan ? 'span-6 sm-span-full' : 'span-3 sm-span-3'
+    ])
+  } else {
+    articleCard.className = addClasses([
+      articleCard.className,
+      size === 'large' || largeSpan ? 'span-6 sm-span-full' : 'span-3 sm-span-6'
+    ])
+  }
 
   const articleCardText = document.createElement('div')
   articleCardText.className = 'sb-article-card__text'

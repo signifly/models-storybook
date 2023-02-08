@@ -3,7 +3,8 @@ import { createArticleGrid } from './ArticleGrid'
 export default {
   title: 'Examples/Article Grid',
   argTypes: {
-    cards: { control: 'object' }
+    cards: { control: 'object' },
+    halfGrid: { control: 'boolean' }
   }
 }
 

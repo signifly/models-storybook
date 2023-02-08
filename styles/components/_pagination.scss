@@ -38,3 +38,15 @@
     margin-right: 48px;
   }
 }
+
+@media screen and (max-width: $sm) {
+  .sb-pagination .sb-pagination__page,
+  .sb-pagination .sb-pagination__dots {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .sb-pagination .sb-pagination__arrow {
+    transform: scale(0.625);
+  }
+}

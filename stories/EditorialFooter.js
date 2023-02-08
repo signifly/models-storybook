@@ -9,13 +9,9 @@ export const createEditorialFooter = ({ footerGroups = [] }) => {
   if (footerGroups && footerGroups.length) {
     footerGroups.forEach((group) => {
       const groupContainer = createContainer({ title: group.title, headerBorder: true })
-      groupContainer.className = addClasses([groupContainer.className, 'span-6'])
-      const articles = createArticleGrid({ cards: group.articles })
-      articles.className = addClasses([
-        articles.className,
-        'sb-editorial-footer__articles',
-        'sb-grid--6'
-      ])
+      groupContainer.className = addClasses([groupContainer.className, 'span-6', 'sm-span-full'])
+      const articles = createArticleGrid({ cards: group.articles, halfGrid: true })
+      articles.className = addClasses([articles.className, 'sb-editorial-footer__articles'])
       groupContainer.appendChild(articles)
       editorialFooter.appendChild(groupContainer)
     })

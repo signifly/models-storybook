@@ -14,3 +14,10 @@
     }
   }
 }
+
+@media screen and (max-width: $sm) {
+  .sb-profile-scroll__title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

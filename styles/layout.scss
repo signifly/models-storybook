@@ -57,4 +57,13 @@
 
 @media screen and (max-width: $sm) {
   @include gridUtilities('sm');
+
+  .sb-grid {
+    grid-row-gap: $row-gap-sm;
+    grid-column-gap: $column-gap-sm;
+
+    &--5 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
 }

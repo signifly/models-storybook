@@ -8,9 +8,10 @@ export const createLatestStories = ({ title, cards, mainLink }) => {
 
   if (cards && cards.length) {
     const grid5 = document.createElement('div')
-    grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
+    grid5.className = addClasses(['sb-latest-stories', 'sb-grid', 'sb-grid--5'])
     cards.forEach((card) => {
       let cardElement = createVideoCard(card)
+      cardElement.className = addClasses([cardElement.className, 'sm-span-full'])
       grid5.appendChild(cardElement)
     })
     section.appendChild(grid5)
@@ -21,6 +22,7 @@ export const createLatestStories = ({ title, cards, mainLink }) => {
     linkContainer.className = addClasses(['sb-flex', 'sb-center'])
     section.appendChild(linkContainer)
     const linkElement = createLink({ label: mainLink.label, url: mainLink.url })
+    linkElement.className = addClasses([linkElement.className, 'sb-latest-stories__link'])
     linkContainer.appendChild(linkElement)
   }
 

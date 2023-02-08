@@ -40,3 +40,15 @@
     }
   }
 }
+
+@media screen and (max-width: $sm) {
+  .sb-menu__item {
+    padding: 6px;
+  }
+  .sb-menu--small {
+    .sb-menu__item .sb-link {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+}

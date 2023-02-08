@@ -7,7 +7,7 @@ export const createImage = ({ imgSrc, imgAlt, imgCaption }) => {
   image.className = 'sb-image__img'
   imageWrapper.appendChild(image)
   if (imgCaption) {
-    const imageText = document.createElement('div')
+    const imageText = document.createElement('p')
     imageText.className = 'sb-image__text'
     imageText.innerHTML = imgCaption
     imageWrapper.appendChild(imageText)

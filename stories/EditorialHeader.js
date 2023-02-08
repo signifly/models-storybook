@@ -10,12 +10,17 @@ export const createEditorialHeader = ({ content }) => {
     const editorialHeaderText = document.createElement('div')
     editorialHeaderText.className = addClasses([
       'sb-editorial-header__text',
-      content.img ? 'span-6' : 'span-full'
+      content.img ? 'span-6' : 'span-full',
+      'sm-span-full'
     ])
     editorialHeader.appendChild(editorialHeaderText)
 
     const editorialHeaderImg = document.createElement('div')
-    editorialHeaderImg.className = addClasses(['sb-editorial-header__img', 'span-6'])
+    editorialHeaderImg.className = addClasses([
+      'sb-editorial-header__img',
+      'span-6',
+      'sm-span-full'
+    ])
     editorialHeader.appendChild(editorialHeaderImg)
 
     if (content.title) {

@@ -1,12 +1,13 @@
+import { addClasses } from '../utilities/classes-names'
 import { createArticleCard } from './ArticleCard'
 
-export const createArticleGrid = ({ cards = [] }) => {
+export const createArticleGrid = ({ cards = [], halfGrid = false }) => {
   const grid = document.createElement('div')
-  grid.className = 'sb-grid'
+  grid.className = halfGrid ? 'sb-grid sb-grid--6' : 'sb-grid'
 
   if (cards && cards.length) {
     cards.forEach((card) => {
-      let cardElement = createArticleCard(card)
+      let cardElement = createArticleCard({ ...card, halfGrid: halfGrid })
       grid.appendChild(cardElement)
     })
   }

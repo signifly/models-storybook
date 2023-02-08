@@ -1,0 +1,14 @@
+.sb-latest-stories {
+  &__link {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-latest-stories .sb-latest-stories__link {
+    font-size: 9px;
+    line-height: 11px;
+  }
+}

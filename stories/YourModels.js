@@ -12,6 +12,7 @@ export const createYourModels = ({ loggedIn = false, title, cards = [], mainButt
   if (cards && cards.length) {
     cards.forEach((card) => {
       const cardElement = createCard(card)
+      cardElement.className = addClasses([cardElement.className, 'sm-span-2'])
       grid5.appendChild(cardElement)
     })
 

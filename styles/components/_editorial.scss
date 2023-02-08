@@ -28,6 +28,7 @@
       line-height: 48px;
       letter-spacing: -0.01em;
       text-align: center;
+      margin: 0;
     }
   }
 }
@@ -63,5 +64,31 @@
 .sb-editorial-footer {
   .sb-editorial-footer__articles {
     margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-editorial.sb-grid {
+    grid-row-gap: 36px;
+  }
+  .sb-editorial .sb-editorial__segment--text {
+    font-size: 14px;
+    line-height: 22px;
+
+    blockquote {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+  .sb-editorial-header {
+    .sb-title {
+      font-size: 32px;
+      line-height: 35px;
+    }
+    .sb-subtitle {
+      font-size: 11px;
+      line-height: 14px;
+      margin-top: 12px;
+    }
   }
 }

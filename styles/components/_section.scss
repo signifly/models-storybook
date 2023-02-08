@@ -17,6 +17,10 @@
 }
 
 @media screen and (max-width: $sm) {
+  .sb-section {
+    grid-column-gap: $column-gap-sm;
+    grid-row-gap: calc($row-gap-sm * 2);
+  }
   .sb-section__title {
     font-size: 24px;
     line-height: 28px;
