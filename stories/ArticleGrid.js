@@ -7,8 +7,14 @@ export const createArticleGrid = ({ cards = [], halfGrid = false }) => {
 
   if (cards && cards.length) {
     cards.forEach((card) => {
-      let cardElement = createArticleCard({ ...card, halfGrid: halfGrid })
-      grid.appendChild(cardElement)
+      if (card.line) {
+        const articleLine = document.createElement('div')
+        articleLine.className = 'sb-article-line'
+        grid.appendChild(articleLine)
+      } else {
+        let cardElement = createArticleCard({ ...card, halfGrid: halfGrid })
+        grid.appendChild(cardElement)
+      }
     })
   }
 

@@ -27,6 +27,7 @@
   &__tagline {
     font-size: 20px;
     line-height: 25px;
+    color: $white;
   }
 
   &__paragraph {
@@ -34,12 +35,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-family: $font-primary-light;
     color: $color-subtext;
     font-size: 14px;
-    font-weight: 450;
     line-height: 18px;
-    letter-spacing: 0em;
     text-align: left;
   }
 
@@ -52,7 +50,7 @@
   }
 }
 
-@media screen and (max-width: $sm) {
+@media screen and (max-width: $md) {
   .sb-footer {
     padding: 24px 16px;
   }

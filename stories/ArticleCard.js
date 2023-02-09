@@ -11,12 +11,8 @@ export const createArticleCard = ({
   halfGrid = false
 }) => {
   const articleCard = document.createElement('div')
-
   articleCard.addEventListener('click', onClick)
-  articleCard.className = addClasses([
-    'sb-article-card',
-    `sb-article-card--${size}`,
-  ])
+  articleCard.className = addClasses(['sb-article-card', `sb-article-card--${size}`])
 
   if (halfGrid) {
     articleCard.className = addClasses([

@@ -64,6 +64,11 @@
       }
     }
 
+    &__submit {
+      font-size: 11px;
+      line-height: 13px;
+    }
+
     &__social-links {
       display: flex;
       width: 100%;
@@ -86,7 +91,6 @@
     p,
     li {
       font-size: 14px;
-      font-weight: 450;
       line-height: 18px;
     }
 
@@ -116,14 +120,13 @@
 
   .sb-copyright {
     font-size: 12px;
-    font-weight: 400;
     line-height: 15px;
     margin-top: 95px;
     color: $grey3;
   }
 }
 
-@media screen and (max-width: $sm) {
+@media screen and (max-width: $md) {
   .sb-pre-footer {
     padding-top: 24px;
     padding-bottom: 24px;

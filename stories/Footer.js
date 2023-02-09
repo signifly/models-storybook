@@ -12,7 +12,7 @@ export const createFooter = ({ tagline, paragraph, buttons }) => {
   wrapperBottom.className = addClasses(['sb-footer__wrapper', 'sb-footer__wrapper--bottom'])
 
   const footerTagline = document.createElement('p')
-  footerTagline.className = 'sb-footer__tagline'
+  footerTagline.className = addClasses(['sb-footer__tagline', 'sb-title'])
   footerTagline.innerText = tagline
 
   const footerParagraph = document.createElement('div')
