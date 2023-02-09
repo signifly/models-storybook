@@ -1,18 +1,43 @@
 @import 'fonts';
 
-$black: #000;
-$gray: #999999;;
+// Colors
+$black: #111111;
+$charcoal: #262626;
+$white: #ffffff;
+$grey1: #f7f7f7;
+$grey2: #e5e5e5;
+$grey3: #cccccc;
+$grey4: #999999;
+$blue: #1ea7fd;
+$red: #bb2a33;
 
-$color-primary: #1c4756;
-$color-primary-dark: #112332;
-$color-secondary: #e8ebed;
-$color-tertriary: #d4dadf;
-$color-highlight: #e0f1f7;
-$color-error: #ff487f;
-$color-sand: #fdf3ec;
-$color-yellow: #ffd600;
-$color-orange: #ffb37b;
 $color-text: $black;
-$color-subtext: $gray;
+$color-subtext: $grey4;
 
-$font-primary: 'SuisseIntl-Medium', sans-serif;
+// Fonts
+$font-primary: 'SuisseIntl-Book', sans-serif;
+$font-primary-bold: 'SuisseIntl-SemiBold', sans-serif;
+$font-accent: 'PPEiko-Regular', serif;
+$font-accent-italic: 'PPEiko-RegularItalic', serif;
+
+// Grid
+$columns: 12;
+$row-gap: 24px;
+$column-gap: 24px;
+$row-gap-sm: 16px;
+$column-gap-sm: 16px;
+
+// Breakpoints
+$xxs: 380px;
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Layout
+$site-gutter: 48px;
+$site-gutter-md: 40px;
+$site-gutter-sm: 16px;
+$container-max-width: 1440px;

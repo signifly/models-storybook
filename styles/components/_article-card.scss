@@ -1,0 +1,150 @@
+.sb-article-card {
+  display: flex;
+  min-height: 453px;
+
+  &--small {
+    font-size: 12px;
+    flex-flow: column-reverse;
+  }
+
+  &--large {
+    font-size: 16px;
+  }
+
+  &--border-radius &__img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__text,
+  &__img {
+    flex-grow: 1;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__text .sb-title,
+  &__text .sb-subtitle {
+    margin: 0;
+  }
+
+  &__text .sb-title {
+    font-style: normal;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: $black;
+  }
+
+  &__text .sb-subtitle {
+    color: $color-subtext;
+    font-size: 14px;
+    line-height: 125%;
+    margin-bottom: 12px;
+  }
+
+  &--small &__text {
+    .sb-title {
+      font-size: 16px;
+      line-height: 21px;
+      text-align: left;
+    }
+
+    .sb-subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  &--small &__img {
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  &--large &__text {
+    padding-right: $column-gap;
+    width: 33%;
+
+    .sb-title {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+
+    .sb-subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  &--large &__img {
+    width: 66%;
+  }
+}
+
+.sb-article-line {
+  grid-column: 1 / -1;
+  height: 2px;
+  border-bottom: 1px solid $grey2;
+  width: 100%;
+}
+
+@media screen and (max-width: $md) {
+  .sb-article-card {
+    min-height: unset;
+  }
+
+  .sb-article-card--large {
+    font-size: 12px;
+  }
+
+  .sb-article-card--large .sb-article-card__text {
+    .sb-title {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .sb-subtitle {
+      font-size: 11px;
+      line-height: 14px;
+      letter-spacing: 0em;
+    }
+  }
+
+  .sb-article-card--small .sb-article-card__text {
+    .sb-title {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0em;
+    }
+
+    .sb-subtitle {
+      font-size: 11px;
+      line-height: 14px;
+      letter-spacing: 0em;
+    }
+  }
+
+  .sb-article-card--large .sb-article-card__text {
+    .sb-title {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .sb-subtitle {
+      font-size: 11px;
+      line-height: 14px;
+      letter-spacing: 0em;
+    }
+  }
+}

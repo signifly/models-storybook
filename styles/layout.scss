@@ -1,0 +1,69 @@
+@mixin gridUtilities($size: '') {
+  @if $size != '' {
+    $size: $size + '-';
+  }
+  @for $column from 1 to $columns {
+    .#{$size}span-#{$column} {
+      grid-column-end: span #{$column};
+    }
+
+    .#{$size}start-#{$column} {
+      grid-column-start: #{$column};
+    }
+  }
+
+  .#{$size}span-full {
+    grid-column: 1 / span #{$columns};
+  }
+
+  .#{$size}start-#{$columns} {
+    grid-column-start: #{$columns};
+  }
+}
+
+.sb-grid {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+  grid-row-gap: $row-gap;
+  grid-column-gap: $column-gap;
+  width: 100%;
+
+  &--5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  &--6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.sb-flex {
+  display: flex;
+  &.sb-center {
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@include gridUtilities('');
+
+@media screen and (max-width: $lg) {
+  @include gridUtilities('lg');
+}
+
+@media screen and (max-width: $md) {
+  @include gridUtilities('md');
+}
+
+@media screen and (max-width: $sm) {
+  @include gridUtilities('sm');
+
+  .sb-grid {
+    grid-row-gap: $row-gap-sm;
+    grid-column-gap: $column-gap-sm;
+
+    &--5 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+}

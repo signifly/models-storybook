@@ -1,0 +1,51 @@
+.sb-card {
+  display: flex;
+  flex-flow: column-reverse;
+
+  &__text,
+  &__img {
+    flex-grow: 1;
+  }
+
+  &__text .sb-title,
+  &__text .sb-subtitle,
+  &__text .sb-subtext {
+    margin: 0;
+  }
+
+  &__text .sb-title {
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__text .sb-subtitle,
+  &__text .sb-subtext {
+    color: $color-subtext;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 12px;
+    aspect-ratio: 1;
+  }
+
+  &--borders {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid $grey2;
+    border-bottom: 1px solid $grey2;
+  }
+
+  &--border-radius &__img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &--title-margin &__text .sb-title {
+    margin-bottom: 24px;
+  }
+}

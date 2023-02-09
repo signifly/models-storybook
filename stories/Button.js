@@ -1,19 +1,12 @@
-export const createButton = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  onClick,
-}) => {
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.innerText = label;
-  btn.addEventListener('click', onClick);
+import { addClasses } from '../utilities/classes-names'
 
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  btn.className = ['storybook-button', `storybook-button--${size}`, mode].join(' ');
+export const createButton = ({ primary = false, label, onClick }) => {
+  const btn = document.createElement('button')
+  btn.type = 'button'
+  btn.innerText = label
+  btn.addEventListener('click', onClick)
 
-  btn.style.backgroundColor = backgroundColor;
+  btn.className = addClasses(['sb-button', primary ? 'sb-button--primary' : 'sb-button--secondary'])
 
-  return btn;
-};
+  return btn
+}

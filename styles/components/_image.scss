@@ -1,0 +1,33 @@
+.sb-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    margin-top: 12px;
+    color: $color-subtext;
+    font-size: 12px;
+    line-height: 15px;
+
+    a {
+      @include link;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-image .sb-image__text {
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 12px;
+  }
+}

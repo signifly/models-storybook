@@ -1,0 +1,77 @@
+.sb-cta {
+  background-color: $grey1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: $row-gap;
+  padding: 24px;
+
+  &__text {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__text .sb-title {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  &__text .sb-subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  &__text .sb-link {
+    padding: 8px 0;
+  }
+
+  &__text .sb-button {
+    margin-top: auto;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &--simple {
+    background-color: transparent;
+    grid-template-columns: 1fr;
+    padding: 0;
+
+    .sb-cta__text .sb-link {
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-cta {
+    grid-gap: 12px;
+    padding: 12px;
+  }
+
+  .sb-cta__text .sb-title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .sb-cta__text .sb-subtitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .sb-cta__text .sb-link,
+  .sb-cta--simple .sb-cta__text .sb-link {
+    font-size: 9px;
+    line-height: 11px;
+  }
+}

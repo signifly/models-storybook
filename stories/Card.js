@@ -1,29 +1,55 @@
+import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
-export const createCard = ({ size = 'medium', title, subtitle, onClick, imgSrc, borderRadius }) => {
+export const createCard = ({
+  title,
+  subtitle,
+  subtext,
+  onClick,
+  imgSrc,
+  borders,
+  borderRadius,
+  titleMargin
+}) => {
   const card = document.createElement('div')
-  card.className = 'card'
+  card.className = 'sb-card'
   card.addEventListener('click', onClick)
-  card.className = ['card', `card--${size}`, borderRadius ? 'card--border-radius' : ''].join(' ')
+  card.className = addClasses([
+    'sb-card',
+    borders ? 'sb-card--borders' : '',
+    borderRadius ? 'sb-card--border-radius' : '',
+    titleMargin ? 'sb-card--title-margin' : ''
+  ])
 
   const cardText = document.createElement('div')
-  cardText.className = 'card__text'
+  cardText.className = 'sb-card__text'
 
-  const titleElement = document.createElement('h6')
-  titleElement.className = 'title'
-  titleElement.innerText = title
+  if (title) {
+    const titleElement = document.createElement('h6')
+    titleElement.className = 'sb-title'
+    titleElement.innerText = title
+    cardText.appendChild(titleElement)
+  }
 
-  const subtitleElement = document.createElement('p')
-  subtitleElement.className = 'subtitle'
-  subtitleElement.innerText = subtitle
+  if (subtitle) {
+    const subtitleElement = document.createElement('p')
+    subtitleElement.className = 'sb-subtitle'
+    subtitleElement.innerText = subtitle
+    cardText.appendChild(subtitleElement)
+  }
 
-  cardText.appendChild(subtitleElement)
-  cardText.appendChild(titleElement)
+  if (subtext) {
+    const subtextElement = document.createElement('p')
+    subtextElement.className = 'sb-subtext'
+    subtextElement.innerText = subtext
+    cardText.appendChild(subtextElement)
+  }
+
   card.appendChild(cardText)
 
-  const cardImage = createImage({ src: imgSrc })
+  const cardImage = createImage({ imgSrc: imgSrc })
 
-  cardImage.className = 'card__img'
+  cardImage.className = 'sb-card__img'
 
   card.appendChild(cardImage)
 

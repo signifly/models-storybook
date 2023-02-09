@@ -1,7 +1,79 @@
-button {
+.sb-section,
+.sb-container,
+.sb-grid {
+  padding-left: $site-gutter;
+  padding-right: $site-gutter;
+}
+
+.sb-section,
+.sb-container,
+.sb-grid {
+  .sb-section,
+  .sb-container,
+  .sb-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+a,
+button,
+.sb-button,
+.sb-link {
   cursor: pointer;
 }
 
-.subtitle {
-  color: $color-subtext;
+.sb-button,
+.sb-link {
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.sb-link {
+  @include link;
+}
+
+.sb-title {
+  @include title
+}
+.sb-subtitle {
+  @include subtitle
+}
+
+.sb-logged-off {
+  position: relative;
+  overflow: hidden;
+  height: 175px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, $white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-section,
+  .sb-container,
+  .sb-grid {
+    padding-left: $site-gutter-md;
+    padding-right: $site-gutter-md;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-section,
+  .sb-container,
+  .sb-grid {
+    padding-left: $site-gutter-sm;
+    padding-right: $site-gutter-sm;
+  }
 }

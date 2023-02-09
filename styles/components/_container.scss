@@ -1,0 +1,25 @@
+.sb-container {
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &--border {
+      border-bottom: 1px solid $grey2;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-container__header > .sb-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .sb-container__header > .sb-link {
+    font-size: 9px;
+    line-height: 11px;
+  }
+}

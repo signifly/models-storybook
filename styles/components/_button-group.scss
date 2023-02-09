@@ -1,0 +1,17 @@
+.sb-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-button-group button {
+    margin: 4px;
+  }
+}

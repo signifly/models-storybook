@@ -1,0 +1,35 @@
+.sb-button {
+  font-family: $font-primary-bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.04;
+  transition: all 0.3s;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 12px 16px;
+
+  &--primary {
+    color: $white;
+    border: 1px $grey4 solid;
+    background-color: $black;
+  }
+
+  &--secondary {
+    color: $black;
+    border: 1px $grey2 solid;
+    background-color: transparent;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-button {
+    font-size: 9px;
+    line-height: 10px;
+    padding: 10px 14px;
+  }
+}

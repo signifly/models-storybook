@@ -1,27 +1,33 @@
-export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl }) => {
-  const heroBanner = document.createElement('div')
-  heroBanner.className = 'hero-banner'
+import { addClasses } from '../utilities/classes-names'
+import { createLink } from './Link'
 
+export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl, borders }) => {
+  const grid = document.createElement('div')
+  grid.className = 'sb-grid'
+
+  const heroBanner = document.createElement('div')
+  heroBanner.className = addClasses([
+    'sb-hero-banner',
+    'span-full',
+    borders ? 'sb-hero-banner--borders' : ''
+  ])
 
   const heroBannerImg = document.createElement('img')
-  heroBannerImg.className = 'hero-banner__img'
+  heroBannerImg.className = 'sb-hero-banner__img'
   heroBannerImg.src = imgSrc
 
   const heroBannerText = document.createElement('div')
-  heroBannerText.className = 'hero-banner__text'
+  heroBannerText.className = 'sb-hero-banner__text'
 
   const titleElement = document.createElement('h1')
-  titleElement.className = 'title'
+  titleElement.className = 'sb-title'
   titleElement.innerText = title
 
   const subtitleElement = document.createElement('p')
-  subtitleElement.className = 'subtitle'
+  subtitleElement.className = 'sb-subtitle'
   subtitleElement.innerText = subtitle
 
-  const linkElement = document.createElement('a')
-  linkElement.className = 'link'
-  linkElement.innerText = linkLabel
-  linkElement.href = linkUrl
+  const linkElement = createLink({ label: linkLabel, url: linkUrl })
 
   heroBannerText.appendChild(subtitleElement)
   heroBannerText.appendChild(titleElement)
@@ -29,5 +35,7 @@ export const createHeroBanner = ({ imgSrc, title, subtitle, linkLabel, linkUrl }
   heroBanner.appendChild(heroBannerImg)
   heroBanner.appendChild(heroBannerText)
 
-  return heroBanner
+  grid.appendChild(heroBanner)
+
+  return grid
 }
