@@ -15,10 +15,31 @@ $color-text: $black;
 $color-subtext: $grey4;
 
 // Fonts
-$font-primary: 'SuisseIntl-Book', sans-serif;
-$font-primary-bold: 'SuisseIntl-SemiBold', sans-serif;
-$font-accent: 'PPEiko-Regular', serif;
-$font-accent-italic: 'PPEiko-RegularItalic', serif;
+$font-primary-ultralight: 'SuisseIntl-Ultralight', sans-serif;
+$font-primary-thin: 'SuisseIntl-Thin', sans-serif;
+$font-primary-light: 'SuisseIntl-Light', sans-serif;
+$font-primary-regular: 'SuisseIntl-Regular', sans-serif;
+$font-primary-book: 'SuisseIntl-Book', sans-serif;
+$font-primary-medium: 'SuisseIntl-Medium', sans-serif;
+$font-primary-semibold: 'SuisseIntl-SemiBold', sans-serif;
+$font-primary-bold: 'SuisseIntl-Bold', sans-serif;
+$font-primary-black: 'SuisseIntl-Black', sans-serif;
+$font-primary-ultralight-italic: 'SuisseIntl-UltralightItalic', sans-serif;
+$font-primary-thin-italic: 'SuisseIntl-ThinItalic', sans-serif;
+$font-primary-light-italic: 'SuisseIntl-LightItalic', sans-serif;
+$font-primary-regular-italic: 'SuisseIntl-RegularItalic', sans-serif;
+$font-primary-book-italic: 'SuisseIntl-BookItalic', sans-serif;
+$font-primary-medium-italic: 'SuisseIntl-MediumItalic', sans-serif;
+$font-primary-semibold-italic: 'SuisseIntl-SemiBoldItalic', sans-serif;
+$font-primary-bold-italic: 'SuisseIntl-BoldItalic', sans-serif;
+$font-primary-black-italic: 'SuisseIntl-BlackItalic', sans-serif;
+
+$font-accent-regular: 'PPEiko-Regular', serif;
+$font-accent-regular-italic: 'PPEiko-RegularItalic', serif;
+$font-accent-medium: 'PPEiko-Medium', serif;
+$font-accent-medium-italic: 'PPEiko-MediumItalic', serif;
+$font-accent-bold: 'PPEiko-Bold', serif;
+$font-accent-bold-italic: 'PPEiko-BoldItalic', serif;
 
 // Grid
 $columns: 12;

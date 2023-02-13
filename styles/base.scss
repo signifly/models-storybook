@@ -23,24 +23,15 @@ button,
   cursor: pointer;
 }
 
-.sb-button,
-.sb-link {
-  transition: all 0.3s;
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
 .sb-link {
   @include link;
 }
 
 .sb-title {
-  @include title
+  @include title;
 }
 .sb-subtitle {
-  @include subtitle
+  @include subtitle;
 }
 
 .sb-logged-off {
@@ -57,6 +48,84 @@ button,
     top: 0;
     left: 0;
     z-index: 1;
+  }
+}
+
+.sb-font-primary {
+  &--ultralight {
+    font-family: $font-primary-ultralight;
+  }
+  &--ultralight-italic {
+    font-family: $font-primary-ultralight-italic;
+  }
+  &--thin {
+    font-family: $font-primary-thin;
+  }
+  &--thin-italic {
+    font-family: $font-primary-thin-italic;
+  }
+  &--light {
+    font-family: $font-primary-light;
+  }
+  &--light-italic {
+    font-family: $font-primary-light-italic;
+  }
+  &--regular {
+    font-family: $font-primary-regular;
+  }
+  &--regular-italic {
+    font-family: $font-primary-regular-italic;
+  }
+  &--book {
+    font-family: $font-primary-book;
+  }
+  &--book-italic {
+    font-family: $font-primary-book-italic;
+  }
+  &--medium {
+    font-family: $font-primary-medium;
+  }
+  &--medium-italic {
+    font-family: $font-primary-medium-italic;
+  }
+  &--semibold {
+    font-family: $font-primary-semibold;
+  }
+  &--semibold-italic {
+    font-family: $font-primary-semibold-italic;
+  }
+  &--bold {
+    font-family: $font-primary-bold;
+  }
+  &--bold-italic {
+    font-family: $font-primary-bold-italic;
+  }
+  &--black {
+    font-family: $font-primary-black;
+  }
+  &--black-italic {
+    font-family: $font-primary-black-italic;
+  }
+}
+
+.sb-font-accent {
+  &--regular {
+    font-family: $font-accent-regular;
+  }
+  &--regular-italic {
+    font-family: $font-accent-regular-italic;
+  }
+  &--medium {
+    font-family: $font-accent-medium;
+  }
+  &--medium-italic {
+    font-family: $font-accent-medium-italic;
+  }
+  &--bold {
+    font-family: $font-accent-bold;
+  }
+  &--bold-italic {
+    font-family: $font-accent-bold-italic;
   }
 }
 

@@ -1,15 +1,13 @@
 import { addClasses } from '../utilities/classes-names'
 import { createSection } from './Section'
 import { createCta } from './Cta'
-import { createCard } from './Card'
-import { createButton } from './Button'
-import { createProfileGrid } from './ProfileGrid'
+import { createAvatarGrid } from './AvatarGrid'
 
 export const createAgenciesPeople = ({
   title,
   ctaSections,
   simpleCtaSections,
-  profileGrids,
+  avatarGrids,
   cards,
   mainButton
 }) => {
@@ -26,18 +24,18 @@ export const createAgenciesPeople = ({
     section.appendChild(ctaGrid)
   }
 
-  if (profileGrids && profileGrids.length) {
-    const profileGridsGrid = document.createElement('div')
-    profileGridsGrid.className = 'sb-grid'
-    profileGrids.forEach((profileGrid) => {
-      let profileGridElement = createProfileGrid(profileGrid)
-      profileGridElement.className = addClasses([
-        profileGridElement.className,
+  if (avatarGrids && avatarGrids.length) {
+    const avatarGridsGrid = document.createElement('div')
+    avatarGridsGrid.className = 'sb-grid'
+    avatarGrids.forEach((avatarGrid) => {
+      let avatarGridElement = createAvatarGrid(avatarGrid)
+      avatarGridElement.className = addClasses([
+        avatarGridElement.className,
         'span-6',
         'sm-span-full'
       ])
-      profileGridsGrid.appendChild(profileGridElement)
-      section.appendChild(profileGridsGrid)
+      avatarGridsGrid.appendChild(avatarGridElement)
+      section.appendChild(avatarGridsGrid)
     })
   }
 

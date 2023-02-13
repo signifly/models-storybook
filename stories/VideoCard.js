@@ -37,14 +37,14 @@ export const createVideoCard = ({
     videoTagged.className = 'sb-video-card__tagged'
     videoHeader.appendChild(videoTagged)
 
-    const taggedProfiles = document.createElement('div')
-    taggedProfiles.className = 'sb-tagged__profiles'
-    videoTagged.appendChild(taggedProfiles)
+    const taggedAvatars = document.createElement('div')
+    taggedAvatars.className = 'sb-tagged__avatars'
+    videoTagged.appendChild(taggedAvatars)
 
     if (tagged && tagged.length) {
       tagged.forEach((img) => {
-        const taggedProfile = createImage({ ...img })
-        taggedProfiles.appendChild(taggedProfile)
+        const taggedAvatar = createImage({ ...img })
+        taggedAvatars.appendChild(taggedAvatar)
       })
     }
 

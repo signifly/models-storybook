@@ -15,9 +15,21 @@
   .#{$size}span-full {
     grid-column: 1 / span #{$columns};
   }
+  .sb-grid--5 .#{$size}span-full {
+    grid-column: 1 / span #{5};
+  }
+  .sb-grid--6 .#{$size}span-full {
+    grid-column: 1 / span #{6};
+  }
 
   .#{$size}start-#{$columns} {
     grid-column-start: #{$columns};
+  }
+  .sb-grid--5 .#{$size}start-#{5} {
+    grid-column-start: #{5};
+  }
+  .sb-grid--6 .#{$size}start-#{6} {
+    grid-column-start: #{6};
   }
 }
 
@@ -41,7 +53,7 @@
   display: flex;
   &.sb-center {
     justify-content: center;
-    align-content: center;
+    align-items: center;
   }
 }
 
