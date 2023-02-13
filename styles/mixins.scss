@@ -21,13 +21,13 @@
 
 @mixin title {
   color: $color-text;
-  font-family: $font-primary-bold;
+  font-family: $font-primary-semibold;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 @mixin subtitle {
   color: $color-subtext;
-  font-family: $font-primary;
+  font-family: $font-primary-book;
   font-weight: 450;
 }
 
@@ -38,4 +38,9 @@
   border: none;
   font-weight: 400;
   letter-spacing: -0.01em;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }

@@ -9,7 +9,7 @@
     padding: 12px;
 
     .sb-link {
-      font-family: $font-accent;
+      font-family: $font-accent-regular;
       font-size: 40px;
       line-height: 46px;
       text-align: center;
@@ -21,7 +21,7 @@
     justify-content: center;
 
     .sb-menu__item .sb-link {
-      font-family: $font-accent;
+      font-family: $font-accent-regular;
       font-size: 15px;
       line-height: 15px;
       text-align: center;
@@ -32,7 +32,7 @@
     }
 
     .sb-menu__item--selected .sb-link {
-      font-family: $font-accent-italic;
+      font-family: $font-accent-regular-italic;
     }
   }
 }

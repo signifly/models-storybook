@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=d91e2c212657",
     "sass": "sass styles/index.scss:styles/index.css --style compressed",
-    "sass-uncompressed": "sass styles/index.scss:styles/index.css"
+    "sass-uncompressed": "sass styles/index.scss:styles/index-uc.css"
   },
   "repository": {
     "type": "git",

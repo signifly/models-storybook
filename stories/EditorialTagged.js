@@ -1,11 +1,11 @@
 import { addClasses } from '../utilities/classes-names'
-import { createProfileGrid } from './ProfileGrid'
+import { createAvatarGrid } from './AvatarGrid'
 import { createContainer } from './Container'
 
-export const createEditorialTagged = ({ title, profiles, buttonLabel, onClick }) => {
-  const editorialTagged = createProfileGrid({
+export const createEditorialTagged = ({ title, avatars, buttonLabel, onClick }) => {
+  const editorialTagged = createAvatarGrid({
     title: title,
-    profiles: profiles,
+    avatars: avatars,
     buttonLabel: buttonLabel,
     onButtonClick: onClick,
     centeredButton: true,

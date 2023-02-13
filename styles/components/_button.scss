@@ -1,5 +1,5 @@
 .sb-button {
-  font-family: $font-primary;
+  font-family: $font-primary-book;
   border-radius: 8px;
   cursor: pointer;
   display: inline-block;
@@ -21,8 +21,17 @@
     background-color: transparent;
   }
 
-  &:hover {
+  &--primary:hover {
+    background-color: $charcoal;
+  }
+
+  &--secondary:hover {
+    border: 1px $grey3 solid;
+  }
+
+  &:disabled {
     opacity: 0.5;
+    cursor: default;
   }
 }
 

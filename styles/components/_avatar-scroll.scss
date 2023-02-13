@@ -1,0 +1,23 @@
+.sb-avatar-scroll {
+  overflow-y: scroll;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__wrapper {
+    .sb-avatar {
+      border-top: 1px solid $grey2;
+    }
+    .sb-avatar:last-child {
+      border-bottom: 1px solid $grey2;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .sb-avatar-scroll__title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

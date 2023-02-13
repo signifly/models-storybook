@@ -1,5 +1,5 @@
 info @storybook/html v6.5.15
-info 
+info
 info => Cleaning outputDir: /var/folders/nk/qf7rjp9n4lj58s0s1w9__kfm0000gn/T/chromatic--83243-DJc3RlK1mq0B
 info => Loading presets
 info => Compiling manager..
@@ -8,9 +8,9 @@ info Addon-docs: using MDX1
 info => Using implicit CSS loaders
 info => Using default Webpack4 setup
 <s> [webpack.Progress] 0% compiling
-<s> [webpack.Progress] 10% building 0/0 modules 0 active 
+<s> [webpack.Progress] 10% building 0/0 modules 0 active
 <s> [webpack.Progress] 10% building 0/1 modules 1 active multi /Users/hughmiranda/models-storybook/node_modules/@storybook/core-client/dist/esm/globals/polyfills.js /Users/hughmiranda/models-storybook/node_modules/@storybook/core-client/dist/esm/globals/globals.js /Users/hughmiranda/models-storybook/storybook-init-framework-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/html/dist/esm/client/preview/config-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/html/dist/esm/client/docs/config-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-links/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-docs/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-actions/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-backgrounds/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-measure/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-outline/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-interactions/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/.storybook/preview.js-generated-config-entry.js /Users/hughmiranda/models-storybook/generated-stories-entry.js
-<s> [webpack.Progress] 10% building 1/1 modules 0 active 
+<s> [webpack.Progress] 10% building 1/1 modules 0 active
 (node:83265) DeprecationWarning: Default PostCSS plugins are deprecated. When switching to '@storybook/addon-postcss',
 you will need to add your own plugins, such as 'postcss-flexbugs-fixes' and 'autoprefixer'.
 
@@ -29,7 +29,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 10% building 5/8 modules 3 active /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-interactions/preview.js-generated-config-entry.js
 <s> [webpack.Progress] 10% building 6/8 modules 2 active /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-interactions/preview.js-generated-config-entry.js
 <s> [webpack.Progress] 10% building 7/8 modules 1 active /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-interactions/preview.js-generated-config-entry.js
-<s> [webpack.Progress] 10% building 8/8 modules 0 active 
+<s> [webpack.Progress] 10% building 8/8 modules 0 active
 <s> [webpack.Progress] 10% building 8/9 modules 1 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/storybook-init-framework-entry.js
 <s> [webpack.Progress] 10% building 8/10 modules 2 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/generated-stories-entry.js
 <s> [webpack.Progress] 10% building 8/11 modules 3 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/.storybook/preview.js-generated-config-entry.js
@@ -152,9 +152,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 16% building 50/86 modules 36 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/PopUp.stories.js
 <s> [webpack.Progress] 16% building 50/87 modules 37 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/PopUpExample.stories.js
 <s> [webpack.Progress] 16% building 50/88 modules 38 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/PreFooter.stories.js
-<s> [webpack.Progress] 16% building 50/89 modules 39 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/Profile.stories.js
-<s> [webpack.Progress] 16% building 50/90 modules 40 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/ProfileGrid.stories.js
-<s> [webpack.Progress] 16% building 50/91 modules 41 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/ProfileScroll.stories.js
+<s> [webpack.Progress] 16% building 50/89 modules 39 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/Avatar.stories.js
+<s> [webpack.Progress] 16% building 50/90 modules 40 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/AvatarGrid.stories.js
+<s> [webpack.Progress] 16% building 50/91 modules 41 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/AvatarScroll.stories.js
 <s> [webpack.Progress] 16% building 50/92 modules 42 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/Section.stories.js
 <s> [webpack.Progress] 16% building 50/93 modules 43 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/SocialLink.stories.js
 <s> [webpack.Progress] 16% building 50/94 modules 44 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/node_modules/@storybook/source-loader/dist/cjs/index.js??ref--12!/Users/hughmiranda/models-storybook/stories/VideoCard.stories.js
@@ -311,9 +311,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 26% building 138/157 modules 19 active /Users/hughmiranda/models-storybook/node_modules/@storybook/addon-measure/dist/esm/box-model/visualizer.js
 <s> [webpack.Progress] 26% building 138/158 modules 20 active /Users/hughmiranda/models-storybook/node_modules/core-js/internals/shared.js
 <s> [webpack.Progress] 26% building 138/159 modules 21 active /Users/hughmiranda/models-storybook/node_modules/core-js/internals/try-to-string.js
-<s> [webpack.Progress] 26% building 138/160 modules 22 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/Profile.js
+<s> [webpack.Progress] 26% building 138/160 modules 22 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/Avatar.js
 <s> [webpack.Progress] 26% building 138/161 modules 23 active /Users/hughmiranda/models-storybook/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-<s> [webpack.Progress] 26% building 138/162 modules 24 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/ProfileScroll.js
+<s> [webpack.Progress] 26% building 138/162 modules 24 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/AvatarScroll.js
 <s> [webpack.Progress] 26% building 138/163 modules 25 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/Section.js
 <s> [webpack.Progress] 26% building 139/163 modules 24 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/Section.js
 <s> [webpack.Progress] 26% building 140/163 modules 23 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/Section.js
@@ -360,7 +360,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 27% building 146/198 modules 52 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/PopUp.js
 <s> [webpack.Progress] 27% building 146/199 modules 53 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/AgenciesPeople.js
 <s> [webpack.Progress] 27% building 147/199 modules 52 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/AgenciesPeople.js
-<s> [webpack.Progress] 27% building 147/200 modules 53 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/ProfileGrid.js
+<s> [webpack.Progress] 27% building 147/200 modules 53 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/AvatarGrid.js
 <s> [webpack.Progress] 27% building 147/201 modules 54 active /Users/hughmiranda/models-storybook/node_modules/core-js/internals/promise-constructor-detection.js
 <s> [webpack.Progress] 27% building 147/202 modules 55 active /Users/hughmiranda/models-storybook/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/hughmiranda/models-storybook/stories/SocialLink.js
 <s> [webpack.Progress] 27% building 147/203 modules 56 active /Users/hughmiranda/models-storybook/node_modules/core-js/internals/promise-native-constructor.js
@@ -2143,7 +2143,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 69% building 1062/1065 modules 3 active /Users/hughmiranda/models-storybook/node_modules/array.prototype.map/index.js
 <s> [webpack.Progress] 69% building 1063/1065 modules 2 active /Users/hughmiranda/models-storybook/node_modules/array.prototype.map/index.js
 <s> [webpack.Progress] 69% building 1064/1065 modules 1 active /Users/hughmiranda/models-storybook/node_modules/array.prototype.map/index.js
-<s> [webpack.Progress] 70% building 1065/1065 modules 0 active 
+<s> [webpack.Progress] 70% building 1065/1065 modules 0 active
 <s> [webpack.Progress] 69% building 1065/1066 modules 1 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/2022/CodePointAt.js
 <s> [webpack.Progress] 69% building 1065/1067 modules 2 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/helpers/forEach.js
 <s> [webpack.Progress] 69% building 1065/1068 modules 3 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/2022/Invoke.js
@@ -2177,7 +2177,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 69% building 1079/1082 modules 3 active /Users/hughmiranda/models-storybook/node_modules/es-set-tostringtag/index.js
 <s> [webpack.Progress] 69% building 1080/1082 modules 2 active /Users/hughmiranda/models-storybook/node_modules/es-set-tostringtag/index.js
 <s> [webpack.Progress] 69% building 1081/1082 modules 1 active /Users/hughmiranda/models-storybook/node_modules/es-set-tostringtag/index.js
-<s> [webpack.Progress] 70% building 1082/1082 modules 0 active 
+<s> [webpack.Progress] 70% building 1082/1082 modules 0 active
 <s> [webpack.Progress] 69% building 1082/1083 modules 1 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/helpers/isLeadingSurrogate.js
 <s> [webpack.Progress] 69% building 1082/1084 modules 2 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/helpers/isTrailingSurrogate.js
 <s> [webpack.Progress] 69% building 1082/1085 modules 3 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/2022/UTF16SurrogatePairToCodePoint.js
@@ -2185,7 +2185,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 69% building 1083/1086 modules 3 active /Users/hughmiranda/models-storybook/node_modules/entities/lib/maps/decode.json
 <s> [webpack.Progress] 69% building 1084/1086 modules 2 active /Users/hughmiranda/models-storybook/node_modules/entities/lib/maps/decode.json
 <s> [webpack.Progress] 69% building 1085/1086 modules 1 active /Users/hughmiranda/models-storybook/node_modules/entities/lib/maps/decode.json
-<s> [webpack.Progress] 70% building 1086/1086 modules 0 active 
+<s> [webpack.Progress] 70% building 1086/1086 modules 0 active
 <s> [webpack.Progress] 69% building 1086/1087 modules 1 active /Users/hughmiranda/models-storybook/node_modules/es-abstract/2022/ToUint32.js
 <s> [webpack.Progress] 69% building 1086/1088 modules 2 active /Users/hughmiranda/models-storybook/node_modules/is-function/index.js
 <s> [webpack.Progress] 69% building 1087/1088 modules 1 active /Users/hughmiranda/models-storybook/node_modules/is-function/index.js
@@ -2195,7 +2195,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 69% building 1088/1091 modules 3 active /Users/hughmiranda/models-storybook/node_modules/telejson/node_modules/isobject/index.js
 <s> [webpack.Progress] 69% building 1089/1091 modules 2 active /Users/hughmiranda/models-storybook/node_modules/telejson/node_modules/isobject/index.js
 <s> [webpack.Progress] 69% building 1090/1091 modules 1 active /Users/hughmiranda/models-storybook/node_modules/telejson/node_modules/isobject/index.js
-<s> [webpack.Progress] 70% building 1091/1091 modules 0 active 
+<s> [webpack.Progress] 70% building 1091/1091 modules 0 active
 <s> [webpack.Progress] 69% building 1091/1092 modules 1 active /Users/hughmiranda/models-storybook/node_modules/is-arguments/index.js
 <s> [webpack.Progress] 69% building 1091/1093 modules 2 active /Users/hughmiranda/models-storybook/node_modules/stop-iteration-iterator/index.js
 <s> [webpack.Progress] 69% building 1091/1094 modules 3 active /Users/hughmiranda/models-storybook/node_modules/is-map/index.js
@@ -2205,8 +2205,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-d
 <s> [webpack.Progress] 69% building 1093/1096 modules 3 active /Users/hughmiranda/models-storybook/node_modules/es-get-iterator/node_modules/isarray/index.js
 <s> [webpack.Progress] 69% building 1094/1096 modules 2 active /Users/hughmiranda/models-storybook/node_modules/es-get-iterator/node_modules/isarray/index.js
 <s> [webpack.Progress] 69% building 1095/1096 modules 1 active /Users/hughmiranda/models-storybook/node_modules/es-get-iterator/node_modules/isarray/index.js
-<s> [webpack.Progress] 70% building 1096/1096 modules 0 active 
-<s> [webpack.Progress] 70% building 1096/1096 modules 0 active 
+<s> [webpack.Progress] 70% building 1096/1096 modules 0 active
+<s> [webpack.Progress] 70% building 1096/1096 modules 0 active
 <s> [webpack.Progress] 70% finish module graph
 <s> [webpack.Progress] 70% finish module graph FlagDependencyExportsPlugin
 <s> [webpack.Progress] 70% finish module graph WasmFinalizeExportsPlugin
@@ -2308,12 +2308,12 @@ info => Manager built (13 s)
 <s> [webpack.Progress] 95% emitting HtmlWebpackPlugin
 <s> [webpack.Progress] 98% after emitting
 <s> [webpack.Progress] 98% after emitting SizeLimitsPlugin
-<s> [webpack.Progress] 100% 
+<s> [webpack.Progress] 100%
 
 info => Preview built (13 s)
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
-WARN Assets: 
+WARN Assets:
 WARN   static/media/PPEiko-Black.8014541c.ttf (320 KiB)
 WARN   static/media/PPEiko-BlackItalic.a95a0927.ttf (320 KiB)
 WARN   static/media/PPEiko-Heavy.cb8c006a.ttf (320 KiB)
@@ -2334,5 +2334,5 @@ WARN   main (1.33 MiB)
 WARN       runtime~main.914f5808.iframe.bundle.js
 WARN       vendors~main.5b2b4ba1.iframe.bundle.js
 WARN       main.00494b3d.iframe.bundle.js
-WARN 
+WARN
 info => Output directory: /var/folders/nk/qf7rjp9n4lj58s0s1w9__kfm0000gn/T/chromatic--83243-DJc3RlK1mq0B
