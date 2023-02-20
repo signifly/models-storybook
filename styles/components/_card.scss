@@ -11,6 +11,10 @@
   &__text .sb-subtitle,
   &__text .sb-subtext {
     margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__text .sb-title {

@@ -3,6 +3,7 @@
 .sb-grid {
   padding-left: $site-gutter;
   padding-right: $site-gutter;
+  box-sizing: border-box;
 }
 
 .sb-section,
