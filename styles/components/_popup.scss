@@ -18,7 +18,7 @@
     --set-width: 100%;
     --set-height: 100%;
     background-color: $white;
-    padding: 30px;
+    padding: 48px 30px 30px;
     border-radius: 8px;
     width: var(--set-width);
     height: var(--set-height);
@@ -26,9 +26,12 @@
   }
 
   &__content {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
     width: 100%;
+    padding-right: 16px;
+    box-sizing: border-box;
   }
 
   &__close {
