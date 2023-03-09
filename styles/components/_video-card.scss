@@ -51,16 +51,38 @@
       border: 1px $grey2 solid;
       border-radius: 50%;
       overflow: hidden;
+
+      &--more-icon {
+        background-color: $black;
+      }
+
+      &--more-icon::before {
+        content: '+';
+        color: $white;
+        background: $black;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
+
     .sb-tagged__avatars .sb-image:not(:first-child) {
       position: absolute;
       top: 0;
     }
-    .sb-tagged__avatars .sb-image:nth-child(2) {
-      left: 12px;
-    }
-    .sb-tagged__avatars .sb-image:nth-child(3) {
-      left: 24px;
+
+    $n: 10;
+
+    @for $i from 1 through $n {
+      .sb-tagged__avatars .sb-image:nth-child(#{$i}) {
+        left: 12px * ($i - 1);
+      }
     }
 
     .sb-tagged__button {

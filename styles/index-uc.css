@@ -123,6 +123,7 @@
 .sb-grid {
   padding-left: 48px;
   padding-right: 48px;
+  box-sizing: border-box;
 }
 
 .sb-section .sb-section,
@@ -744,16 +745,19 @@ button,
   --set-width: 100%;
   --set-height: 100%;
   background-color: #ffffff;
-  padding: 30px;
+  padding: 48px 30px 30px;
   border-radius: 8px;
   width: var(--set-width);
   height: var(--set-height);
   overflow: hidden;
 }
 .sb-popup__content {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 .sb-popup__close {
   position: absolute;
@@ -1158,6 +1162,10 @@ button,
 }
 .sb-card__text .sb-title, .sb-card__text .sb-subtitle, .sb-card__text .sb-subtext {
   margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .sb-card__text .sb-title {
   margin-bottom: 4px;
@@ -1690,15 +1698,56 @@ button,
   border-radius: 50%;
   overflow: hidden;
 }
+.sb-video-card__tagged .sb-tagged__avatars .sb-image--more-icon {
+  background-color: #111111;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image--more-icon::before {
+  content: "+";
+  color: #ffffff;
+  background: #111111;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .sb-video-card__tagged .sb-tagged__avatars .sb-image:not(:first-child) {
   position: absolute;
   top: 0;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(1) {
+  left: 0px;
 }
 .sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(2) {
   left: 12px;
 }
 .sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(3) {
   left: 24px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(4) {
+  left: 36px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(5) {
+  left: 48px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(6) {
+  left: 60px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(7) {
+  left: 72px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(8) {
+  left: 84px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(9) {
+  left: 96px;
+}
+.sb-video-card__tagged .sb-tagged__avatars .sb-image:nth-child(10) {
+  left: 108px;
 }
 .sb-video-card__tagged .sb-tagged__button {
   margin-left: auto;
