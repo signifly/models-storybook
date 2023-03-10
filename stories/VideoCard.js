@@ -42,8 +42,11 @@ export const createVideoCard = ({
     videoTagged.appendChild(taggedAvatars)
 
     if (tagged && tagged.length) {
-      tagged.forEach((img) => {
+      tagged.forEach((img, index) => {
         const taggedAvatar = createImage({ ...img })
+        if (index === tagged.length - 1) {
+          taggedAvatar.className = addClasses([taggedAvatar.className, 'sb-image--more'])
+        }
         taggedAvatars.appendChild(taggedAvatar)
       })
     }
