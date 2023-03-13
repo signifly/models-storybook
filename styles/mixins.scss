@@ -43,4 +43,8 @@
   &:hover {
     opacity: 0.5;
   }
+
+  &:visited {
+    color: $color-text;
+  }
 }

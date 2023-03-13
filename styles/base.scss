@@ -24,8 +24,12 @@ button,
   cursor: pointer;
 }
 
-.sb-link {
+[class*='sb-link'] {
   @include link;
+}
+
+.sb-link--remove-underline {
+  text-decoration: none;
 }
 
 .sb-title {

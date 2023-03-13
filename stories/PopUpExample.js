@@ -1,9 +1,8 @@
 import { createPopUp } from './PopUp'
 import { createAvatarScroll } from './AvatarScroll'
 
-export const createPopUpExample = ({ fixed, height, width,onClick }) => {
+export const createPopUpExample = ({ fixed, height, width, title, onClick }) => {
   const popupContent = createAvatarScroll({
-    title: 'Tagged People',
     avatars: [
       {
         imgSrc:
@@ -38,7 +37,7 @@ export const createPopUpExample = ({ fixed, height, width,onClick }) => {
     ]
   })
 
-  const popup = createPopUp({ fixed, height, width, content: popupContent, onClick })
+  const popup = createPopUp({ fixed, height, width, title, content: popupContent, onClick })
 
   return popup
 }

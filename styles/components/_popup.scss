@@ -18,7 +18,7 @@
     --set-width: 100%;
     --set-height: 100%;
     background-color: $white;
-    padding: 48px 30px 30px;
+    padding: 30px;
     border-radius: 8px;
     width: var(--set-width);
     height: var(--set-height);
@@ -26,18 +26,29 @@
   }
 
   &__content {
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
     width: 100%;
-    padding-right: 16px;
+    padding: 16px 16px 32px 0;
     box-sizing: border-box;
   }
 
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+  }
+
+  &__title {
+    text-align: left;
+    margin: 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
   &__close {
-    position: absolute;
-    top: 30px;
-    right: 30px;
     font-size: 11px;
     line-height: 13px;
     letter-spacing: 0.03em;

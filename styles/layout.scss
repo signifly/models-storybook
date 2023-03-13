@@ -77,5 +77,24 @@
     &--5 {
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
+
+    &--scroll {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      overflow: scroll;
+      padding-bottom: 16px;
+    }
+
+    &--scroll .sb-card .sb-card__img,
+    &--scroll .sb-card .sb-card__text {
+      width: 33vw;
+    }
+
+
+    &--scroll .sb-card .sb-card__text {
+      white-space: break-spaces;
+    }
   }
 }

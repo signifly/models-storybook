@@ -1,10 +1,11 @@
 import { addClasses } from '../utilities/classes-names'
 import { createImage } from './Image'
 
-export const createAvatar = ({ title, subtitle, onClick, imgSrc, initials }) => {
-  const avatar = document.createElement('div')
+export const createAvatar = ({ title, subtitle, imgSrc, initials, href, onClick }) => {
+  const avatar = document.createElement('a')
   avatar.addEventListener('click', onClick)
-  avatar.className = 'sb-avatar'
+  avatar.className = 'sb-avatar sb-link--remove-underline'
+  avatar.href = href
 
   if (imgSrc) {
     const avatarImage = createImage({ imgSrc: imgSrc })
