@@ -1529,14 +1529,16 @@ button,
   background-color: #262626;
   color: #ffffff;
 }
-.sb-pre-footer--dark a {
+.sb-pre-footer--dark a,
+.sb-pre-footer--dark a:visited {
   color: #ffffff;
 }
 .sb-pre-footer--light {
   background-color: #ffffff;
   color: #262626;
 }
-.sb-pre-footer--light a {
+.sb-pre-footer--light a,
+.sb-pre-footer--light a:visited {
   color: #262626;
 }
 .sb-pre-footer__newsletter {

@@ -7,7 +7,8 @@
     background-color: $charcoal;
     color: $white;
 
-    a {
+    a,
+    a:visited {
       color: $white;
     }
   }
@@ -16,7 +17,8 @@
     background-color: $white;
     color: $charcoal;
 
-    a {
+    a,
+    a:visited {
       color: $charcoal;
     }
   }
