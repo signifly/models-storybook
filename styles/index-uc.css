@@ -688,7 +688,7 @@ button,
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    overflow: scroll;
+    overflow-x: scroll;
     padding-bottom: 16px;
   }
   .sb-grid--scroll .sb-card .sb-card__img, .sb-grid--scroll .sb-card .sb-card__text {
