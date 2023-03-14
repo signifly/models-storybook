@@ -146,7 +146,7 @@ button,
   cursor: pointer;
 }
 
-[class*=sb-link] {
+.sb-link {
   color: #111111;
   text-decoration: underline;
   background-color: transparent;
@@ -155,15 +155,28 @@ button,
   letter-spacing: -0.01em;
   transition: opacity 0.3s;
 }
-[class*=sb-link]:hover {
+.sb-link:hover {
   opacity: 0.5;
 }
-[class*=sb-link]:visited {
+.sb-link:visited {
   color: #111111;
 }
 
 .sb-link--remove-underline {
+  color: #111111;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: opacity 0.3s;
   text-decoration: none;
+}
+.sb-link--remove-underline:hover {
+  opacity: 0.5;
+}
+.sb-link--remove-underline:visited {
+  color: #111111;
 }
 
 .sb-title {
@@ -1268,7 +1281,7 @@ button,
   font-family: "SuisseIntl-SemiBold", sans-serif;
 }
 .sb-avatar__text {
-  white-space: pre-wrap;
+  white-space: break-spaces;
 }
 .sb-avatar__text .sb-title,
 .sb-avatar__text .sb-subtitle {

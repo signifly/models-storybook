@@ -24,11 +24,12 @@ button,
   cursor: pointer;
 }
 
-[class*='sb-link'] {
+.sb-link {
   @include link;
 }
 
 .sb-link--remove-underline {
+  @include link;
   text-decoration: none;
 }
 
