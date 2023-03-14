@@ -32,11 +32,10 @@
   }
 
   &__text {
-    white-space: break-spaces;
-
     .sb-title,
     .sb-subtitle {
       margin: 0;
+      white-space: break-spaces;
     }
     .sb-title {
       font-size: 16px;

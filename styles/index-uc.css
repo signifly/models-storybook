@@ -1280,12 +1280,10 @@ button,
   line-height: 25px;
   font-family: "SuisseIntl-SemiBold", sans-serif;
 }
-.sb-avatar__text {
-  white-space: break-spaces;
-}
 .sb-avatar__text .sb-title,
 .sb-avatar__text .sb-subtitle {
   margin: 0;
+  white-space: break-spaces;
 }
 .sb-avatar__text .sb-title {
   font-size: 16px;
