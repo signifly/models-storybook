@@ -1,9 +1,12 @@
-.sb-menu {
+.sb-menu,
+ul.sb-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   width: 100%;
+  overflow-x: auto;
+  padding-bottom: 16px;
 
   &__item {
     padding: 12px;
@@ -28,12 +31,21 @@
     }
 
     .sb-menu__item--selected {
-      border-bottom: 2px solid $black;
+      // border-bottom: 2px solid $black;
+      box-shadow: 0px 2px 0px 0px $black;
+      margin-bottom: -1px;
     }
 
     .sb-menu__item--selected .sb-link {
       font-family: $font-accent-regular-italic;
     }
+  }
+
+  &.sb-menu--fixed {
+    background-color: $white;
+    border-bottom: 1px solid $grey2;
+    position: fixed;
+    z-index: 30;
   }
 }
 
@@ -43,7 +55,6 @@
   }
 
   .sb-menu--large {
-    overflow: scroll;
     padding-bottom: 16px;
   }
 

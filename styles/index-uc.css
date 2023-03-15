@@ -701,7 +701,7 @@ button,
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding-bottom: 16px;
   }
   .sb-grid--scroll .sb-card .sb-card__img, .sb-grid--scroll .sb-card .sb-card__text {
@@ -750,6 +750,10 @@ button,
   border-bottom: 1px solid #e5e5e5;
 }
 
+.sb-container .sb-menu.sb-menu--fixed {
+  margin-left: -48px;
+}
+
 @media screen and (max-width: 768px) {
   .sb-container__header > .sb-title {
     font-size: 16px;
@@ -758,6 +762,9 @@ button,
   .sb-container__header > .sb-link {
     font-size: 9px;
     line-height: 11px;
+  }
+  .sb-container .sb-menu.sb-menu--fixed {
+    margin-left: -16px;
   }
 }
 .sb-popup {
@@ -933,37 +940,54 @@ button,
     margin: 4px;
   }
 }
-.sb-menu {
+.sb-menu,
+ul.sb-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   width: 100%;
+  overflow-x: auto;
+  padding-bottom: 16px;
 }
-.sb-menu__item {
+.sb-menu__item,
+ul.sb-menu__item {
   padding: 12px;
 }
-.sb-menu__item .sb-link {
+.sb-menu__item .sb-link,
+ul.sb-menu__item .sb-link {
   font-family: "PPEiko-Regular", serif;
   font-size: 40px;
   line-height: 46px;
   text-align: center;
   text-decoration: none;
 }
-.sb-menu--small {
+.sb-menu--small,
+ul.sb-menu--small {
   justify-content: center;
 }
-.sb-menu--small .sb-menu__item .sb-link {
+.sb-menu--small .sb-menu__item .sb-link,
+ul.sb-menu--small .sb-menu__item .sb-link {
   font-family: "PPEiko-Regular", serif;
   font-size: 15px;
   line-height: 15px;
   text-align: center;
 }
-.sb-menu--small .sb-menu__item--selected {
-  border-bottom: 2px solid #111111;
+.sb-menu--small .sb-menu__item--selected,
+ul.sb-menu--small .sb-menu__item--selected {
+  box-shadow: 0px 2px 0px 0px #111111;
+  margin-bottom: -1px;
 }
-.sb-menu--small .sb-menu__item--selected .sb-link {
+.sb-menu--small .sb-menu__item--selected .sb-link,
+ul.sb-menu--small .sb-menu__item--selected .sb-link {
   font-family: "PPEiko-RegularItalic", serif;
+}
+.sb-menu.sb-menu--fixed,
+ul.sb-menu.sb-menu--fixed {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  z-index: 30;
 }
 
 @media screen and (max-width: 768px) {
@@ -971,7 +995,6 @@ button,
     padding: 6px;
   }
   .sb-menu--large {
-    overflow: scroll;
     padding-bottom: 16px;
   }
   .sb-menu--small .sb-menu__item .sb-link {

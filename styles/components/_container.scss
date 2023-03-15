@@ -13,6 +13,10 @@
   }
 }
 
+.sb-container .sb-menu.sb-menu--fixed {
+  margin-left: -48px;
+}
+
 @media screen and (max-width: $md) {
   .sb-container__header > .sb-title {
     font-size: 16px;
@@ -21,5 +25,8 @@
   .sb-container__header > .sb-link {
     font-size: 9px;
     line-height: 11px;
+  }
+  .sb-container .sb-menu.sb-menu--fixed {
+    margin-left: -16px;
   }
 }
