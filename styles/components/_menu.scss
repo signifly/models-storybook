@@ -6,6 +6,8 @@ ul.sb-menu {
   list-style: none;
   width: 100%;
   overflow-x: auto;
+  overflow-y: visible;
+  border-bottom: 1px solid $grey2;
 
   &__item {
     padding: 12px;
@@ -21,6 +23,7 @@ ul.sb-menu {
 
   &--small {
     justify-content: center;
+    overflow: visible;
 
     .sb-menu__item .sb-link {
       font-family: $font-accent-regular;
@@ -30,8 +33,17 @@ ul.sb-menu {
     }
 
     .sb-menu__item--selected {
-      border-bottom: 2px solid $black;
-      margin-bottom: -1px;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $black;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+      }
     }
 
     .sb-menu__item--selected .sb-link {
