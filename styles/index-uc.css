@@ -948,7 +948,6 @@ ul.sb-menu {
   list-style: none;
   width: 100%;
   overflow-x: auto;
-  padding-bottom: 16px;
 }
 .sb-menu__item,
 ul.sb-menu__item {
@@ -975,7 +974,7 @@ ul.sb-menu--small .sb-menu__item .sb-link {
 }
 .sb-menu--small .sb-menu__item--selected,
 ul.sb-menu--small .sb-menu__item--selected {
-  box-shadow: 0px 2px 0px 0px #111111;
+  border-bottom: 2px solid #111111;
   margin-bottom: -1px;
 }
 .sb-menu--small .sb-menu__item--selected .sb-link,
@@ -993,9 +992,6 @@ ul.sb-menu.sb-menu--fixed {
 @media screen and (max-width: 768px) {
   .sb-menu__item {
     padding: 6px;
-  }
-  .sb-menu--large {
-    padding-bottom: 16px;
   }
   .sb-menu--small .sb-menu__item .sb-link {
     font-size: 13px;
