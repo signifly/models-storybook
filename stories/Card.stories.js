@@ -10,6 +10,7 @@ export default {
     borders: { control: 'boolean' },
     borderRadius: { control: 'boolean' },
     titleMargin: { control: 'boolean' },
+    video: { control: 'boolean' },
     onClick: { action: 'onClick' }
   }
 }
@@ -27,7 +28,8 @@ Card.args = {
   subtext: 'Subtext',
   borders: false,
   borderRadius: false,
-  titleMargin: false
+  titleMargin: false,
+  video: false
 }
 
 export const Borders = Template.bind({})
@@ -39,7 +41,8 @@ Borders.args = {
   subtext: 'Subtext',
   borders: true,
   borderRadius: false,
-  titleMargin: false
+  titleMargin: false,
+  video: false
 }
 
 export const BorderRadius = Template.bind({})
@@ -51,7 +54,8 @@ BorderRadius.args = {
   subtext: 'Subtext',
   borders: false,
   borderRadius: true,
-  titleMargin: false
+  titleMargin: false,
+  video: false
 }
 
 export const TitleMargin = Template.bind({})
@@ -63,5 +67,19 @@ TitleMargin.args = {
   subtext: 'Subtext',
   borders: false,
   borderRadius: false,
-  titleMargin: true
+  titleMargin: true,
+  video: false
+}
+
+export const VideoButton = Template.bind({})
+VideoButton.args = {
+  imgSrc:
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80',
+  title: 'Title',
+  subtitle: 'Subtitle',
+  subtext: 'Subtext',
+  borders: false,
+  borderRadius: false,
+  titleMargin: false,
+  video: true
 }
