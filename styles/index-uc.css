@@ -774,12 +774,13 @@ button,
   top: 0;
   left: 0;
   background-color: rgba(17, 17, 17, 0.25);
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .sb-popup--fixed {
   position: fixed;
+  display: flex;
 }
 .sb-popup__wrapper {
   position: relative;
@@ -796,9 +797,9 @@ button,
 .sb-popup__content {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
+  height: calc(100% - 40px);
   width: 100%;
-  padding: 16px 16px 32px 0;
+  padding: 16px 16px 0 0;
   box-sizing: border-box;
 }
 .sb-popup__header {
