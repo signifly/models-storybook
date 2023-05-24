@@ -1922,12 +1922,18 @@ ul.sb-menu.sb-menu--fixed {
 .sb-editorial.sb-grid {
   grid-row-gap: 96px;
 }
-.sb-editorial__segment--text {
+.sb-editorial p,
+.sb-editorial img,
+.sb-editorial iframe {
+  grid-column-start: 3;
+  grid-column-end: span 8;
+}
+.sb-editorial p {
   font-size: 16px;
   line-height: 26px;
   text-align: left;
 }
-.sb-editorial__segment--text a {
+.sb-editorial a {
   color: #111111;
   text-decoration: underline;
   background-color: transparent;
@@ -1936,25 +1942,25 @@ ul.sb-menu.sb-menu--fixed {
   letter-spacing: -0.01em;
   transition: opacity 0.3s;
 }
-.sb-editorial__segment--text a:hover {
+.sb-editorial a:hover {
   opacity: 0.5;
 }
-.sb-editorial__segment--text a:visited {
+.sb-editorial a:visited {
   color: #111111;
 }
-.sb-editorial__segment--text h1,
-.sb-editorial__segment--text h2,
-.sb-editorial__segment--text h3,
-.sb-editorial__segment--text h4,
-.sb-editorial__segment--text h5,
-.sb-editorial__segment--text h6 {
+.sb-editorial h1,
+.sb-editorial h2,
+.sb-editorial h3,
+.sb-editorial h4,
+.sb-editorial h5,
+.sb-editorial h6 {
   color: #111111;
   font-family: "SuisseIntl-SemiBold", sans-serif;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 16px;
 }
-.sb-editorial__segment--text blockquote {
+.sb-editorial blockquote {
   font-family: "SuisseIntl-SemiBold", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -1962,6 +1968,11 @@ ul.sb-menu.sb-menu--fixed {
   letter-spacing: -0.01em;
   text-align: center;
   margin: 0;
+}
+.sb-editorial img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .sb-editorial-header .sb-title {
@@ -1992,19 +2003,25 @@ ul.sb-menu.sb-menu--fixed {
   .sb-editorial.sb-grid {
     grid-row-gap: 36px;
   }
-  .sb-editorial .sb-editorial__segment--text {
+  .sb-editorial p,
+  .sb-editorial img,
+  .sb-editorial iframe {
+    grid-column-start: 1;
+    grid-column-end: span 12;
+  }
+  .sb-editorial p {
     font-size: 14px;
     line-height: 22px;
   }
-  .sb-editorial .sb-editorial__segment--text blockquote {
+  .sb-editorial blockquote {
     font-size: 32px;
     line-height: 35px;
   }
-  .sb-editorial-header .sb-title {
+  .sb-editorial .sb-editorial-header .sb-title {
     font-size: 32px;
     line-height: 35px;
   }
-  .sb-editorial-header .sb-subtitle {
+  .sb-editorial .sb-editorial-header .sb-subtitle {
     font-size: 11px;
     line-height: 14px;
     margin-top: 12px;
