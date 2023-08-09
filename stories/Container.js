@@ -20,7 +20,7 @@ export const createContainer = ({ title, linkLabel, linkUrl, headerBorder }) => 
       containerHeader.appendChild(containerTitle)
     }
 
-    if (linkLabel) {
+    if (linkLabel || linkUrl) {
       const containerLink = createLink({ label: linkLabel, url: linkUrl })
       containerHeader.appendChild(containerLink)
     }

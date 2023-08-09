@@ -1,10 +1,14 @@
 .sb-section {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 1fr;
   grid-column-gap: $column-gap;
   grid-row-gap: calc($row-gap * 2);
+
+  &--no-padding-lg {
+    padding: 0;
+  }
 
   &__title {
     font-family: $font-accent-regular-italic;
@@ -20,9 +24,21 @@
   .sb-section {
     grid-column-gap: $column-gap-sm;
     grid-row-gap: calc($row-gap-sm * 2);
+
+    &--no-padding-md {
+      padding: 0;
+    }
   }
   .sb-section__title {
     font-size: 24px;
     line-height: 28px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .sb-section {
+    &--no-padding-sm {
+      padding: 0;
+    }
   }
 }
