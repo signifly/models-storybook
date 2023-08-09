@@ -1,0 +1,122 @@
+.sb-plan-card {
+  border: 1px solid $grey2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include text;
+
+  &__info,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 24px;
+  }
+
+  .sb-title--pro::after {
+    @include text;
+    content: 'PRO';
+    text-transform: uppercase;
+    font-size: 9px;
+    line-height: 11px;
+    border: 1px solid $amber;
+    border-radius: 4px;
+    color: $amber;
+    padding: 5px 8px;
+    margin-left: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    letter-spacing: calc(9px * 0.05);
+  }
+
+  &__price {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 8px;
+    @include title;
+  }
+
+  &__price-subtitle {
+    font-size: 11px;
+    line-height: 13px;
+    color: $grey4;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__spec {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 0;
+
+    p {
+      margin: 0;
+      margin-left: 8px;
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    .check-pink,
+    .check-orange,
+    .check-orangered {
+      display: block;
+      height: 21px;
+      width: 21px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+    margin-top: 24px;
+    font-size: 9px;
+    line-height: 11px;
+    width: 100%;
+    &--pink {
+      background-color: $pink;
+      border: 1px solid $pink;
+    }
+    &--orange {
+      background-color: $orange;
+      border: 1px solid $orange;
+    }
+    &--orangered {
+      background-color: $orangered;
+      border: 1px solid $orangered;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+.sb-plan-card-container {
+  padding-left: $site-gutter !important;
+  padding-right: $site-gutter !important;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: $md) {
+  .sb-plan-card-container {
+    padding-left: $site-gutter-md !important;
+    padding-right: $site-gutter-md !important;
+  }
+}
+@media screen and (max-width: $sm) {
+  .sb-plan-card-container {
+    padding-left: $site-gutter-sm !important;
+    padding-right: $site-gutter-sm !important;
+  }
+}

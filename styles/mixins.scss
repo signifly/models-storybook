@@ -25,10 +25,15 @@
   font-weight: 600;
   letter-spacing: -0.01em;
 }
+
 @mixin subtitle {
   color: $color-subtext;
   font-family: $font-primary-book;
   font-weight: 450;
+}
+
+@mixin text {
+  font-family: $font-primary-book;
 }
 
 @mixin link {

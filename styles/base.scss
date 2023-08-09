@@ -26,6 +26,15 @@ button,
 
 .sb-link {
   @include link;
+  &--left {
+    text-align: left;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--right {
+    text-align: right;
+  }
 }
 
 .sb-link--remove-underline {
@@ -35,9 +44,27 @@ button,
 
 .sb-title {
   @include title;
+  &--left {
+    text-align: left;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--right {
+    text-align: right;
+  }
 }
 .sb-subtitle {
   @include subtitle;
+  &--left {
+    text-align: left;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--right {
+    text-align: right;
+  }
 }
 
 .sb-logged-off {
