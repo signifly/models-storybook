@@ -190,10 +190,6 @@ export const createTable = () => {
         bodyRow.appendChild(planCell)
       })
 
-      if (index === sections.length - 1 && i === section.rows.length - 1) {
-        bodyRow.className = 'sb-table__last-row'
-      }
-
       tbody.appendChild(bodyRow)
     })
 

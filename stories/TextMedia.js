@@ -28,19 +28,22 @@ export const createTextMedia = ({
 
   if (title) {
     const titleElement = document.createElement(mainTitle ? 'h1' : 'h2')
-    titleElement.className = 'sb-title'
+    titleElement.className = 'sb-title sb-text-media__text--title'
     titleElement.innerText = title
     textMediaText.appendChild(titleElement)
   }
 
   if (text || buttonLabel) {
     const textElement = document.createElement('div')
+    textElement.className = 'sb-text-media__text--body'
 
     const textPElement = document.createElement('p')
+    textPElement.className = 'sb-text-media__text--paragraph'
     textPElement.innerText = text
     textElement.appendChild(textPElement)
 
     const buttonElement = createButton({ primary: true, label: buttonLabel, onClick: onClick })
+    buttonElement.className =addClasses([buttonElement.className, 'sb-text-media__text--cta'])
     textElement.appendChild(buttonElement)
 
     textMediaText.appendChild(textElement)

@@ -1,0 +1,84 @@
+.sb-agency-signup-button {
+  display: inline-block;
+  font-family: $font-primary-book;
+  font-size: 0.6875rem;
+  color: var(--agency-signup-button-color, #{$white});
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: 0.02063rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  padding: .75rem 1.5rem;
+  background-color: var(--agency-signup-button-background-color, #{$black});
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--agency-signup-button-border-color, var(--agency-signup-button-background-color, #{$black}));
+  text-decoration: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Hover
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-agency-signup-button--hover,
+.sb-agency-signup-button:hover {
+  --agency-signup-button-background-color: $orange-amber;
+  --agency-signup-button-color: #{$black};
+}
+
+/*
+|--------------------------------------------------------------------------
+| Primary
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-agency-signup-button--primary {
+  --agency-signup-button-background-color: $orange-amber;
+  --agency-signup-button-color: #{$black};
+}
+
+// =============================================
+// Hover
+// =============================================
+
+.sb-agency-signup-button--hover.sb-agency-signup-button--primary,
+.sb-agency-signup-button--primary:hover {
+  --agency-signup-button-background-color: #{$black};
+  --agency-signup-button-color: #{$white};
+}
+
+/*
+|--------------------------------------------------------------------------
+| Secondary
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-agency-signup-button--secondary {
+  --agency-signup-button-background-color: transparent;
+  --agency-signup-button-border-color: $orange-amber;
+  --agency-signup-button-color: #{$black};
+}
+
+// =============================================
+// Hover
+// =============================================
+
+.sb-agency-signup-button--hover.sb-agency-signup-button--secondary,
+.sb-agency-signup-button--secondary:hover {
+  --agency-signup-button-background-color: #{$black};
+  --agency-signup-button-border-color: #{$black};
+  --agency-signup-button-color: #{$white};
+}

@@ -1,0 +1,61 @@
+.sb-filter-button--dropdown {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Icons
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+// =============================================
+// Number
+// =============================================
+
+.sb-filter-button--dropdown__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: max-content;
+  min-width: 1rem;
+  height: max-content;
+  min-height: 1rem;
+  font-family: $font-primary-book;
+  font-size: 0.625rem;
+  color: $white;
+  font-weight: 450;
+  line-height: 1;
+  text-align: center;
+  border-radius: 100%;
+  padding: 2px;
+  background-color: $black;
+}
+
+// =============================================
+// Arrow
+// =============================================
+
+.sb-filter-button--dropdown-arrow {
+  flex-shrink: 0;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Opened
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-button--opened.sb-filter-button--dropdown {
+  .sb-filter-button--dropdown-arrow {
+	transform: rotate(180deg);
+  }
+}

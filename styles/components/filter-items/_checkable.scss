@@ -1,0 +1,105 @@
+.sb-filter-item--checkable {
+  --sb-filter-item-input-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  gap: .75rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Input
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-item--checkable__input {
+  flex-shrink: 0;
+  width: var(--sb-filter-item-input-size);
+  height: var(--sb-filter-item-input-size);
+  position: relative;
+  margin-left: auto;
+
+  input {
+	position: absolute;
+	cursor: pointer;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+  }
+}
+
+// =============================================
+// Checkmark
+// =============================================
+
+.sb-filter-item--checkable__checkmark {
+  --sb-filter-item-checkmark-border-size: 1px;
+  display: flex;
+  overflow: hidden;
+  border: var(--sb-filter-item-checkmark-border-size) solid $grey3;
+  border-radius: var(--sb-filter-item-checkable-border-radius);
+  box-sizing: border-box;
+  background-color: $white;
+  transition: border-color .3s ease, background-color .3s ease;
+
+  svg {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	margin: auto;
+	padding: 2px;
+	transition: opacity .3s ease;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| States
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+// =============================================
+// Hover
+// =============================================
+
+.sb-filter-item--hover.sb-filter-item--checkable,
+.sb-filter-item--checkable:hover {
+  .sb-filter-item--checkable__checkmark {
+	border-color: $black;
+  }
+}
+
+// =============================================
+// Selected
+// =============================================
+
+.sb-filter-item--selected.sb-filter-item--checkable {
+  background-color: $white;
+}
+.sb-filter-item--selected.sb-filter-item--checkable .sb-filter-item--checkable__checkmark,
+.sb-filter-item--checkable__input input:checked ~ .sb-filter-item--checkable__checkmark {
+  background-color: $black;
+  border-color: $black;
+
+  svg {
+	opacity: 1;
+  }
+}
+
+// Hover
+// ================================
+
+.sb-filter-item--selected.sb-filter-item--hover.sb-filter-item--checkable,
+.sb-filter-item--checkable.sb-filter-item--selected:hover {
+  background-color: $grey1;
+}

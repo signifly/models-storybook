@@ -1,0 +1,115 @@
+.sb-filter-dropdown {
+  border: 1px solid $grey2;
+  border-radius: .5rem;
+  padding: var(--sb-filter-dropdown-padding, .75rem);
+  background-color: $white;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+// =============================================
+// Md
+// =============================================
+
+.sb-filter-dropdown--md {
+  --sb-filter-dropdown-padding: 1.25rem;
+}
+
+// =============================================
+// With gap
+// =============================================
+
+.sb-filter-dropdown--with-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Wrapper
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-dropdown__wrapper {
+  max-height: 51.25rem;
+  padding-right: 0.5rem;
+  overflow-y: auto;
+}
+
+// =============================================
+// Scrollbar
+// =============================================
+
+.sb-filter-dropdown__wrapper {
+  &::-webkit-scrollbar {
+	width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+	border-radius: .75rem;
+	box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+	border-radius: .75rem;
+	background: $grey2;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Items
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-dropdown__items {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Title
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-dropdown__title {
+  font-family: $font-primary-book;
+  font-size: 0.75rem;
+  color: $grey4;
+  font-weight: 450;
+  line-height: 1.2;
+  margin: 0 0 .5rem;
+  padding: 0;
+}
+
+.sb-filter-dropdown .sb-filter-dropdown__title + .sb-filter-dropdown-search {
+  margin-top: 1rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Divider
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-dropdown hr {
+  height: 0.0625rem;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: $grey2;
+}

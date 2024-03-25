@@ -12,9 +12,10 @@ export default {
     pro: { control: 'boolean' },
     buttonColor: {
       control: { type: 'select' },
-      options: ['pink', 'orange', 'orangered']
-    }
-  }
+      options: ['pink', 'orange', 'orangered'],
+    },
+    current: { control: 'boolean', description: 'Flag indicating whether this PlanCard is the currently selected plan' },
+  },
 }
 
 const Template = ({ ...args }) => {
@@ -35,5 +36,6 @@ PlanCard.args = {
   buttonLabel: 'SIGN UP',
   buttonUrl: '#',
   pro: false,
-  buttonColor: 'pink'
+  buttonColor: 'pink',
+  current: false
 }

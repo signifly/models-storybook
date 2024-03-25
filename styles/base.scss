@@ -85,6 +85,8 @@ button,
 }
 
 .sb-font-primary {
+  font-family: $font-primary-regular;
+
   &--ultralight {
     font-family: $font-primary-ultralight;
   }

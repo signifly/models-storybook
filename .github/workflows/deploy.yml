@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      commit_hash: ${{ steps.commit-assets.outputs.commit_hash }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install
+        run: npm ci
+      - name: Build project
+        run: NODE_ENV=production npm run build
+      - name: Commit built assets
+        id: commit-assets
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Build assets
+      - name: Copy styles and fonts to output dir
+        run: |
+          find ./styles/ -name \*.css -print | cpio -pvd storybook-static
+          cp -r fonts storybook-static/
+      - uses: actions/upload-artifact@v3
+        with:
+          name: storybook-static
+          path: storybook-static      
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    needs: build
+    steps:
+      - name: Download latest assets
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook-static
+          path: storybook-static
+      - name: Deploy Storybook
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
