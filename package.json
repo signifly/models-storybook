@@ -11,7 +11,10 @@
     "sass-compressed": "sass styles/index.scss:styles/index.css --style compressed",
     "sass-uncompressed": "sass styles/index.scss:styles/index-uc.css",
     "sass": "npm run sass-compressed & npm run sass-uncompressed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=d91e2c212657"
   },
   "repository": {
     "type": "git",
