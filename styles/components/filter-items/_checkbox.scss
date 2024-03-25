@@ -1,0 +1,13 @@
+.sb-filter-item--checkbox {
+  --sb-filter-item-checkable-border-radius: .25rem;
+}
+
+// =============================================
+// Medium
+// =============================================
+
+.sb-filter-item--checkbox--medium .sb-filter-item__title {
+  font-family: $font-primary-semibold;
+  font-size: 1rem;
+  font-weight: 600;
+}

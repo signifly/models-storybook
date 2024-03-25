@@ -1,0 +1,168 @@
+:root {
+  --sb-agency-people-card-padding-y: 6px;
+  --sb-agency-people-card-padding-x: 8px;
+  --sb-agency-people-card-border-radius: 8px;
+}
+
+.sb-agency-people-card {
+  @include text;
+  padding-bottom: 8px;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+  max-width: $card-max-width;
+  overflow: hidden;
+  max-height: fit-content;
+
+  &:hover {
+    border-radius: var(--sb-agency-people-card-border-radius);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    aspect-ratio: 270/336;
+  }
+
+  &__image-wrapper {
+    display: flex;
+  }
+
+  &__image-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    margin: auto;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--left {
+      left: var(--sb-agency-card-padding-horizontal);
+    }
+
+    &--right {
+      right: var(--sb-agency-card-padding-horizontal);
+    }
+  }
+
+  &__image-arrow button {
+    display: flex;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: transparent;
+    appearance: none;
+  }
+
+  &__info {
+    p {
+      margin: 0;
+    }
+  }
+
+  &__info-expanded {
+    background: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &--show {
+      opacity: 1;
+    }
+
+    &--hide {
+      opacity: 0;
+    }
+  }
+
+  &__info-description {
+    padding-top: 12px;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    justify-content: start;
+
+    p {
+      margin: 0;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__info-wrapper {
+    background: $white;
+    position: relative;
+
+    &--expand {
+      padding: 12px 8px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $white;
+      z-index: 1;
+      flex-wrap: wrap;
+      transition: max-height 0.3s ease-in-out;
+      min-width: 100%;
+    }
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-left: 8px;
+  }
+
+  &__name {
+    @include title;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  &__job-title {
+    @include subtitle;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__tags {
+    padding: 0 8px;
+    display: flex;
+    gap: 8px;
+    padding-top: 12px;
+    white-space: nowrap;
+    font-size: 12px;
+    flex-wrap: wrap;
+
+    * {
+      padding: var(--sb-agency-people-card-padding-y)
+        var(--sb-agency-people-card-padding-x);
+      background: $grey1;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    &--expand-button {
+      text-decoration: underline;
+      border: none;
+      background: $grey1;
+
+      &:hover {
+        background: $grey2;
+        cursor: pointer;
+      }
+    }
+  }
+}

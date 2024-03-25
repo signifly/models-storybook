@@ -1,6 +1,6 @@
-@mixin gridUtilities($size: '') {
-  @if $size != '' {
-    $size: $size + '-';
+@mixin gridUtilities($size: "") {
+  @if $size != "" {
+    $size: $size + "-";
   }
   @for $column from 1 to $columns {
     .#{$size}span-#{$column} {
@@ -40,6 +40,10 @@
   grid-column-gap: $column-gap;
   width: 100%;
 
+  &--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   &--5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -57,18 +61,18 @@
   }
 }
 
-@include gridUtilities('');
+@include gridUtilities("");
 
 @media screen and (max-width: $lg) {
-  @include gridUtilities('lg');
+  @include gridUtilities("lg");
 }
 
 @media screen and (max-width: $md) {
-  @include gridUtilities('md');
+  @include gridUtilities("md");
 }
 
 @media screen and (max-width: $sm) {
-  @include gridUtilities('sm');
+  @include gridUtilities("sm");
 
   .sb-grid {
     grid-row-gap: $row-gap-sm;
@@ -91,7 +95,6 @@
     &--scroll .sb-card .sb-card__text {
       width: 33vw;
     }
-
 
     &--scroll .sb-card .sb-card__text {
       white-space: break-spaces;

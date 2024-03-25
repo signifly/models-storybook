@@ -1,0 +1,29 @@
+.sb-filter-button {
+  font-family: $font-primary-book;
+  font-size: 0.875rem;
+  color: $black;
+  font-weight: 450;
+  line-height: 1;
+  border: 1px solid $grey2;
+  border-radius: 0.5rem;
+  padding: .75rem 1rem;
+  background-color: $white;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+  appearance: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Hover
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-button--hover,
+.sb-filter-button:hover,
+.sb-filter-button--active {
+  background-color: $grey1;
+  border-color: $black;
+}

@@ -1,0 +1,130 @@
+.sb-header-mobile {
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__hamburger,
+  &__close {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+  }
+
+  &__close {
+    display: none;
+  }
+
+  &__avatar-dropdown .sb-header-dropdown {
+    border: none;
+  }
+
+  &--open-menu {
+    .sb-header-mobile__menu-dropdown {
+      grid-template-rows: 1fr;
+
+      .sb-header-mobile-menu {
+        overflow-y: auto;
+      }
+    }
+
+    .sb-header-mobile__hamburger {
+      display: none;
+    }
+
+    .sb-header-mobile__close {
+      display: block;
+    }
+
+    .sb-header-mobile__search {
+      display: none;
+    }
+  }
+
+  &__menu-dropdown {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s;
+
+    .sb-header-mobile-menu {
+      overflow: hidden;
+    }
+  }
+
+  &--open-avatar {
+    .sb-header-mobile__avatar-dropdown {
+      grid-template-rows: 1fr;
+    }
+
+    .sb-header-mobile__search {
+      display: none;
+    }
+
+    .sb-header-dropdown {
+      border: 1px solid $grey2;
+    }
+  }
+
+  &__avatar-dropdown {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s;
+  }
+}
+
+.sb-header-mobile-menu {
+  &__top {
+    padding: 0 16px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 32px;
+    background-color: $grey1;
+  }
+
+  &__footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    padding: 32px 0;
+    gap: 12px;
+
+    .sb-button {
+      width: 100%;
+      text-transform: uppercase;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .sb-button--primary {
+      border: none;
+      color: $white !important;
+    }
+  }
+
+  &__social {
+    .sb-header-dropdown-social {
+      padding: 0;
+    }
+  }
+}

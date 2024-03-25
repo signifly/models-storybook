@@ -1,0 +1,68 @@
+.sb-filter-item--worked-with {
+  font-family: $font-primary-book;
+  font-weight: 450;
+  line-height: 1.3;
+  gap: 1rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Icon
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-item--worked-with__icon {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: $grey4;
+  text-transform: uppercase;
+  border: 1px solid $grey2;
+  border-radius: .25rem;
+  background-color: $grey1;
+}
+.sb-filter-item--worked-with__icon p {
+  margin: 0;
+  padding: 0;
+}
+
+// =============================================
+// Image
+// =============================================
+
+.sb-filter-item--worked-with__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Content
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-item--worked-with__content {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+// =============================================
+// Sub title
+// =============================================
+
+.sb-filter-item--worked-with__sub-title {
+  font-size: 0.75rem;
+  color: $grey4;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}

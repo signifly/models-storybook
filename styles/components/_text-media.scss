@@ -3,17 +3,58 @@
   padding-right: $site-gutter !important;
   box-sizing: border-box;
 
+  &--no-img {
+    max-width: 40rem !important;
+    text-align: center;
+
+    .sb-text-media {
+      &__text {
+        align-self: center;
+        align-items: center;
+        
+        &--cta {
+          align-self: center;
+			    align-items: center;
+        }
+      }
+    } 
+  }
   &__text {
+    @include text;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    @include text;
+    grid-gap: 24px;
 
     &--video {
       justify-content: space-between;
     }
 
+    &--title {
+      margin: 0;
+      font-size: 3.25rem;
+    }
+
+    &--body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      grid-gap: 24px;
+    }
+                                                                                                                                
+    &--paragraph {
+      @include text;
+      line-height: normal;
+      margin: 0;
+    }
+
+    &--cta {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    
     .sb-button {
       text-transform: uppercase;
       font-size: 11px;
@@ -24,11 +65,18 @@
 
   &__media {
     position: relative;
-
+    width: 100%;
+    
     &--img,
     &--video {
-      width: 100%;
+      width: 100% !important;
+      height: auto !important;
       object-fit: contain;
+    }
+
+    &--video {
+      border: 1px solid #dcdcdc;
+      box-sizing: border-box;
     }
 
     .play-button-icon--wrapper {
@@ -70,21 +118,35 @@
     }
 
     &__text,
+    &__media
     &__media--img {
       padding-left: $site-gutter-md !important;
       padding-right: $site-gutter-md !important;
       box-sizing: border-box;
     }
 
-
     &__text {
       align-items: center;
       text-align: center;
+      
+      &--body {
+        align-items: center;
+      }
     }
   }
 }
 @media screen and (max-width: $sm) {
   .sb-text-media {
+    &__media {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__media--video {
+      border-left: none;
+      border-right: none;
+    }
+    
     &__text,
     &__media--img {
       padding-left: $site-gutter-sm !important;

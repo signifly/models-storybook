@@ -1,0 +1,26 @@
+.sb-page-section {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 64px;
+  box-sizing: border-box;
+
+  &:first-of-type {
+    padding-top: 64px;
+  }
+
+  & > * {
+    max-width: 1240px;
+    margin: 0 auto;
+  } 
+}
+
+@media screen and (max-width: $sm) {
+
+  .sb-page-section {
+    padding-bottom: 40px;
+
+    &:first-of-type {
+      padding-top: 40px;
+    }
+  }
+}

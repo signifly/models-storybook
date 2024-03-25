@@ -14,24 +14,37 @@
   thead {
     background-color: $grey1;
     th {
-      text-align: left;
       @include title;
+      text-align: left;
       padding: 12px 16px;
     }
   }
 
+  caption.sb-table__caption--bottom {
+    font-size: .75rem;
+    padding: 1rem;
+    caption-side: bottom;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
   tbody {
-    tr:not(:last-child),
-    tr.sb-table__last-row {
+    tr:not(:last-child) {
       border-bottom: 1px solid $grey2;
     }
+    
+    &:last-of-type tr:last-of-type{
+      border-bottom: 1px solid $grey2;
+    }
+
     td:first-child {
       text-align: left;
     }
     td {
+      @include text;
       text-align: center;
       padding: 16px;
-      @include text;
     }
 
     td span[class*='check-'] {
@@ -45,17 +58,24 @@
   }
 
   &__plan-header {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
     justify-content: center;
+    align-content: space-between;
+    text-align: center;
+    height: 100%;
 
     .sb-title {
       margin: 8px 0;
       font-size: 20px;
       line-height: 25px;
     }
-
+    .sb-title--pro {
+      display: inline-flex;
+      column-gap: 4px;
+      align-items: center;
+      justify-content: center;
+    }
     .sb-title--pro::after {
       @include text;
       content: 'PRO';
@@ -66,9 +86,6 @@
       border-radius: 4px;
       color: $amber;
       padding: 5px 8px;
-      margin-left: 8px;
-      margin-top: auto;
-      margin-bottom: auto;
       letter-spacing: calc(9px * 0.05);
     }
 
@@ -83,6 +100,10 @@
       text-transform: uppercase;
       font-size: 11px;
       line-height: 13px;
+      min-width: 130px;
+      white-space: nowrap;
+      align-self: end;
+      font-weight: normal;
     }
 
     .sb-button--pink {
@@ -132,7 +153,7 @@
     }
 
     &__plan-header {
-      justify-content: space-between;
+      justify-content: center;
       height: 100%;
     }
 
@@ -146,7 +167,6 @@
       font-size: 5px;
       line-height: 6px;
       padding: 3px 4px;
-      margin-left: 4px;
       letter-spacing: calc(5px * 0.05);
     }
 
@@ -157,6 +177,15 @@
     }
 
     &__plan-header .sb-button {
+      padding: 6px 8px;
+      min-width: 80px;
+    }
+    
+    .sb-button .label-short {
+      display: inline;
+    }
+
+    .sb-button .label-long {
       display: none;
     }
   }
