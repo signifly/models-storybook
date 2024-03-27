@@ -7,7 +7,8 @@ export const createTextInput = ({
     hint,
     isError,
     disabled = false,
-    type = "text"
+    type = "text",
+    icon = ""
 }) => {
 
     // class creator with modifier
@@ -18,7 +19,8 @@ export const createTextInput = ({
         wrapper: `${c('wrapper')} ${disabled ? c('wrapper--disabled') : ''} ${isError ? c('wrapper--error') : ''}`,
         label: `${c('label')}  ${disabled ? c('label--disabled') : ''}`,
         input: `${c('input')} ${disabled ? c('input--disabled') : ''} ${isError ? c('input--error') : ''}`,
-        hint: `${c('hint')} ${isError ? c('hint--error') : ''}`
+        hint: `${c('hint')} ${isError ? c('hint--error') : ''}`,
+        icon: `${c('icon')}`
     }
 
     return strToDom(`
@@ -26,6 +28,7 @@ export const createTextInput = ({
             <div class="${classNames.wrapper}" >
                 <label class="${classNames.label}" for="${name}" >${label}</label>
                 <input class="${classNames.input}" name="${name}" placeholder="${placeholder}" type="${type}" ${disabled ? "disabled" : ''} />
+                ${icon ? `<div class="${classNames.icon}" >${icon}</div>` : ''}
             </div>
             ${hint && `<p class="${classNames.hint}" >${hint}</p>`}
         </div>
