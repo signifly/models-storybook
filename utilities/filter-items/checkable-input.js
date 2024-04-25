@@ -1,7 +1,7 @@
 export const getCheckmark = () => {
 	return `
 		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-				<path d="M13 4.25L6.125 11.125L3 8" stroke="white" stroke-width="1.6666" stroke-linecap="square"/>
+				<path d="M13 4.25L6.125 11.125L3 8" stroke="currentColor" stroke-width="1.6666" stroke-linecap="square"/>
 		</svg>
 	`;
 };

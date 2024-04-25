@@ -1,6 +1,7 @@
 import { strToDom, domToStr } from "../utilities/dom";
 
 export const createTextInput = ({
+    id=undefined,
     name,
     placeholder,
     label,
@@ -27,10 +28,10 @@ export const createTextInput = ({
         <div class="${classNames.layout}" >
             <div class="${classNames.wrapper}" >
                 <label class="${classNames.label}" for="${name}" >${label}</label>
-                <input class="${classNames.input}" name="${name}" placeholder="${placeholder}" type="${type}" ${disabled ? "disabled" : ''} />
+                <input class="${classNames.input}" name="${name}" placeholder="${placeholder}" type="${type}" ${disabled ? "disabled" : ''} ${id ? `id=${id}` : ''} />
                 ${icon ? `<div class="${classNames.icon}" >${icon}</div>` : ''}
             </div>
-            ${hint && `<p class="${classNames.hint}" >${hint}</p>`}
+            ${hint ? `<p class="${classNames.hint}" >${hint}</p>` : ''}
         </div>
     `)
 }
