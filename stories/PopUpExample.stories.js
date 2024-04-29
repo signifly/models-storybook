@@ -19,5 +19,6 @@ export const PopUp = Template.bind({})
 PopUp.args = {
   fixed: true,
   height: 350,
-  width: 350
+  width: 350,
+  title: 'Tagged People',
 }

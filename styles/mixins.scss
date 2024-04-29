@@ -33,7 +33,7 @@
 }
 
 @mixin text {
-  font-family: $font-primary-book;
+  font-family: $font-primary-regular;
 }
 
 @mixin link {
@@ -47,5 +47,9 @@
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:visited {
+    color: $color-text;
   }
 }

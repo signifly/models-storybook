@@ -9,10 +9,11 @@ export const createPlanCard = ({
   buttonLabel,
   buttonOnClick,
   buttonColor,
-  pro
+  pro,
+  current
 }) => {
   const planCard = document.createElement('div')
-  planCard.className = 'sb-plan-card'
+  planCard.className = addClasses(['sb-plan-card', current ? 'sb-plan-card--current' : ''])
 
   // Plan Card Info
 
@@ -62,7 +63,7 @@ export const createPlanCard = ({
   planButton.className = addClasses([
     planButton.className,
     'sb-plan-card__button',
-    `sb-plan-card__button--${buttonColor}`
+    current ? '' : `sb-plan-card__button--${buttonColor}`
   ])
   planCardFooter.appendChild(planButton)
   planCard.appendChild(planCardFooter)

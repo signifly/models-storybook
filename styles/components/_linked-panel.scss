@@ -1,0 +1,52 @@
+.sb-linked-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 7.25rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: $grey1;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Title
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-linked-panel__title {
+  font-family: $font-primary-semibold;
+  font-size: 1.25rem;
+  color: $black;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.00625rem;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Button
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-linked-panel__button-wrapper {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+.sb-linked-panel__button {
+  font-family: $font-primary-book;
+  font-size: 0.6875rem;
+  color: $black;
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: 0.0275rem;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+}

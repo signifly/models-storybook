@@ -52,7 +52,8 @@ LatestWork.args = {
       title: 'Work Title',
       subtitle: 'Fashion',
       subtext: 'Work',
-      borderRadius: true
+      borderRadius: true,
+      video: true
     },
     {
       size: 'small',

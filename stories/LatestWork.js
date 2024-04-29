@@ -14,7 +14,7 @@ export const createLatestWork = ({ title, buttons, cards, mainButton }) => {
 
   if (cards && cards.length) {
     const grid5 = document.createElement('div')
-    grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
+    grid5.className = addClasses(['sb-grid', 'sb-grid--5', 'sb-grid--scroll'])
     cards.forEach((card) => {
       let cardElement = createCard(card)
       cardElement.className = addClasses([cardElement.className, 'sm-span-2'])

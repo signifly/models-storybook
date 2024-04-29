@@ -1,0 +1,99 @@
+:root {
+  --sb-filter-item-toggle-check-padding: 0.12rem;
+  --sb-filter-item-toggle-check-size: 1rem;
+  --sb-filter-item-toggle-height: 1.25rem;
+  --sb-filter-item-toggle-width: 2.25rem;
+}
+
+.sb-filter-item--toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 0;
+  background: transparent !important;
+  gap: 0.5rem;
+}
+
+// =============================================
+// Medium Size
+// =============================================
+
+.sb-filter-item--toggle--medium {
+  --sb-filter-item-toggle-check-size: 1.25rem;
+  --sb-filter-item-toggle-height: 1.5rem;
+  --sb-filter-item-toggle-width: 2.75rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Toggle
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-item__toggle {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+// =============================================
+// Input
+// =============================================
+
+.sb-filter-item__toggle input[type="checkbox"] {
+  display: none;
+  -webkit-appearance: none;
+  appearance: none;
+  visibility: hidden;
+}
+
+// =============================================
+// Check
+// =============================================
+
+.sb-filter-item__toggle-check {
+  display: block;
+  width: var(--sb-filter-item-toggle-width);
+  height: var(--sb-filter-item-toggle-height);
+  border-radius: 0.9rem;
+  background-color: $grey2;
+  transition: background-color .2s ease-in;
+}
+
+// =============================================
+// Icon
+// =============================================
+
+.sb-filter-item__toggle-check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sb-filter-item-toggle-check-size);
+  height: var(--sb-filter-item-toggle-check-size);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 100%;
+  background-color: $white;
+  transition: background-color .2s ease-in, transform .2s ease-in;
+  transform: translate3d(var(--sb-filter-item-toggle-check-padding), 0, 0);
+}
+
+// =============================================
+// Checked
+// =============================================
+
+.sb-filter-item__toggle input[type="checkbox"]:checked ~ .sb-filter-item__toggle-check {
+  background-color: $grey3;
+}
+.sb-filter-item__toggle input[type="checkbox"]:checked ~ .sb-filter-item__toggle-check .sb-filter-item__toggle-check-icon {
+  background-color: $black;
+  transform: translate3d(calc(100% + var(--sb-filter-item-toggle-check-padding)), 0, 0);
+}

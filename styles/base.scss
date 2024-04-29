@@ -37,6 +37,11 @@ button,
   }
 }
 
+.sb-link--remove-underline {
+  @include link;
+  text-decoration: none;
+}
+
 .sb-title {
   @include title;
   &--left {
@@ -80,6 +85,8 @@ button,
 }
 
 .sb-font-primary {
+  font-family: $font-primary-regular;
+
   &--ultralight {
     font-family: $font-primary-ultralight;
   }

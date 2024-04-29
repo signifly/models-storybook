@@ -9,7 +9,8 @@ export const createCard = ({
   imgSrc,
   borders,
   borderRadius,
-  titleMargin
+  titleMargin,
+  video
 }) => {
   const card = document.createElement('div')
   card.className = 'sb-card'
@@ -18,7 +19,8 @@ export const createCard = ({
     'sb-card',
     borders ? 'sb-card--borders' : '',
     borderRadius ? 'sb-card--border-radius' : '',
-    titleMargin ? 'sb-card--title-margin' : ''
+    titleMargin ? 'sb-card--title-margin' : '',
+    video ? 'sb-card--video' : ''
   ])
 
   const cardText = document.createElement('div')

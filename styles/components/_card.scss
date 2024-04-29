@@ -52,4 +52,36 @@
   &--title-margin &__text .sb-title {
     margin-bottom: 24px;
   }
+
+  &--video &__img {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $white;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 12px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="black" d="M12 8v16l12-8z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 200%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

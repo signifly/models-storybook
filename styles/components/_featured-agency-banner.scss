@@ -1,0 +1,401 @@
+:root {
+  --sb-featured-agency-banner-border-radius: .5rem;
+  --sb-featured-agency-banner-header-margin-top: 1rem;
+  --sb-featured-agency-banner-icon-size: 7.5rem;
+  --sb-featured-agency-banner-info-gap: 1.5rem;
+  --sb-featured-agency-banner-max-width: 23rem;
+  --sb-featured-agency-banner-min-height: 34rem;
+  --sb-featured-agency-banner-padding: 2rem;
+  --sb-featured-agency-insights-gap-between-insights: 2rem;
+}
+
+.sb-featured-agency-banner {
+  display: grid;
+  max-width: var(--sb-featured-agency-banner-max-width);
+  min-height: var(--sb-featured-agency-banner-min-height);
+  overflow: hidden;
+  border-radius: var(--sb-featured-agency-banner-border-radius);
+  word-break: break-word;
+}
+.sb-featured-agency-banner > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.sb-featured-agency-banner p,
+.sb-featured-agency-banner h1,
+.sb-featured-agency-banner h2,
+.sb-featured-agency-banner h3,
+.sb-featured-agency-banner h4,
+.sb-featured-agency-banner h5,
+.sb-featured-agency-banner h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.sb-featured-agency-banner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Image
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-featured-agency-banner__img {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--sb-featured-agency-banner-border-radius);
+
+  &::before,
+  &::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 1;
+	border-radius: var(--sb-featured-agency-banner-border-radius);
+	transition: opacity 0.3s ease-in-out;
+	inset: 0;
+  }
+
+  &::before {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%);
+  }
+
+  &::after {
+	opacity: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.90) 100%);
+  }
+}
+.sb-featured-agency-banner__img img {
+  border-radius: var(--sb-featured-agency-banner-border-radius);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Content
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-featured-agency-banner__content {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  text-align: center;
+  margin-top: auto;
+  padding: var(--sb-featured-agency-banner-padding);
+  transition: opacity 0.3s ease-in-out;
+  justify-self: center;
+}
+
+// =============================================
+// Info
+// =============================================
+
+.sb-featured-agency-banner__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sb-featured-agency-banner-info-gap);
+}
+
+// =============================================
+// Icon
+// =============================================
+
+.sb-featured-agency-banner__icon {
+  width: var(--sb-featured-agency-banner-icon-size);
+  height: var(--sb-featured-agency-banner-icon-size);
+  overflow: hidden;
+  border: 1px solid $grey2;
+  border-radius: 100%;
+}
+
+// =============================================
+// Header
+// =============================================
+
+.sb-featured-agency-banner__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc((var(--sb-featured-agency-banner-info-gap) - var(--sb-featured-agency-banner-header-margin-top)) * -1);
+  gap: .25rem;
+}
+
+// =============================================
+// Title
+// =============================================
+
+.sb-featured-agency-banner__title {
+  font-family: $font-primary-semibold;
+  font-size: 1.25rem;
+  color: $white;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.00625rem;
+}
+
+// =============================================
+// Location
+// =============================================
+
+.sb-featured-agency-banner__location {
+  display: flex;
+  align-items: center;
+  font-family: $font-primary-book;
+  font-size: 0.875rem;
+  color: $grey4;
+  font-weight: 450;
+  line-height: 1.3;
+  gap: .25rem;
+}
+
+// =============================================
+// Tags
+// =============================================
+
+.sb-featured-agency-banner__tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-primary-book;
+  font-size: 0.75rem;
+  color: $white;
+  font-weight: 450;
+  line-height: 1;
+  gap: .5rem;
+}
+.sb-featured-agency-banner__tags span {
+  display: inline-block;
+  border: 1px solid $grey4;
+  border-radius: .25rem;
+  padding: .38rem .5rem;
+}
+
+// =============================================
+// Insights
+// =============================================
+
+.sb-featured-agency-banner__insights {
+  display: flex;
+}
+.sb-featured-agency-banner__insights > * + * {
+  margin-left: calc(var(--sb-featured-agency-insights-gap-between-insights) / 2);
+  padding-left: calc(var(--sb-featured-agency-insights-gap-between-insights) / 2);
+  border-left: 0.0625rem solid $grey4;
+}
+
+// Insight
+// ================================
+
+.sb-featured-agency-banner__insight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+}
+
+// Number
+// ================================
+
+.sb-featured-agency-banner__insight-number {
+  font-family: $font-primary-book;
+  font-size: 0.875rem;
+  color: $white;
+  font-weight: 450;
+  line-height: 1.3;
+}
+
+// Title
+// ================================
+
+.sb-featured-agency-banner__insight-title {
+  font-family: $font-primary-book;
+  font-size: 0.75rem;
+  color: $grey4;
+  font-weight: 450;
+  line-height: 1.2;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Content - Hover
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-featured-agency-banner__hover {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  text-align: center;
+  padding: 1.5rem var(--sb-featured-agency-banner-padding) var(--sb-featured-agency-banner-padding) var(--sb-featured-agency-banner-padding);
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+// =============================================
+// Arrows
+// =============================================
+
+.sb-featured-agency-banner__arrow {
+  display: flex;
+  cursor: pointer;
+  margin: auto 0;
+  border: none;
+  padding: 0;
+  background: none;
+  appearance: none;
+  pointer-events: auto;
+}
+
+// Container
+// ================================
+
+.sb-featured-agency-banner__arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+// Left
+// ================================
+
+.sb-featured-agency-banner__arrow-container--left {
+  left: var(--sb-featured-agency-banner-padding);
+}
+
+// Right
+// ================================
+
+.sb-featured-agency-banner__arrow-container--right {
+  right: var(--sb-featured-agency-banner-padding);
+}
+
+// =============================================
+// Content
+// =============================================
+
+.sb-featured-agency-banner__hover-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// =============================================
+// Progress
+// =============================================
+
+.sb-featured-agency-banner__hover-progress {
+  display: flex;
+  gap: .72rem;
+}
+
+// Track
+// ================================
+
+.sb-featured-agency-banner__hover-progress-bar {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(153, 153, 153, 0.5);
+}
+
+// Thumb
+// ================================
+
+.sb-featured-agency-banner__hover-progress-bar::after {
+  content: '';
+  display: block;
+  width: var(--progress, 0%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  will-change: width;
+}
+
+// =============================================
+// Bottom
+// =============================================
+
+.sb-featured-agency-banner__hover-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 1.5rem;
+}
+
+// =============================================
+// Button
+// =============================================
+
+.sb-featured-agency-banner__hover-button a {
+  display: block;
+  font-family: $font-primary-book;
+  font-size: 0.6875rem;
+  color: $black;
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: 0.02063rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  padding: 0.75rem 1rem;
+  background-color: $white;
+  text-decoration: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Is Hover
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-featured-agency-banner--hovered,
+.sb-featured-agency-banner:hover {
+  .sb-featured-agency-banner__img::before {
+	opacity: 0;
+  }
+
+  .sb-featured-agency-banner__img::after {
+	opacity: 1;
+  }
+
+  .sb-featured-agency-banner__content {
+	opacity: 0;
+	pointer-events: none;
+  }
+
+  .sb-featured-agency-banner__hover {
+	opacity: 1;
+	pointer-events: auto;
+  }
+}

@@ -6,7 +6,9 @@
   align-items: flex-start;
   justify-content: space-between;
   @include text;
-
+  &--current {
+    border-color: $charcoal;
+  }
   &__info,
   &__footer {
     display: flex;
@@ -59,6 +61,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 8px 0;
+    column-gap: 4px;
 
     p {
       margin: 0;
@@ -71,6 +74,7 @@
     .check-orange,
     .check-orangered {
       display: block;
+      flex-shrink: 0;
       height: 21px;
       width: 21px;
       background-size: contain;
@@ -84,6 +88,11 @@
     font-size: 9px;
     line-height: 11px;
     width: 100%;
+    text-align: center;
+    text-decoration: none;
+    &--current {
+      background-color: $grey1;
+    }
     &--pink {
       background-color: $pink;
       border: 1px solid $pink;
@@ -98,6 +107,9 @@
     }
     &:hover {
       opacity: 0.75;
+    }
+    .label-short {
+      display: none;
     }
   }
 }

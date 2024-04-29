@@ -7,7 +7,7 @@ export const createYourModels = ({ loggedIn = false, title, cards = [], mainButt
   const section = createSection({ title })
 
   const grid5 = document.createElement('div')
-  grid5.className = addClasses(['sb-grid', 'sb-grid--5'])
+  grid5.className = addClasses(['sb-grid', 'sb-grid--5', 'sb-grid--scroll'])
 
   if (cards && cards.length) {
     cards.forEach((card) => {

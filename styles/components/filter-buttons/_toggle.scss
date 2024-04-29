@@ -1,0 +1,19 @@
+.sb-filter-button--toggle {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Icon
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-button--toggle svg {
+  flex-shrink: 0;
+  margin-left: auto;
+}

@@ -1,0 +1,19 @@
+.sb-filter-dropdown--category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Items
+|--------------------------------------------------------------------------
+|
+|
+|
+*/
+
+.sb-filter-dropdown__group__items {
+  padding-right: var(--sb-filter-dropdown-padding, 0.75rem);
+  padding-left: var(--sb-filter-dropdown-padding, 0.75rem);
+}
