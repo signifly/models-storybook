@@ -25,13 +25,13 @@ export const createTextInput = ({
     }
 
     return strToDom(`
-        <div class="${classNames.layout}" >
+        <label class="${classNames.layout}" >
             <div class="${classNames.wrapper}" >
-                <label class="${classNames.label}" for="${name}" >${label}</label>
+                <span class="${classNames.label}" >${label}</span>
                 <input class="${classNames.input}" name="${name}" placeholder="${placeholder}" type="${type}" ${disabled ? "disabled" : ''} ${id ? `id=${id}` : ''} />
                 ${icon ? `<div class="${classNames.icon}" >${icon}</div>` : ''}
             </div>
             ${hint ? `<p class="${classNames.hint}" >${hint}</p>` : ''}
-        </div>
+        </label>
     `)
 }

@@ -28,7 +28,7 @@ export const createCheckBoxInput = ({
                 <span class="${classNames.input}">${getCheckmark()}</span>
                 <span class="${classNames.label}" >${label}</span>
             </label>
-            <p class="${classNames.hint}" >${hint}</p>
+            ${hint ? `<p class="${classNames.hint}" >${hint}</p>` : ''}
         </div>
     `)
 }

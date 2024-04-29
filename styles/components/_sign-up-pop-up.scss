@@ -1,0 +1,41 @@
+.sb-sign-in-pop-up__,
+.sb-sign-up-pop-up__ {
+    &form-layout {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &tabs-layout {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        border-bottom: 1px solid var(--Grey-2-Border, #E5E5E5);
+        margin: 24px 0;
+    }
+
+    &buttons-layout{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &divider-wrapper {
+        margin: 20px 0;  
+    }
+
+    &terms-and-conditions {
+        color: var(--Grey-4, #999);
+        text-align: center;
+        font-size: 0.6875rem;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 130%; /* 14.3px */
+        a {
+            text-decoration: underline;
+            color: var(--Grey-4, #999);
+        }
+    }
+}

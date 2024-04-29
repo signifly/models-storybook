@@ -5,6 +5,10 @@ $label_font_size: 0.6875rem;
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    &:hover {
+        cursor: text;
+    }
 }
 
 .sb-text-input__wrapper {
